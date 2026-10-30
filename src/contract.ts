@@ -142,7 +142,11 @@ export function contractFields(p: WriteProposalInput): WriteProposalInput {
 
 type Parsed = { ok: true; value: WriteProposalInput } | { ok: false; error: string };
 
-/** Parses write_proposal arguments. A provider in strict mode already enforces the schema; this guards the rest. */
+/**
+ * Parses write_proposal arguments. A provider in strict mode already enforces the schema; this guards the rest.
+ * The writer reads these messages, so they are part of the recorded requests: change their wording and the
+ * committed run no longer replays (npm run replay).
+ */
 export function parseWriteProposal(args: string): Parsed {
   let v: any;
   try {
@@ -154,7 +158,7 @@ export function parseWriteProposal(args: string): Parsed {
   const isStr = (x: unknown) => typeof x === 'string';
   const strs = (x: unknown) => Array.isArray(x) && x.every(isStr);
   if (!v || typeof v !== 'object') return { ok: false, error: 'the arguments are not an object' };
-  for (const k of ['pairId', 'companyId', 'challengeId'] as const) if (!isStr(v[k])) problems.push(`${k} must be a string (it is ${v[k] === undefined ? 'missing' : JSON.stringify(v[k])})`);
+  for (const k of ['pairId', 'companyId', 'challengeId'] as const) if (!isStr(v[k])) problems.push(`${k} must be a string`);
   if (!strs(v.researcherIds) || !v.researcherIds.length) problems.push('researcherIds must list at least one ID');
   if (!FORMATS.includes(v.format)) problems.push(`format must be one of ${FORMATS.join(', ')}`);
   const s = v.sections;
@@ -167,7 +171,7 @@ export function parseWriteProposal(args: string): Parsed {
   if (!Array.isArray(v.claims) || !v.claims.length) problems.push('claims must list at least one claim');
   else {
     v.claims.forEach((c: any, i: number) => {
-      if (!c || !Number.isInteger(c.n)) problems.push(`the claim at position ${i + 1} needs an integer n (it has ${JSON.stringify(c?.n) ?? 'none'})`);
+      if (!c || !Number.isInteger(c.n)) problems.push(`claim ${i + 1} needs an integer n`);
       else if (!CLAIM_KINDS.includes(c.kind)) problems.push(`claim ${c.n} has unknown kind "${c.kind}"`);
       else if (!isStr(c.text) || !strs(c.ids) || !(c.researcherId === null || c.researcherId === undefined || isStr(c.researcherId))) problems.push(`claim ${c.n} needs text, ids and researcherId`);
       else c.researcherId ??= null;

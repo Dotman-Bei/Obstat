@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node --env-file-if-exists=.env --experimental-strip-types --disable-warning=ExperimentalWarning src/main.ts",
+    "replay": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/replay/replay.ts",
     "ui": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/ui-bridge/server.ts",
     "ui:build": "npm --prefix ui install && npm --prefix ui run build",
     "proof": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/proof/concurrency-proof.ts",

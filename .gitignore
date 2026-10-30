@@ -7,3 +7,5 @@ data/
 .taste-skill/
 # The design skill used to build the frontend, a tool rather than part of Obstat
 .claude/
+# npm run replay writes here; the committed run stays in out/
+out-replay/

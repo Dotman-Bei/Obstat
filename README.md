@@ -50,7 +50,15 @@ npm start -- --demo
 
 `--demo` seeds the R0139 pair so the run shows a hold on a known trap (see [Known limits](#known-limits)). A run takes about 5 minutes and roughly 20 model calls on `gemini-3.5-flash-lite`, which fits Gemini's free tier. Models, rate limits and the token budget are in [`src/config.ts`](src/config.ts); put overrides in `obstat.config.json`.
 
-**Without a key**, everything the run produced is committed:
+**Without a key**, run it again from the recording, or read what the run produced:
+
+```bash
+npm install
+git clone https://github.com/jigjoy-ai/einstein-matchmaker-data data
+npm run replay
+```
+
+`npm run replay` runs the same Mozaik runtime, gate and Critic, with every model call answered from [`out/recording.jsonl`](out/recording.jsonl), which the live run wrote. It writes to `out-replay/` and then checks itself against the committed run: all 23 model calls are answered from the recording, the three proposals come out identical word for word, and the concurrency proof passes on the new trace. Everything the run produced is also committed:
 
 - the three proposals: [pair-1](out/proposals/pair-1.md), [pair-2](out/proposals/pair-2.md), [pair-3](out/proposals/pair-3.md)
 - [`out/trace.jsonl`](out/trace.jsonl): every event of the run
@@ -58,7 +66,7 @@ npm start -- --demo
 
 ![The console's hold detail for rv_03: Writer 2 credited R0139 with SYN-PUB-01827; the Critic failed claims 4–6 on attribution and duplicate profile, naming R0539](docs/console-hold.jpg)
 
-`npm run ui:build && npm run ui` serves Obstat at http://127.0.0.1:4320: a landing page, and the terminal (the read-only console) on the committed run behind its Open terminal button. `npm run proof` recomputes the concurrency proof from the committed trace. `npm test` runs 41 tests with no key, including a whole `npm start` pass against the real dataset with a stand-in model.
+`npm run ui:build && npm run ui` serves Obstat at http://127.0.0.1:4320: a landing page, and the terminal (the read-only console) on the committed run behind its Open terminal button. `npm run proof` recomputes the concurrency proof from the committed trace. `npm test` runs 42 tests with no key, including a whole `npm start` pass against the real dataset with a stand-in model, and the replay of the committed run.
 
 ## What it does
 
@@ -151,7 +159,7 @@ PASS  at least 2 other writer loops were active during one hold (PRD §17)
 - **Writers work from a dossier, not the records.** The dossier gives the profile as the profile states it, including the works it lists, but not author entries. Checking attribution is the Critic's job; that is the point of the gate.
 - **Small models throughout**, because the committed run used Gemini's free tier. Writers on `gemini-3.5-flash-lite` sometimes leave out required fields. The gate rejects those calls before review without using up a round. The Analyst chose `no_uns_fit` only once.
 - **Identity hints need record evidence.** Two records with one name and one faculty but no shared works stay two people. A missed merge is the safe failure, because C2 still checks the exact ID on every record.
-- **Replay without a key is partial.** Every model output is recorded to `out/recording.jsonl`, but there is no `npm run replay` that re-runs the runtime from it yet. The no-key path is the committed outputs, `npm run ui` and `npm run proof`.
+- **Replay is exact or it misses.** Each recorded answer is keyed by a hash of the whole request, so a replay reproduces the run only while every prompt, gate message and dossier is unchanged. A request the recording does not hold gets a failure message, never an invented answer, and `npm run replay` reports the misses. A run that abandoned a pair could also replay differently, because which writer takes the replacement depends on timing.
 - **The console shows finished runs.** There is no live view of a run in progress (`npm start -- --ui`) yet.
 - **Gemini needs a patch.** Mozaik 4.1.0 drops Gemini's thought signatures, which Gemini 3 requires on the next turn of a tool call. [`src/providers.ts`](src/providers.ts) keeps them; `npm run doctor` checks a live tool round trip.
 

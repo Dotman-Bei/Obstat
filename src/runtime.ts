@@ -41,8 +41,10 @@ export interface RunOptions {
   demo: boolean;
   print?: boolean;
   config?: Partial<Config>;
-  /** Replaces the provider models (tests). */
+  /** Replaces the provider models (tests, replay). */
   models?: Model[];
+  /** The run's date as the agents see it; a replay passes the recorded run's, since it is part of every writer's request. */
+  today?: Date;
   log?: (line: string) => void;
 }
 
@@ -66,14 +68,15 @@ export async function runObstat(opts: RunOptions): Promise<RunResult> {
     tokenBudget: config.tokenBudget, recordTo: recording, log,
   });
   rt.initializeRuntime({ state, inferenceRunnerConfig: { runner: llm } });
-  const ctx: Ctx = { config, state, rt, llm, search: buildSearch(ix), demo: opts.demo, today: startedAt, log };
+  const today = opts.today ?? startedAt;
+  const ctx: Ctx = { config, state, rt, llm, search: buildSearch(ix), demo: opts.demo, today, log };
 
   const observer = createObserver(ctx, join(config.outDir, 'trace.jsonl'), { print: opts.print });
   const agents: AgentRunner[] = [];
   const coordinator = createCoordinator(ctx, () => agents);
 
   const critic = createAgent({ name: 'CR', capabilities: ['review'], instruction: 'Critic: checks every claim of a held write_proposal against the dataset.', tools: [], handlers: [] });
-  critic.setHandlers([criticHandler({ criticId: critic.getId(), state, sendEvent: rt.sendEvent, support: supportJudge(llm, config.models.small), today: () => startedAt })]);
+  critic.setHandlers([criticHandler({ criticId: critic.getId(), state, sendEvent: rt.sendEvent, support: supportJudge(llm, config.models.small), today: () => today })]);
   rt.join(critic);
 
   for (let i = 1; i <= config.profilers; i++) agents.push(createProfiler(ctx, `P${i}`));
