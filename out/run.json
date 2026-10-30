@@ -1,0 +1,4870 @@
+{
+  "stats": {
+    "startedAt": "2026-10-30T18:23:18.112Z",
+    "endedAt": "2026-10-30T18:28:16.331Z",
+    "calls": 23,
+    "failedCalls": 0,
+    "retries": 0,
+    "tokens": 202616,
+    "stopReason": null,
+    "maxConcurrentLoops": 5,
+    "demo": true
+  },
+  "pairs": [
+    {
+      "researcherIds": [
+        "R0906"
+      ],
+      "challengeId": "C091-CH1",
+      "format": "industrial_phd",
+      "evidence": [
+        "SYN-PUB-09638",
+        "SYN-PUB-09641"
+      ],
+      "why": "Her research on motion-aware filtering for patch ECG bezpośrednio addresses the issue of false atrial fibrillation alarms during patient movement.",
+      "pairId": "pair-1",
+      "companyId": "C091",
+      "status": "written",
+      "writerId": "W1"
+    },
+    {
+      "researcherIds": [
+        "R0539"
+      ],
+      "challengeId": "C062-CH1",
+      "format": "industrial_phd",
+      "evidence": [
+        "SYN-PUB-01827"
+      ],
+      "why": "Seeded by --demo: R0139's profile lists GPR hyperbola-detection work and Terramap misses about one in five hyperbolas.",
+      "pairId": "pair-2",
+      "companyId": "C062",
+      "status": "written",
+      "writerId": "W2"
+    },
+    {
+      "researcherIds": [
+        "R0269"
+      ],
+      "challengeId": "C088-CH2",
+      "format": "joint_project",
+      "evidence": [
+        "SYN-PUB-03378",
+        "SYN-PUB-03379"
+      ],
+      "why": "Her expertise in membrane fouling mechanisms and cleaning protocols for dairy process streams can help mitigate rapid ultrafiltration fouling.",
+      "pairId": "pair-3",
+      "companyId": "C088",
+      "status": "written",
+      "writerId": "W3"
+    }
+  ],
+  "classes": {
+    "C001-CH1": {
+      "cls": "research",
+      "reason": "Unsupervised anomaly detection on industrial networks without attack data is an open machine learning research question.",
+      "ids": [
+        "C001-CH1"
+      ]
+    },
+    "C001-CH2": {
+      "cls": "research",
+      "reason": "Designing a reliable, secure over-the-air firmware update mechanism resilient to intermittent GPRS drops involves technical challenges.",
+      "ids": [
+        "C001-CH2"
+      ]
+    },
+    "C001-CH3": {
+      "cls": "not_research",
+      "reason": "Financial loss quantification methodology requested by clients is primarily a business advisory and risk management service task.",
+      "ids": [
+        "C001-CH3"
+      ]
+    },
+    "C001-CH4": {
+      "cls": "research",
+      "reason": "Automating regression test generation across multiple hardware variants involves software engineering R&D.",
+      "ids": [
+        "C001-CH4"
+      ]
+    },
+    "C002-CH1": {
+      "cls": "research",
+      "reason": "Distinguishing random guessing from genuine understanding in student clickstream data is an educational data mining research problem.",
+      "ids": [
+        "C002-CH1"
+      ]
+    },
+    "C002-CH2": {
+      "cls": "research",
+      "reason": "Determining empirically effective font choices and presentation speeds for dyslexia is an educational technology research question.",
+      "ids": [
+        "C002-CH2"
+      ]
+    },
+    "C002-CH3": {
+      "cls": "not_research",
+      "reason": "Grant application paperwork and administrative corrections are standard administrative tasks.",
+      "ids": [
+        "C002-CH3"
+      ]
+    },
+    "C003-CH1": {
+      "cls": "research",
+      "reason": "Investigating weld joint failures under chilled operational conditions involves materials science and structural integrity analysis.",
+      "ids": [
+        "C003-CH1"
+      ]
+    },
+    "C003-CH2": {
+      "cls": "research",
+      "reason": "Refactoring and unifying fragmented PLC ladder logic codebases across numerous installations is a software engineering challenge.",
+      "ids": [
+        "C003-CH2"
+      ]
+    },
+    "C003-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing a bankable cash-flow model and sensitivity analysis for loan application is financial consulting, not research.",
+      "ids": [
+        "C003-CH3"
+      ]
+    },
+    "C003-CH4": {
+      "cls": "research",
+      "reason": "Characterising and mitigating harmonic emissions from servo drives requires electrical engineering and electromagnetic compatibility expertise.",
+      "ids": [
+        "C003-CH4"
+      ]
+    },
+    "C004-CH1": {
+      "cls": "research",
+      "reason": "Spatial interpolation and downscaling of meteorological data to resolve microclimate discrepancies for parametric insurance is research.",
+      "ids": [
+        "C004-CH1"
+      ]
+    },
+    "C004-CH2": {
+      "cls": "research",
+      "reason": "Automated data error detection and verification in third-party API feeds to prevent payout leakage is a software verification task.",
+      "ids": [
+        "C004-CH2"
+      ]
+    },
+    "C004-CH3": {
+      "cls": "research",
+      "reason": "Developing actuarial pricing models for sparse historical event datasets involves advanced statistical estimation and machine learning.",
+      "ids": [
+        "C004-CH3"
+      ]
+    },
+    "C004-CH4": {
+      "cls": "not_research",
+      "reason": "Appointing a licensed intermediary and handling regulatory licensing processes are legal and administrative work.",
+      "ids": [
+        "C004-CH4"
+      ]
+    },
+    "C005-CH1": {
+      "cls": "research",
+      "reason": "Optimizing active current draw in low-power embedded biomedical hardware while maintaining sampling rates is hardware R&D.",
+      "ids": [
+        "C005-CH1"
+      ]
+    },
+    "C005-CH2": {
+      "cls": "research",
+      "reason": "Developing efficient specialized compression algorithms for multi-channel ECG signals is a data compression research problem.",
+      "ids": [
+        "C005-CH2"
+      ]
+    },
+    "C005-CH3": {
+      "cls": "not_research",
+      "reason": "Addressing notified body queries for medical device regulatory compliance is administrative and regulatory documentation work.",
+      "ids": [
+        "C005-CH3"
+      ]
+    },
+    "C006-CH1": {
+      "cls": "research",
+      "reason": "Improving case-outcome prediction accuracy using limited legal text datasets is a natural language processing research task.",
+      "ids": [
+        "C006-CH1"
+      ]
+    },
+    "C006-CH2": {
+      "cls": "not_research",
+      "reason": "Cap table restructuring and handling convertible note terms are legal and corporate finance tasks.",
+      "ids": [
+        "C006-CH2"
+      ]
+    },
+    "C006-CH3": {
+      "cls": "research",
+      "reason": "Attaching reliable confidence scores and source provenance to generated legal summaries is an AI reliability research problem.",
+      "ids": [
+        "C006-CH3"
+      ]
+    },
+    "C006-CH4": {
+      "cls": "research",
+      "reason": "Redesigning database indexing architecture to scale full-text search response times for millions of legal documents is systems research.",
+      "ids": [
+        "C006-CH4"
+      ]
+    },
+    "C007-CH1": {
+      "cls": "research",
+      "reason": "Optimizing pyrolysis parameters to increase fixed carbon yield for biochar certification is chemical process engineering research.",
+      "ids": [
+        "C007-CH1"
+      ]
+    },
+    "C007-CH2": {
+      "cls": "not_research",
+      "reason": "Preparing certification paperwork and navigating scheme documentation are administrative tasks.",
+      "ids": [
+        "C007-CH2"
+      ]
+    },
+    "C007-CH3": {
+      "cls": "research",
+      "reason": "Addressing reliability and maintenance issues caused by inconsistent feedstock properties is industrial engineering research.",
+      "ids": [
+        "C007-CH3"
+      ]
+    },
+    "C008-CH1": {
+      "cls": "research",
+      "reason": "Optimizing low-power wide-area network link performance in extreme low-signal basement environments is telecommunications research.",
+      "ids": [
+        "C008-CH1"
+      ]
+    },
+    "C008-CH2": {
+      "cls": "research",
+      "reason": "Investigating and eliminating weld spatter surface defects prior to powder coating is manufacturing process engineering research.",
+      "ids": [
+        "C008-CH2"
+      ]
+    },
+    "C008-CH3": {
+      "cls": "not_research",
+      "reason": "Navigating foreign public procurement tenders and e-procurement portals is sales and administrative work.",
+      "ids": [
+        "C008-CH3"
+      ]
+    },
+    "C008-CH4": {
+      "cls": "research",
+      "reason": "Refactoring and verifying legacy C code interrupt-handling layers to eliminate race conditions is advanced software engineering research.",
+      "ids": [
+        "C008-CH4"
+      ]
+    },
+    "C009-CH1": {
+      "cls": "research",
+      "reason": "Handling Slavic morphological inflection and mixed-script input in search queries is a natural language processing research problem.",
+      "ids": [
+        "C009-CH1"
+      ]
+    },
+    "C009-CH2": {
+      "cls": "research",
+      "reason": "Improving automated speech recognition accuracy for telephony audio in South Slavic languages is speech technology research.",
+      "ids": [
+        "C009-CH2"
+      ]
+    },
+    "C010-CH1": {
+      "cls": "research",
+      "reason": "Developing credit scoring models for micro firms with under a year of history involves financial modeling and risk research.",
+      "ids": [
+        "C010-CH1"
+      ]
+    },
+    "C010-CH2": {
+      "cls": "research",
+      "reason": "Generating plain-language explainability for automated machine learning credit decisions is an interpretable AI research problem.",
+      "ids": [
+        "C010-CH2"
+      ]
+    },
+    "C011-CH1": {
+      "cls": "research",
+      "reason": "Building production-grade recommender systems from transaction history requires machine learning expertise.",
+      "ids": [
+        "C011-CH1"
+      ]
+    },
+    "C011-CH2": {
+      "cls": "not_research",
+      "reason": "Reviewing and negotiating client data processing agreements under GDPR is legal work.",
+      "ids": [
+        "C011-CH2"
+      ]
+    },
+    "C011-CH3": {
+      "cls": "research",
+      "reason": "Optimizing long-running CI/CD test suites and build pipelines is a software engineering research problem.",
+      "ids": [
+        "C011-CH3"
+      ]
+    },
+    "C011-CH4": {
+      "cls": "research",
+      "reason": "Implementing accurate carbon footprint calculations and lifecycle assessment standards for logistics requires environmental engineering knowledge.",
+      "ids": [
+        "C011-CH4"
+      ]
+    },
+    "C012-CH1": {
+      "cls": "research",
+      "reason": "Automating reconnaissance and vulnerability enumeration phases for continuous penetration testing is a cybersecurity research task.",
+      "ids": [
+        "C012-CH1"
+      ]
+    },
+    "C012-CH2": {
+      "cls": "not_research",
+      "reason": "Designing customer training curricula and educational materials is training development work.",
+      "ids": [
+        "C012-CH2"
+      ]
+    },
+    "C012-CH3": {
+      "cls": "not_research",
+      "reason": "Filing paperwork for statutory auditor registration with government ministries is administrative and legal work.",
+      "ids": [
+        "C012-CH3"
+      ]
+    },
+    "C013-CH1": {
+      "cls": "research",
+      "reason": "Translating raw telematics event streams into predictive per-driver risk scoring models is actuarial and data science research.",
+      "ids": [
+        "C013-CH1"
+      ]
+    },
+    "C013-CH2": {
+      "cls": "research",
+      "reason": "Mapping high-resolution spatial hail intensity to improve agricultural property claim pricing is meteorological and actuarial research.",
+      "ids": [
+        "C013-CH2"
+      ]
+    },
+    "C013-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing regulatory Solvency II internal model validation reports is actuarial compliance and administrative work.",
+      "ids": [
+        "C013-CH3"
+      ]
+    },
+    "C014-CH1": {
+      "cls": "research",
+      "reason": "Building resilient automated data pipelines that handle schema drift across diverse enterprise systems is data engineering research.",
+      "ids": [
+        "C014-CH1"
+      ]
+    },
+    "C014-CH2": {
+      "cls": "not_research",
+      "reason": "Implementing an Information Security Management System for ISO 27001 certification is quality management consulting work.",
+      "ids": [
+        "C014-CH2"
+      ]
+    },
+    "C014-CH3": {
+      "cls": "not_research",
+      "reason": "Onboarding and training junior staff members is human resources and management work.",
+      "ids": [
+        "C014-CH3"
+      ]
+    },
+    "C014-CH4": {
+      "cls": "research",
+      "reason": "Developing reliable natural language to SQL translation and aggregation over business databases is an NLP and database research challenge.",
+      "ids": [
+        "C014-CH4"
+      ]
+    },
+    "C015-CH1": {
+      "cls": "research",
+      "reason": "Investigating chemical reactions and microbial issues causing sulphur smells in ion-exchange water softeners is environmental engineering research.",
+      "ids": [
+        "C015-CH1"
+      ]
+    },
+    "C015-CH2": {
+      "cls": "research",
+      "reason": "Adapting chemical test kit calibrations to high-hardness water matrices is analytical chemistry research.",
+      "ids": [
+        "C015-CH2"
+      ]
+    },
+    "C016-CH1": {
+      "cls": "research",
+      "reason": "Building cross-lingual assisted writing tools to prevent code-switching grammar mistakes is a natural language processing task.",
+      "ids": [
+        "C016-CH1"
+      ]
+    },
+    "C016-CH2": {
+      "cls": "research",
+      "reason": "Modeling audience engagement dynamics to predict optimal social media posting times is data science research.",
+      "ids": [
+        "C016-CH2"
+      ]
+    },
+    "C016-CH3": {
+      "cls": "not_research",
+      "reason": "Purchasing video production equipment or securing equipment leases is commercial procurement and financing.",
+      "ids": [
+        "C016-CH3"
+      ]
+    },
+    "C017-CH1": {
+      "cls": "research",
+      "reason": "Developing cost-effective high-resolution spatial sampling techniques for variable soils involves geostatistical research.",
+      "ids": [
+        "C017-CH1"
+      ]
+    },
+    "C017-CH2": {
+      "cls": "research",
+      "reason": "Building robust document extraction pipelines for diverse unstructured PDF laboratory reports is a document AI research problem.",
+      "ids": [
+        "C017-CH2"
+      ]
+    },
+    "C017-CH3": {
+      "cls": "research",
+      "reason": "Modelling soil buffer capacity and liming recommendations for specific regional soil series is agricultural and soil science research.",
+      "ids": [
+        "C017-CH3"
+      ]
+    },
+    "C018-CH1": {
+      "cls": "research",
+      "reason": "Automating the generation of complex AUTOSAR component configuration files from system extracts is model-driven engineering research.",
+      "ids": [
+        "C018-CH1"
+      ]
+    },
+    "C018-CH2": {
+      "cls": "research",
+      "reason": "Developing systematic methods to detect interaction faults at component boundaries in automotive communication stacks is software engineering research.",
+      "ids": [
+        "C018-CH2"
+      ]
+    },
+    "C018-CH3": {
+      "cls": "not_research",
+      "reason": "Training engineers on protocol internals and handling staff turnover are internal HR and training activities.",
+      "ids": [
+        "C018-CH3"
+      ]
+    },
+    "C019-CH1": {
+      "cls": "research",
+      "reason": "Developing high-speed computer vision systems that reliably read barcodes on curved surfaces of fast-moving parcels is applied vision research.",
+      "ids": [
+        "C019-CH1"
+      ]
+    },
+    "C019-CH2": {
+      "cls": "research",
+      "reason": "Developing ultra-fast vehicle routing re-optimisation algorithms for dynamic same-day delivery is operations research.",
+      "ids": [
+        "C019-CH2"
+      ]
+    },
+    "C019-CH3": {
+      "cls": "not_research",
+      "reason": "Addressing driver turnover, shift flexibility, and retention incentives is human resource management work.",
+      "ids": [
+        "C019-CH3"
+      ]
+    },
+    "C019-CH4": {
+      "cls": "research",
+      "reason": "Forecasting daily return parcel volumes at the SKU level using transaction history is predictive modeling research.",
+      "ids": [
+        "C019-CH4"
+      ]
+    },
+    "C020-CH1": {
+      "cls": "research",
+      "reason": "Automating safety-critical test case generation from functional requirements is software engineering and verification research.",
+      "ids": [
+        "C020-CH1"
+      ]
+    },
+    "C020-CH2": {
+      "cls": "not_research",
+      "reason": "Purchasing or building a hardware-in-the-loop test bench is hardware acquisition and engineering services.",
+      "ids": [
+        "C020-CH2"
+      ]
+    },
+    "C021-CH1": {
+      "cls": "research",
+      "reason": "Optimizing large-scale distributed data reconciliation jobs to run within strict time windows is data engineering research.",
+      "ids": [
+        "C021-CH1"
+      ]
+    },
+    "C021-CH2": {
+      "cls": "research",
+      "reason": "Developing cash-flow forecasting models for short transaction history windows is financial data science research.",
+      "ids": [
+        "C021-CH2"
+      ]
+    },
+    "C021-CH3": {
+      "cls": "not_research",
+      "reason": "Reviewing merchant contract terms to satisfy venture capital investor requirements is legal work.",
+      "ids": [
+        "C021-CH3"
+      ]
+    },
+    "C022-CH1": {
+      "cls": "research",
+      "reason": "Developing automated spatial correction algorithms to align cadaster parcel boundaries with high-resolution imagery is geomatic research.",
+      "ids": [
+        "C022-CH1"
+      ]
+    },
+    "C022-CH2": {
+      "cls": "research",
+      "reason": "Resolving complex cross-version compatibility and stability issues on legacy mobile operating systems is mobile software engineering.",
+      "ids": [
+        "C022-CH2"
+      ]
+    },
+    "C022-CH3": {
+      "cls": "research",
+      "reason": "Modelling evapotranspiration and coupling it with soil-type maps for irrigation scheduling is agricultural and hydrological research.",
+      "ids": [
+        "C022-CH3"
+      ]
+    },
+    "C023-CH1": {
+      "cls": "research",
+      "reason": "Developing computer vision models to detect surface scratches on reflective metal with very few training samples is vision research.",
+      "ids": [
+        "C023-CH1"
+      ]
+    },
+    "C023-CH2": {
+      "cls": "research",
+      "reason": "Optimizing deep learning models for resource-constrained, low-cost edge hardware is embedded systems research.",
+      "ids": [
+        "C023-CH2"
+      ]
+    },
+    "C024-CH1": {
+      "cls": "not_research",
+      "reason": "Formatting technical documentation to meet utility data-model standards for tenders is technical writing and proposal work.",
+      "ids": [
+        "C024-CH1"
+      ]
+    },
+    "C024-CH2": {
+      "cls": "research",
+      "reason": "Investigating thermodynamics and sealing mechanisms to prevent internal cabinet condensation is mechanical engineering research.",
+      "ids": [
+        "C024-CH2"
+      ]
+    },
+    "C024-CH3": {
+      "cls": "research",
+      "reason": "Mining legacy textual maintenance logs to predict equipment failure probabilities is data science and reliability research.",
+      "ids": [
+        "C024-CH3"
+      ]
+    },
+    "C025-CH1": {
+      "cls": "research",
+      "reason": "Developing predictive signal integrity and electromagnetic compatibility simulation workflows for PCB layout is hardware research.",
+      "ids": [
+        "C025-CH1"
+      ]
+    },
+    "C025-CH2": {
+      "cls": "not_research",
+      "reason": "Producing functional safety analysis (FMEDA) documentation for compliance is engineering consulting.",
+      "ids": [
+        "C025-CH2"
+      ]
+    },
+    "C025-CH3": {
+      "cls": "not_research",
+      "reason": "Navigating medical device contract manufacturing audit processes and supplier listing is regulatory compliance work.",
+      "ids": [
+        "C025-CH3"
+      ]
+    },
+    "C025-CH4": {
+      "cls": "research",
+      "reason": "Building few-shot or adaptive optical inspection vision systems for rapidly changing component mixes is computer vision research.",
+      "ids": [
+        "C025-CH4"
+      ]
+    },
+    "C026-CH1": {
+      "cls": "research",
+      "reason": "Improving optical sorting classification accuracy for dark-coloured polymers is mechatronics and machine vision research.",
+      "ids": [
+        "C026-CH1"
+      ]
+    },
+    "C026-CH2": {
+      "cls": "not_research",
+      "reason": "Structuring financial reporting and obtaining corporate credit ratings for bond issuance is financial consulting work.",
+      "ids": [
+        "C026-CH2"
+      ]
+    },
+    "C026-CH3": {
+      "cls": "research",
+      "reason": "Designing leachate containment and groundwater remediation strategies for waste storage is environmental engineering research.",
+      "ids": [
+        "C026-CH3"
+      ]
+    },
+    "C027-CH1": {
+      "cls": "research",
+      "reason": "Developing highly optimized workforce scheduling and constraint solvers for large-scale operations is operations research.",
+      "ids": [
+        "C027-CH1"
+      ]
+    },
+    "C027-CH2": {
+      "cls": "research",
+      "reason": "Validating psychological construct validity and predictive validity of survey instruments is psychometric research.",
+      "ids": [
+        "C027-CH2"
+      ]
+    },
+    "C027-CH3": {
+      "cls": "not_research",
+      "reason": "Providing legal opinions on employment monitoring compliance under labour codes and GDPR is legal work.",
+      "ids": [
+        "C027-CH3"
+      ]
+    },
+    "C027-CH4": {
+      "cls": "not_research",
+      "reason": "Developing financial business cases and ROI metrics for sales pitches is commercial strategy work.",
+      "ids": [
+        "C027-CH4"
+      ]
+    },
+    "C028-CH1": {
+      "cls": "research",
+      "reason": "Modelling polymer cooling dynamics and warpage in injection moulding to optimize process parameters is materials and manufacturing research.",
+      "ids": [
+        "C028-CH1"
+      ]
+    },
+    "C028-CH2": {
+      "cls": "not_research",
+      "reason": "Implementing an environmental management system for ISO 14001 certification is environmental auditing consulting.",
+      "ids": [
+        "C028-CH2"
+      ]
+    },
+    "C028-CH3": {
+      "cls": "research",
+      "reason": "Analyzing surface energy interactions and ink adhesion on plastic substrates is material science and surface chemistry research.",
+      "ids": [
+        "C028-CH3"
+      ]
+    },
+    "C028-CH4": {
+      "cls": "not_research",
+      "reason": "Following up on public grant application statuses and administrative reviews is grant management work.",
+      "ids": [
+        "C028-CH4"
+      ]
+    },
+    "C029-CH1": {
+      "cls": "research",
+      "reason": "Investigating moisture absorption kinetics and hygrothermal properties of natural fibre insulation is building physics research.",
+      "ids": [
+        "C029-CH1"
+      ]
+    },
+    "C029-CH2": {
+      "cls": "research",
+      "reason": "Characterizing recycled concrete aggregate variability and developing mix-design compensation models is structural engineering research.",
+      "ids": [
+        "C029-CH2"
+      ]
+    },
+    "C029-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing life-cycle inventories and Environmental Product Declaration documentation is environmental consultancy work.",
+      "ids": [
+        "C029-CH3"
+      ]
+    },
+    "C029-CH4": {
+      "cls": "research",
+      "reason": "Analyzing manufacturing line efficiency and production cost structures for prefabricated building systems is industrial engineering research.",
+      "ids": [
+        "C029-CH4"
+      ]
+    },
+    "C030-CH1": {
+      "cls": "research",
+      "reason": "Modelling high-frequency switching transient propagation and protection tripping in power electronics is electrical engineering research.",
+      "ids": [
+        "C030-CH1"
+      ]
+    },
+    "C030-CH2": {
+      "cls": "research",
+      "reason": "Developing real-time optimal power flow algorithms for fast SCADA control loops is smart grid research.",
+      "ids": [
+        "C030-CH2"
+      ]
+    },
+    "C030-CH3": {
+      "cls": "not_research",
+      "reason": "Navigating foreign regulatory product certification and legal compliance processes is administrative and legal work.",
+      "ids": [
+        "C030-CH3"
+      ]
+    },
+    "C030-CH4": {
+      "cls": "research",
+      "reason": "Developing data imputation and state estimation algorithms to handle telemetry gaps in smart grids is power systems research.",
+      "ids": [
+        "C030-CH4"
+      ]
+    },
+    "C031-CH1": {
+      "cls": "research",
+      "reason": "Adapting contextual brand-safety filters and natural language classification for regional news content is NLP research.",
+      "ids": [
+        "C031-CH1"
+      ]
+    },
+    "C031-CH2": {
+      "cls": "research",
+      "reason": "Integrating dynamic real-time data feeds (weather, traffic) into digital out-of-home media scheduling is software systems research.",
+      "ids": [
+        "C031-CH2"
+      ]
+    },
+    "C031-CH3": {
+      "cls": "research",
+      "reason": "Designing audience research methodologies to measure editorial trust across demographics is media studies research.",
+      "ids": [
+        "C031-CH3"
+      ]
+    },
+    "C031-CH4": {
+      "cls": "not_research",
+      "reason": "Planning and budgeting the physical archival digitization of legacy magnetic tapes is project management and operational work.",
+      "ids": [
+        "C031-CH4"
+      ]
+    },
+    "C032-CH1": {
+      "cls": "research",
+      "reason": "Developing unsupervised anomaly detection methods for industrial networks without attack datasets is cybersecurity research.",
+      "ids": [
+        "C032-CH1"
+      ]
+    },
+    "C032-CH2": {
+      "cls": "research",
+      "reason": "Evaluating and transitioning embedded signature chains to post-quantum cryptographic algorithms is cryptography research.",
+      "ids": [
+        "C032-CH2"
+      ]
+    },
+    "C033-CH1": {
+      "cls": "research",
+      "reason": "Investigating radio propagation, signal reflection, and multipath interference in metal polytunnels is wireless communications research.",
+      "ids": [
+        "C033-CH1"
+      ]
+    },
+    "C033-CH2": {
+      "cls": "research",
+      "reason": "Designing automated quality control and inspection procedures for small-batch electronics manufacturing is industrial engineering research.",
+      "ids": [
+        "C033-CH2"
+      ]
+    },
+    "C033-CH3": {
+      "cls": "not_research",
+      "reason": "Navigating CE marking requirements and compliance procedures for hardware products is regulatory compliance work.",
+      "ids": [
+        "C033-CH3"
+      ]
+    },
+    "C034-CH1": {
+      "cls": "research",
+      "reason": "Investigating chemical precursors and enzymatic factors causing bitter off-flavors in food preserves is food chemistry research.",
+      "ids": [
+        "C034-CH1"
+      ]
+    },
+    "C034-CH2": {
+      "cls": "research",
+      "reason": "Reformulating low-sugar food products while maintaining gelling properties and shelf stability is food science research.",
+      "ids": [
+        "C034-CH2"
+      ]
+    },
+    "C034-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing standard food safety management plans and HACCP documentation for marketplace onboarding is administrative compliance work.",
+      "ids": [
+        "C034-CH3"
+      ]
+    },
+    "C035-CH1": {
+      "cls": "research",
+      "reason": "Analyzing body sizing distributions and garment fit metrics to reduce ecommerce return rates is apparel engineering research.",
+      "ids": [
+        "C035-CH1"
+      ]
+    },
+    "C035-CH2": {
+      "cls": "research",
+      "reason": "Investigating consumer conversion barriers and UX friction points in fashion e-commerce is consumer behavior research.",
+      "ids": [
+        "C035-CH2"
+      ]
+    },
+    "C035-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing lifecycle assessment documentation for textile wholesale compliance is environmental consulting.",
+      "ids": [
+        "C035-CH3"
+      ]
+    },
+    "C035-CH4": {
+      "cls": "not_research",
+      "reason": "Preparing financial statements, bookkeeping, and securing angel investment are financial and administrative tasks.",
+      "ids": [
+        "C035-CH4"
+      ]
+    },
+    "C036-CH1": {
+      "cls": "research",
+      "reason": "Modelling post-harvest fruit decay kinetics and modified atmosphere packaging to extend shelf-life is food engineering research.",
+      "ids": [
+        "C036-CH1"
+      ]
+    },
+    "C036-CH2": {
+      "cls": "research",
+      "reason": "Developing compostable polymer lidding films with required sealing and barrier properties is materials science research.",
+      "ids": [
+        "C036-CH2"
+      ]
+    },
+    "C037-CH1": {
+      "cls": "research",
+      "reason": "Developing rapid sizing and load-profiling algorithms for battery energy storage systems is energy systems research.",
+      "ids": [
+        "C037-CH1"
+      ]
+    },
+    "C037-CH2": {
+      "cls": "not_research",
+      "reason": "Negotiating bank credit lines and meeting corporate auditing requirements are financial tasks.",
+      "ids": [
+        "C037-CH2"
+      ]
+    },
+    "C038-CH1": {
+      "cls": "research",
+      "reason": "Adapting candidate-job matching algorithms and feature representations for skilled-trades manufacturing roles is machine learning research.",
+      "ids": [
+        "C038-CH1"
+      ]
+    },
+    "C038-CH2": {
+      "cls": "research",
+      "reason": "Developing psychometrically valid and reliable screening test batteries for HR platforms is psychometric research.",
+      "ids": [
+        "C038-CH2"
+      ]
+    },
+    "C038-CH3": {
+      "cls": "not_research",
+      "reason": "Conducting Data Protection Impact Assessments and drafting privacy policies for GDPR compliance are legal tasks.",
+      "ids": [
+        "C038-CH3"
+      ]
+    },
+    "C038-CH4": {
+      "cls": "not_research",
+      "reason": "Recruiting specialized software engineers and migrating database infrastructure are standard software engineering tasks.",
+      "ids": [
+        "C038-CH4"
+      ]
+    },
+    "C039-CH1": {
+      "cls": "research",
+      "reason": "Investigating polymer aging and sensor drift mechanisms in capacitive pressure insoles is biomedical engineering research.",
+      "ids": [
+        "C039-CH1"
+      ]
+    },
+    "C039-CH2": {
+      "cls": "research",
+      "reason": "Optimizing machine learning classification models to achieve high accuracy from short duration sensor trials is biomedical signal processing research.",
+      "ids": [
+        "C039-CH2"
+      ]
+    },
+    "C039-CH3": {
+      "cls": "not_research",
+      "reason": "Implementing standard electronic health record integration protocols (HL7 FHIR) for clients is software integration work.",
+      "ids": [
+        "C039-CH3"
+      ]
+    },
+    "C039-CH4": {
+      "cls": "research",
+      "reason": "Developing advanced gait symmetry indices and compensation models for post-stroke rehabilitation is clinical biomechanics research.",
+      "ids": [
+        "C039-CH4"
+      ]
+    },
+    "C040-CH1": {
+      "cls": "research",
+      "reason": "Addressing domain shift and scanner-to-scanner variance in medical imaging AI models is medical image analysis research.",
+      "ids": [
+        "C040-CH1"
+      ]
+    },
+    "C040-CH2": {
+      "cls": "not_research",
+      "reason": "Structuring venture capital equity financing rounds and finding co-investors are corporate finance tasks.",
+      "ids": [
+        "C040-CH2"
+      ]
+    },
+    "C040-CH3": {
+      "cls": "research",
+      "reason": "Designing active learning query strategies to efficiently prioritize ambiguous edge cases for expert review is AI research.",
+      "ids": [
+        "C040-CH3"
+      ]
+    },
+    "C041-CH1": {
+      "cls": "research",
+      "reason": "Investigating electrochemical corrosion mechanisms of probe electrodes in aggressive soils is materials and agricultural engineering research.",
+      "ids": [
+        "C041-CH1"
+      ]
+    },
+    "C041-CH2": {
+      "cls": "research",
+      "reason": "Interpreting complex electrical impedance spectra to estimate root biomass via advanced regression modeling is agricultural research.",
+      "ids": [
+        "C041-CH2"
+      ]
+    },
+    "C041-CH3": {
+      "cls": "research",
+      "reason": "Studying how crop root morphology differences affect electrical sensor responses across plant hybrids is agronomic research.",
+      "ids": [
+        "C041-CH3"
+      ]
+    },
+    "C041-CH4": {
+      "cls": "research",
+      "reason": "Developing on-device anomaly filtering and time-series compression algorithms for IoT sensor streams is embedded systems research.",
+      "ids": [
+        "C041-CH4"
+      ]
+    },
+    "C042-CH1": {
+      "cls": "research",
+      "reason": "Optimizing complex multi-parcel drone mission planning and real-time re-routing algorithms is robotics and operations research.",
+      "ids": [
+        "C042-CH1"
+      ]
+    },
+    "C042-CH2": {
+      "cls": "research",
+      "reason": "Developing robust computer vision models for automated plant row segmentation and stand density estimation is precision agriculture research.",
+      "ids": [
+        "C042-CH2"
+      ]
+    },
+    "C042-CH3": {
+      "cls": "not_research",
+      "reason": "Reviewing cross-border legal agreements and drone operator licensing regulations is legal compliance work.",
+      "ids": [
+        "C042-CH3"
+      ]
+    },
+    "C043-CH1": {
+      "cls": "research",
+      "reason": "Developing automated crowdsourced or remote-sensing methods for road geometry map updating is geospatial research.",
+      "ids": [
+        "C043-CH1"
+      ]
+    },
+    "C043-CH2": {
+      "cls": "research",
+      "reason": "Developing robust format conversion and geometric mapping algorithms between proprietary formats and OpenDRIVE standards is spatial data engineering.",
+      "ids": [
+        "C043-CH2"
+      ]
+    },
+    "C043-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing pitch decks and seeking venture capital seed investment are business development and fundraising tasks.",
+      "ids": [
+        "C043-CH3"
+      ]
+    },
+    "C044-CH1": {
+      "cls": "research",
+      "reason": "Analyzing cross-lingual educational content difficulty, vocabulary levels, and task sequencing is educational technology research.",
+      "ids": [
+        "C044-CH1"
+      ]
+    },
+    "C044-CH2": {
+      "cls": "research",
+      "reason": "Optimizing 3D graphics rendering pipelines for low-power mobile GPUs in educational apps is computer graphics research.",
+      "ids": [
+        "C044-CH2"
+      ]
+    },
+    "C044-CH3": {
+      "cls": "not_research",
+      "reason": "Managing grant applications and handling administrative form corrections are administrative tasks.",
+      "ids": [
+        "C044-CH3"
+      ]
+    },
+    "C045-CH1": {
+      "cls": "research",
+      "reason": "Developing automated test generation and migration verification strategies for legacy mainframe migrations is software engineering research.",
+      "ids": [
+        "C045-CH1"
+      ]
+    },
+    "C045-CH2": {
+      "cls": "not_research",
+      "reason": "Recruiting IT staff and managing salary compensation bands are human resource management tasks.",
+      "ids": [
+        "C045-CH2"
+      ]
+    },
+    "C045-CH3": {
+      "cls": "research",
+      "reason": "Designing intelligent, pattern-aware cloud workload autoscaling algorithms based on dependencies and time-series patterns is systems research.",
+      "ids": [
+        "C045-CH3"
+      ]
+    },
+    "C045-CH4": {
+      "cls": "research",
+      "reason": "Establishing carbon accounting and lifecycle assessment methodologies for IT cloud services is environmental engineering research.",
+      "ids": [
+        "C045-CH4"
+      ]
+    },
+    "C046-CH1": {
+      "cls": "research",
+      "reason": "Developing predictive models for software project velocity slippage and team fatigue patterns is software engineering research.",
+      "ids": [
+        "C046-CH1"
+      ]
+    },
+    "C046-CH2": {
+      "cls": "not_research",
+      "reason": "Negotiating GDPR data processing addenda and sub-processor clauses with foreign clients is legal work.",
+      "ids": [
+        "C046-CH2"
+      ]
+    },
+    "C046-CH3": {
+      "cls": "not_research",
+      "reason": "Hiring senior cloud architects and competing in the talent market are human resource tasks.",
+      "ids": [
+        "C046-CH3"
+      ]
+    },
+    "C047-CH1": {
+      "cls": "research",
+      "reason": "Developing predictive failure models for power transformers using dissolved gas analysis and load data is power systems research.",
+      "ids": [
+        "C047-CH1"
+      ]
+    },
+    "C047-CH2": {
+      "cls": "research",
+      "reason": "Developing day-ahead load forecasting models accounting for high penetration of rooftop photovoltaic installations is smart grid research.",
+      "ids": [
+        "C047-CH2"
+      ]
+    },
+    "C048-CH1": {
+      "cls": "research",
+      "reason": "Investigating moisture migration and sealing design in outdoor electronics enclosures is mechanical and environmental engineering research.",
+      "ids": [
+        "C048-CH1"
+      ]
+    },
+    "C048-CH2": {
+      "cls": "research",
+      "reason": "Developing accurate solar-battery sizing models using regional insolation and meteorological data is renewable energy research.",
+      "ids": [
+        "C048-CH2"
+      ]
+    },
+    "C048-CH3": {
+      "cls": "research",
+      "reason": "Developing microclimate prediction models for local frost forecasting using sensor networks is agrometeorological research.",
+      "ids": [
+        "C048-CH3"
+      ]
+    },
+    "C049-CH1": {
+      "cls": "research",
+      "reason": "Automating complex business rule engines and payroll processing workflows from spreadsheets is business process automation research.",
+      "ids": [
+        "C049-CH1"
+      ]
+    },
+    "C049-CH2": {
+      "cls": "research",
+      "reason": "Developing automated legal change tracking and document template updating systems is legal informatics research.",
+      "ids": [
+        "C049-CH2"
+      ]
+    },
+    "C049-CH3": {
+      "cls": "research",
+      "reason": "Designing psychometrically valid employee wellbeing survey modules for corporate ESG reporting is organizational psychology research.",
+      "ids": [
+        "C049-CH3"
+      ]
+    },
+    "C050-CH1": {
+      "cls": "research",
+      "reason": "Developing predictive demand forecasting models for e-commerce parcel volume and labor planning is operations research.",
+      "ids": [
+        "C050-CH1"
+      ]
+    },
+    "C050-CH2": {
+      "cls": "research",
+      "reason": "Designing protective packaging inserts and cushioning simulations for fragile goods drop testing is packaging engineering research.",
+      "ids": [
+        "C050-CH2"
+      ]
+    },
+    "C050-CH3": {
+      "cls": "not_research",
+      "reason": "Establishing legal representation and economic operator compliance for EU regulations is legal advisory work.",
+      "ids": [
+        "C050-CH3"
+      ]
+    },
+    "C050-CH4": {
+      "cls": "research",
+      "reason": "Developing unified, error-checked print dispatch workflows across heterogeneous hardware drivers is software engineering research.",
+      "ids": [
+        "C050-CH4"
+      ]
+    },
+    "C051-CH1": {
+      "cls": "research",
+      "reason": "Developing advanced route difficulty and physical effort estimation models for cycling topography is transportation and sports science research.",
+      "ids": [
+        "C051-CH1"
+      ]
+    },
+    "C051-CH2": {
+      "cls": "research",
+      "reason": "Automating hardware manufacturing calibration procedures for GPS antenna assemblies is industrial engineering research.",
+      "ids": [
+        "C051-CH2"
+      ]
+    },
+    "C051-CH3": {
+      "cls": "not_research",
+      "reason": "Fundraising, financial projections, and corporate valuation do not involve an open technical research question.",
+      "ids": [
+        "C051-CH3"
+      ]
+    },
+    "C051-CH4": {
+      "cls": "research",
+      "reason": "Optimizing a slow map rendering pipeline for mobile devices is an applied computer graphics and software engineering challenge.",
+      "ids": [
+        "C051-CH4"
+      ]
+    },
+    "C052-CH1": {
+      "cls": "research",
+      "reason": "Real-time adjustment of pesticide flow rate based on crop canopy vision involves agricultural robotics and image processing.",
+      "ids": [
+        "C052-CH1"
+      ]
+    },
+    "C052-CH2": {
+      "cls": "not_research",
+      "reason": "Manual flight planning is a workflow bottleneck best solved by off-the-shelf software or hiring, not university research.",
+      "ids": [
+        "C052-CH2"
+      ]
+    },
+    "C052-CH3": {
+      "cls": "not_research",
+      "reason": "Developing a financial model and go-to-market plan for expansion is business administration, not scientific research.",
+      "ids": [
+        "C052-CH3"
+      ]
+    },
+    "C052-CH4": {
+      "cls": "research",
+      "reason": "Investigating clay adhesion and soil buildup on low-flying drone structures is a materials and mechanical engineering problem.",
+      "ids": [
+        "C052-CH4"
+      ]
+    },
+    "C053-CH1": {
+      "cls": "research",
+      "reason": "Troubleshooting coagulant performance to meet strict manganese and iron discharge limits is chemical and environmental research.",
+      "ids": [
+        "C053-CH1"
+      ]
+    },
+    "C053-CH2": {
+      "cls": "not_research",
+      "reason": "Sizing recycling units via spreadsheets is a standard engineering calculation and sales tool development task.",
+      "ids": [
+        "C053-CH2"
+      ]
+    },
+    "C053-CH3": {
+      "cls": "not_research",
+      "reason": "Regulatory permitting and licensing for hazardous waste transport is a legal and administrative process.",
+      "ids": [
+        "C053-CH3"
+      ]
+    },
+    "C053-CH4": {
+      "cls": "research",
+      "reason": "Identifying microbial consortia forming biofilms in storage tanks and suppressing them requires microbiological research.",
+      "ids": [
+        "C053-CH4"
+      ]
+    },
+    "C054-CH1": {
+      "cls": "research",
+      "reason": "Investigating lithium battery performance degradation under sub-zero temperatures is an electrochemical and thermal engineering question.",
+      "ids": [
+        "C054-CH1"
+      ]
+    },
+    "C054-CH2": {
+      "cls": "research",
+      "reason": "Automating the counting of trapped insects on sticky pads via embedded camera vision is a pattern recognition task.",
+      "ids": [
+        "C054-CH2"
+      ]
+    },
+    "C055-CH1": {
+      "cls": "research",
+      "reason": "Compensating for positional drift caused by thermal expansion in welding fixtures is a precision engineering problem.",
+      "ids": [
+        "C055-CH1"
+      ]
+    },
+    "C055-CH2": {
+      "cls": "not_research",
+      "reason": "Building a costing estimator for tender preparation is an internal business process improvement task.",
+      "ids": [
+        "C055-CH2"
+      ]
+    },
+    "C055-CH3": {
+      "cls": "not_research",
+      "reason": "CE marking and Machinery Directive compliance interpretation are legal and regulatory tasks.",
+      "ids": [
+        "C055-CH3"
+      ]
+    },
+    "C056-CH1": {
+      "cls": "research",
+      "reason": "Improving procedural level generators to prevent player repetition and maintain high retention is game design algorithm research.",
+      "ids": [
+        "C056-CH1"
+      ]
+    },
+    "C056-CH2": {
+      "cls": "research",
+      "reason": "Automating lip-sync animation from dialogue audio files is a speech processing and computer animation research problem.",
+      "ids": [
+        "C056-CH2"
+      ]
+    },
+    "C056-CH3": {
+      "cls": "not_research",
+      "reason": "Cross-border contract negotiation and intellectual property ownership clauses are legal services.",
+      "ids": [
+        "C056-CH3"
+      ]
+    },
+    "C057-CH1": {
+      "cls": "research",
+      "reason": "Predicting per-parcel crop yield from vigour maps and remote sensing data is an agricultural modeling research task.",
+      "ids": [
+        "C057-CH1"
+      ]
+    },
+    "C057-CH2": {
+      "cls": "research",
+      "reason": "Developing affordable soil moisture estimation methods using remote sensing proxies is an agricultural science challenge.",
+      "ids": [
+        "C057-CH2"
+      ]
+    },
+    "C058-CH1": {
+      "cls": "research",
+      "reason": "Investigating temperature-dependent oxygen transmission rate spikes in mono-material PE pouches is polymer packaging research.",
+      "ids": [
+        "C058-CH1"
+      ]
+    },
+    "C058-CH2": {
+      "cls": "not_research",
+      "reason": "Paying an external laboratory for regulatory recyclability certification is a testing and compliance service purchase.",
+      "ids": [
+        "C058-CH2"
+      ]
+    },
+    "C058-CH3": {
+      "cls": "research",
+      "reason": "Broadening the sealing temperature window of mLLDPE films without losing peel strength is polymer engineering research.",
+      "ids": [
+        "C058-CH3"
+      ]
+    },
+    "C058-CH4": {
+      "cls": "research",
+      "reason": "Testing the technical feasibility of direct digital inkjet printing on plastic films for ink adhesion is materials research.",
+      "ids": [
+        "C058-CH4"
+      ]
+    },
+    "C059-CH1": {
+      "cls": "research",
+      "reason": "Using vibration and temperature sensor data to build predictive engine failure models is applied machine learning and reliability engineering.",
+      "ids": [
+        "C059-CH1"
+      ]
+    },
+    "C059-CH2": {
+      "cls": "research",
+      "reason": "Developing reliable low-water level forecasting models for inland waterways is hydrological and hydraulic engineering research.",
+      "ids": [
+        "C059-CH2"
+      ]
+    },
+    "C059-CH3": {
+      "cls": "not_research",
+      "reason": "Replacing spreadsheet-based payroll and HR administration with an off-the-shelf software package is administrative work.",
+      "ids": [
+        "C059-CH3"
+      ]
+    },
+    "C060-CH1": {
+      "cls": "research",
+      "reason": "Speed up real-time schedule re-optimisation for public transit disruptions using advanced combinatorial algorithms.",
+      "ids": [
+        "C060-CH1"
+      ]
+    },
+    "C060-CH2": {
+      "cls": "research",
+      "reason": "Building travel time prediction models from massive AVL time-series data streams is intelligent transportation systems research.",
+      "ids": [
+        "C060-CH2"
+      ]
+    },
+    "C060-CH3": {
+      "cls": "not_research",
+      "reason": "Navigating cross-border transport licensing and GDPR data-residency compliance is legal work.",
+      "ids": [
+        "C060-CH3"
+      ]
+    },
+    "C061-CH1": {
+      "cls": "research",
+      "reason": "Determining the lipid oxidation pathways causing rapid rancidity in cold-pressed pumpkin seed oil is food chemistry research.",
+      "ids": [
+        "C061-CH1"
+      ]
+    },
+    "C061-CH2": {
+      "cls": "not_research",
+      "reason": "Optimizing filter press cleaning routines or buying a larger press is an industrial machinery operations problem.",
+      "ids": [
+        "C061-CH2"
+      ]
+    },
+    "C061-CH3": {
+      "cls": "not_research",
+      "reason": "Following up on pending organic certification applications with a certifying body is administrative work.",
+      "ids": [
+        "C061-CH3"
+      ]
+    },
+    "C062-CH1": {
+      "cls": "research",
+      "reason": "Automating the interpretation of GPR B-scan images to detect underground utility pipes is image processing and computer vision research.",
+      "ids": [
+        "C062-CH1"
+      ]
+    },
+    "C062-CH2": {
+      "cls": "research",
+      "reason": "Extracting infrastructure deformation and subsidence signals from archival GNSS base-station RINEX data is geodetic research.",
+      "ids": [
+        "C062-CH2"
+      ]
+    },
+    "C062-CH3": {
+      "cls": "not_research",
+      "reason": "Subcontracting cadastral certification to a foreign-licensed surveyor is a commercial service purchase.",
+      "ids": [
+        "C062-CH3"
+      ]
+    },
+    "C063-CH1": {
+      "cls": "research",
+      "reason": "Parallelizing finite-element physics solvers in C++ to achieve real-time digital twin performance is high-performance computing research.",
+      "ids": [
+        "C063-CH1"
+      ]
+    },
+    "C063-CH2": {
+      "cls": "no_uns_fit",
+      "reason": "Structural dynamics and vibration fatigue analysis is a real engineering question, but the closest university groups lack matching expertise.",
+      "ids": [
+        "C063-CH2"
+      ]
+    },
+    "C063-CH3": {
+      "cls": "research",
+      "reason": "Optimizing 3D web viewer rendering performance for massive CAD mesh files in browsers is computer graphics geometry processing research.",
+      "ids": [
+        "C063-CH3"
+      ]
+    },
+    "C063-CH4": {
+      "cls": "research",
+      "reason": "Integrating worker ergonomics assessment layers into manufacturing digital twins combines industrial engineering and human factors research.",
+      "ids": [
+        "C063-CH4"
+      ]
+    },
+    "C064-CH1": {
+      "cls": "research",
+      "reason": "Detecting infinite loops and deadlocks in user-drawn workflow automation diagrams is formal methods and verification research.",
+      "ids": [
+        "C064-CH1"
+      ]
+    },
+    "C064-CH2": {
+      "cls": "not_research",
+      "reason": "Integrating multiple telematics vendor APIs into a dashboard is standard software engineering integration work.",
+      "ids": [
+        "C064-CH2"
+      ]
+    },
+    "C064-CH3": {
+      "cls": "not_research",
+      "reason": "Sales training and presentation coaching for founders is professional development services.",
+      "ids": [
+        "C064-CH3"
+      ]
+    },
+    "C065-CH1": {
+      "cls": "research",
+      "reason": "Improving cross-lingual consistency checking for administrative and grant terminology is natural language processing research.",
+      "ids": [
+        "C065-CH1"
+      ]
+    },
+    "C065-CH2": {
+      "cls": "research",
+      "reason": "Developing robust product recommendation models for low-transaction e-commerce stores is machine learning recommender systems research.",
+      "ids": [
+        "C065-CH2"
+      ]
+    },
+    "C065-CH3": {
+      "cls": "not_research",
+      "reason": "Securing a line of credit or bank loan to acquire a competitor is corporate finance and administrative work.",
+      "ids": [
+        "C065-CH3"
+      ]
+    },
+    "C066-CH1": {
+      "cls": "research",
+      "reason": "Developing structural calculation methodologies for timber-frame and glulam connections is civil engineering research.",
+      "ids": [
+        "C066-CH1"
+      ]
+    },
+    "C066-CH2": {
+      "cls": "research",
+      "reason": "Streamlining seismic vulnerability assessments for older masonry buildings is structural engineering research.",
+      "ids": [
+        "C066-CH2"
+      ]
+    },
+    "C066-CH3": {
+      "cls": "not_research",
+      "reason": "Recruiting staff and competing with Western European salary levels is an HR and recruitment challenge.",
+      "ids": [
+        "C066-CH3"
+      ]
+    },
+    "C067-CH1": {
+      "cls": "research",
+      "reason": "Resolving cross-lingual semantic matching errors in financial budget line items is natural language processing research.",
+      "ids": [
+        "C067-CH1"
+      ]
+    },
+    "C067-CH2": {
+      "cls": "not_research",
+      "reason": "Raising seed funding from angel investors is startup financing, not research.",
+      "ids": [
+        "C067-CH2"
+      ]
+    },
+    "C067-CH3": {
+      "cls": "research",
+      "reason": "Structuring database logging to satisfy legal admissibility and electronic record regulations across jurisdictions is digital law and compliance research.",
+      "ids": [
+        "C067-CH3"
+      ]
+    },
+    "C068-CH1": {
+      "cls": "research",
+      "reason": "Optimizing automated fitting clearance algorithms for 3D-printed orthoses to prevent pressure sores is biomedical engineering research.",
+      "ids": [
+        "C068-CH1"
+      ]
+    },
+    "C068-CH2": {
+      "cls": "research",
+      "reason": "Investigating fatigue failure mechanisms in PA12 nylon FDM printed parts under cyclic loading is materials and additive manufacturing research.",
+      "ids": [
+        "C068-CH2"
+      ]
+    },
+    "C068-CH3": {
+      "cls": "not_research",
+      "reason": "Calculating export logistics and customs costs for pricing tenders is commercial business operations work.",
+      "ids": [
+        "C068-CH3"
+      ]
+    },
+    "C068-CH4": {
+      "cls": "research",
+      "reason": "Implementing real-time computer vision monitoring on FDM printers to detect layer delamination defects is machine vision research.",
+      "ids": [
+        "C068-CH4"
+      ]
+    },
+    "C069-CH1": {
+      "cls": "research",
+      "reason": "Automating springback compensation for press-brake sheet metal bending is manufacturing and computational mechanics research.",
+      "ids": [
+        "C069-CH1"
+      ]
+    },
+    "C069-CH2": {
+      "cls": "research",
+      "reason": "Disaggregating electrical energy consumption across welding stations to identify efficiency waste is industrial engineering research.",
+      "ids": [
+        "C069-CH2"
+      ]
+    },
+    "C069-CH3": {
+      "cls": "not_research",
+      "reason": "Hiring skilled CNC programmers in a tight local labor market is a recruitment challenge.",
+      "ids": [
+        "C069-CH3"
+      ]
+    },
+    "C069-CH4": {
+      "cls": "research",
+      "reason": "Investigating ash inclusion surface defects caused by high silicon content in hot-dip galvanizing is materials metallurgy research.",
+      "ids": [
+        "C069-CH4"
+      ]
+    },
+    "C070-CH1": {
+      "cls": "research",
+      "reason": "Modelling realistic dynamic load physics for forklift training simulators is mechanical dynamics and simulation research.",
+      "ids": [
+        "C070-CH1"
+      ]
+    },
+    "C070-CH2": {
+      "cls": "research",
+      "reason": "Converting raw eye-tracking scanpath data into meaningful performance and attention scores is human factors and cognitive psychology research.",
+      "ids": [
+        "C070-CH2"
+      ]
+    },
+    "C070-CH3": {
+      "cls": "research",
+      "reason": "Optimizing real-time particle rendering for dust and smoke effects on mid-range hardware is computer graphics research.",
+      "ids": [
+        "C070-CH3"
+      ]
+    },
+    "C070-CH4": {
+      "cls": "research",
+      "reason": "Designing formal validation studies with control groups for vocational training simulator certification is educational and methodological research.",
+      "ids": [
+        "C070-CH4"
+      ]
+    },
+    "C071-CH1": {
+      "cls": "research",
+      "reason": "Modeling battery voltage degradation and early failure predictors in IoT coin-cell nodes is energy storage reliability research.",
+      "ids": [
+        "C071-CH1"
+      ]
+    },
+    "C071-CH2": {
+      "cls": "research",
+      "reason": "Conducting pre-compliance electromagnetic compatibility and antenna matching tests for sub-GHz mesh radios is electrical engineering research.",
+      "ids": [
+        "C071-CH2"
+      ]
+    },
+    "C071-CH3": {
+      "cls": "not_research",
+      "reason": "Purchasing a formal cryptographic security audit from an external consultancy is a compliance service purchase.",
+      "ids": [
+        "C071-CH3"
+      ]
+    },
+    "C071-CH4": {
+      "cls": "research",
+      "reason": "Automating test coverage analysis and designing smart jigs to catch intermittent thermal faults is electronic test engineering research.",
+      "ids": [
+        "C071-CH4"
+      ]
+    },
+    "C072-CH1": {
+      "cls": "research",
+      "reason": "Reconstructing historical period-authentic dialogue and linguistic usage in Serbian and Hungarian is historical corpus linguistics research.",
+      "ids": [
+        "C072-CH1"
+      ]
+    },
+    "C072-CH2": {
+      "cls": "research",
+      "reason": "Reconstructing interwar architectural heritage from sparse photographs is architectural morphology and digital heritage research.",
+      "ids": [
+        "C072-CH2"
+      ]
+    },
+    "C073-CH1": {
+      "cls": "research",
+      "reason": "Adapting customer mood and intent inference models across different retail markets using domain adaptation is machine learning research.",
+      "ids": [
+        "C073-CH1"
+      ]
+    },
+    "C073-CH2": {
+      "cls": "research",
+      "reason": "Drafting algorithmic impact assessments and feature importance documentation to satisfy EU AI Act transparency requirements is legal and technical research.",
+      "ids": [
+        "C073-CH2"
+      ]
+    },
+    "C073-CH3": {
+      "cls": "research",
+      "reason": "Improving people-counting vision models under severe occlusion from tall shelving units is computer vision research.",
+      "ids": [
+        "C073-CH3"
+      ]
+    },
+    "C073-CH4": {
+      "cls": "not_research",
+      "reason": "Hiring a German-speaking enterprise sales manager is a recruitment challenge.",
+      "ids": [
+        "C073-CH4"
+      ]
+    },
+    "C074-CH1": {
+      "cls": "research",
+      "reason": "Automating the conversion of massive drone LiDAR point clouds into structured BIM bridge models is geomatics and civil informatics research.",
+      "ids": [
+        "C074-CH1"
+      ]
+    },
+    "C074-CH2": {
+      "cls": "research",
+      "reason": "Optimizing spatial query performance for massive parcel datasets in web GIS platforms is spatial database and geoinformatics research.",
+      "ids": [
+        "C074-CH2"
+      ]
+    },
+    "C074-CH3": {
+      "cls": "research",
+      "reason": "Developing advanced geostatistical interpolation methods for subsurface stratigraphy between sparse boreholes is geotechnical engineering research.",
+      "ids": [
+        "C074-CH3"
+      ]
+    },
+    "C074-CH4": {
+      "cls": "not_research",
+      "reason": "Navigating administrative paperwork for professional license renewal with the Geodetic Authority is legal and administrative work.",
+      "ids": [
+        "C074-CH4"
+      ]
+    },
+    "C075-CH1": {
+      "cls": "research",
+      "reason": "Analyzing and mitigating voltage rise issues on rural low-voltage feeders caused by high photovoltaic penetration is electrical power systems research.",
+      "ids": [
+        "C075-CH1"
+      ]
+    },
+    "C075-CH2": {
+      "cls": "research",
+      "reason": "Developing standardized methodologies for calculating greenhouse gas emissions from low-voltage network operations is environmental life-cycle research.",
+      "ids": [
+        "C075-CH2"
+      ]
+    },
+    "C075-CH3": {
+      "cls": "research",
+      "reason": "Improving underground utility mapping and cable localization accuracy from historical archives is geodetic and geophysical research.",
+      "ids": [
+        "C075-CH3"
+      ]
+    },
+    "C075-CH4": {
+      "cls": "not_research",
+      "reason": "Recruiting skilled electricians and commissioning engineers for BESS installations is a hiring challenge.",
+      "ids": [
+        "C075-CH4"
+      ]
+    },
+    "C076-CH1": {
+      "cls": "research",
+      "reason": "Generating accurate 3D urban building models with complex historic roof forms from basic footprint extrusions is urban morphology research.",
+      "ids": [
+        "C076-CH1"
+      ]
+    },
+    "C076-CH2": {
+      "cls": "research",
+      "reason": "Developing fast microclimate simulation layers for pedestrian wind and shadow comfort in urban planning is building physics and environmental engineering research.",
+      "ids": [
+        "C076-CH2"
+      ]
+    },
+    "C076-CH3": {
+      "cls": "research",
+      "reason": "Resolving datum transformation and coordinate system misalignment issues between national geodetic datums and ETRS89 is geodesy research.",
+      "ids": [
+        "C076-CH3"
+      ]
+    },
+    "C076-CH4": {
+      "cls": "not_research",
+      "reason": "Converting statutory financial statements to IFRS format for investors is accounting and auditing work.",
+      "ids": [
+        "C076-CH4"
+      ]
+    },
+    "C077-CH1": {
+      "cls": "research",
+      "reason": "Optimizing collaborative robot safety zone protocols to minimize throughput loss on mixed assembly lines is robotics research.",
+      "ids": [
+        "C077-CH1"
+      ]
+    },
+    "C077-CH2": {
+      "cls": "not_research",
+      "reason": "Manual programming of robot workcells is standard engineering integration work.",
+      "ids": [
+        "C077-CH2"
+      ]
+    },
+    "C077-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing CE declarations of conformity and regulatory paperwork for export is legal and administrative compliance work.",
+      "ids": [
+        "C077-CH3"
+      ]
+    },
+    "C077-CH4": {
+      "cls": "research",
+      "reason": "Implementing real-time sensor feedback loops to compensate for thermal workpiece drift in robotic welding is manufacturing automation research.",
+      "ids": [
+        "C077-CH4"
+      ]
+    },
+    "C078-CH1": {
+      "cls": "research",
+      "reason": "Formulating cosmetic emulsions to extend shelf life without exceeding regulatory preservative limits is cosmetic science research.",
+      "ids": [
+        "C078-CH1"
+      ]
+    },
+    "C078-CH2": {
+      "cls": "research",
+      "reason": "Optimizing raw material pre-treatment and steam-distillation profiles to maximize essential oil yields is chemical engineering research.",
+      "ids": [
+        "C078-CH2"
+      ]
+    },
+    "C078-CH3": {
+      "cls": "not_research",
+      "reason": "Paying an external laboratory for SPF validation testing of sunscreen products is a testing service purchase.",
+      "ids": [
+        "C078-CH3"
+      ]
+    },
+    "C078-CH4": {
+      "cls": "research",
+      "reason": "Investigating wall thickness distribution and thermal warping in injection-moulded plastic jar lids is polymer processing engineering research.",
+      "ids": [
+        "C078-CH4"
+      ]
+    },
+    "C079-CH1": {
+      "cls": "research",
+      "reason": "Adapting injury-risk prediction models from elite sports datasets to amateur regional league populations is sports science research.",
+      "ids": [
+        "C079-CH1"
+      ]
+    },
+    "C079-CH2": {
+      "cls": "research",
+      "reason": "Redesigning coaching dashboards and metric visualization for better usability among older users is human-computer interaction research.",
+      "ids": [
+        "C079-CH2"
+      ]
+    },
+    "C079-CH3": {
+      "cls": "not_research",
+      "reason": "Recruiting senior backend engineers in a competitive labor market is an HR challenge.",
+      "ids": [
+        "C079-CH3"
+      ]
+    },
+    "C080-CH1": {
+      "cls": "research",
+      "reason": "Investigating vertical flame spread test failures on protective clothing collar seams is materials and textile engineering research.",
+      "ids": [
+        "C080-CH1"
+      ]
+    },
+    "C080-CH2": {
+      "cls": "research",
+      "reason": "Designing wastewater treatment processes to reduce COD levels in textile dyeing effluent is environmental engineering research.",
+      "ids": [
+        "C080-CH2"
+      ]
+    },
+    "C080-CH3": {
+      "cls": "not_research",
+      "reason": "Handling EU PPE Regulation registration and technical file paperwork is administrative and legal compliance work.",
+      "ids": [
+        "C080-CH3"
+      ]
+    },
+    "C080-CH4": {
+      "cls": "research",
+      "reason": "Optimizing automated fabric cutting layouts and marker-making to improve material utilization is operational research and computational geometry.",
+      "ids": [
+        "C080-CH4"
+      ]
+    },
+    "C081-CH1": {
+      "cls": "research",
+      "reason": "Designing power electronics circuits to reduce total harmonic distortion in LED drivers below strict compliance limits is electrical engineering research.",
+      "ids": [
+        "C081-CH1"
+      ]
+    },
+    "C081-CH2": {
+      "cls": "research",
+      "reason": "Developing adaptive spectral tuning algorithms based on plant photomorphogenic growth models is plant physiology research.",
+      "ids": [
+        "C081-CH2"
+      ]
+    },
+    "C081-CH3": {
+      "cls": "research",
+      "reason": "Developing localized scheduling and dimming optimization algorithms for embedded microcontroller networks is operations research.",
+      "ids": [
+        "C081-CH3"
+      ]
+    },
+    "C081-CH4": {
+      "cls": "not_research",
+      "reason": "Grant application writing and financial structuring for EU audits is administrative and accounting work.",
+      "ids": [
+        "C081-CH4"
+      ]
+    },
+    "C082-CH1": {
+      "cls": "research",
+      "reason": "Optimizing chromatography purification processes to achieve high phycocyanin purity and heavy metal compliance is biochemical engineering research.",
+      "ids": [
+        "C082-CH1"
+      ]
+    },
+    "C082-CH2": {
+      "cls": "research",
+      "reason": "Managing the light-temperature trade-off in outdoor microalgae raceway ponds during winter is bioprocess engineering research.",
+      "ids": [
+        "C082-CH2"
+      ]
+    },
+    "C082-CH3": {
+      "cls": "not_research",
+      "reason": "Drafting formal distribution and supply contracts with legal terms is legal work.",
+      "ids": [
+        "C082-CH3"
+      ]
+    },
+    "C083-CH1": {
+      "cls": "research",
+      "reason": "Developing fast re-optimisation algorithms for same-day delivery routing under dynamic order changes is operations research.",
+      "ids": [
+        "C083-CH1"
+      ]
+    },
+    "C083-CH2": {
+      "cls": "research",
+      "reason": "Building retail store demand forecasting models to optimize delivery sizing and timing is supply chain analytics research.",
+      "ids": [
+        "C083-CH2"
+      ]
+    },
+    "C084-CH1": {
+      "cls": "research",
+      "reason": "Developing automated parcel-to-bus loading and scheduling algorithms under seasonal schedule changes is operations research.",
+      "ids": [
+        "C084-CH1"
+      ]
+    },
+    "C084-CH2": {
+      "cls": "not_research",
+      "reason": "Maintaining multilingual customer interfaces and hiring German speakers is software localization and hiring work.",
+      "ids": [
+        "C084-CH2"
+      ]
+    },
+    "C084-CH3": {
+      "cls": "research",
+      "reason": "Re-engineering sorting hub floor layouts and material flow during peak hours is industrial engineering research.",
+      "ids": [
+        "C084-CH3"
+      ]
+    },
+    "C085-CH1": {
+      "cls": "research",
+      "reason": "Optimizing laboratory middleware rule sets and delta-check algorithms to minimize unnecessary manual reviews is biomedical informatics research.",
+      "ids": [
+        "C085-CH1"
+      ]
+    },
+    "C085-CH2": {
+      "cls": "research",
+      "reason": "Investigating inconclusive antimicrobial susceptibility results in Enterococcus strains from poultry is veterinary microbiology research.",
+      "ids": [
+        "C085-CH2"
+      ]
+    },
+    "C085-CH3": {
+      "cls": "not_research",
+      "reason": "Upgrading software to support national e-health HL7 FHIR standards is standard software integration work.",
+      "ids": [
+        "C085-CH3"
+      ]
+    },
+    "C086-CH1": {
+      "cls": "research",
+      "reason": "Designing migration paths and implementing post-quantum cryptographic algorithms in hardware security modules is cryptography research.",
+      "ids": [
+        "C086-CH1"
+      ]
+    },
+    "C086-CH2": {
+      "cls": "research",
+      "reason": "Optimizing distributed database query performance and revocation check response times for high-volume PKI platforms is distributed systems research.",
+      "ids": [
+        "C086-CH2"
+      ]
+    },
+    "C086-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing IFRS-consolidated financials for venture capital fundraising is accounting and financial reporting work.",
+      "ids": [
+        "C086-CH3"
+      ]
+    },
+    "C086-CH4": {
+      "cls": "research",
+      "reason": "Investigating micro-fractures in epoxy potting layers during thermal cycling for hardware security enclosures is materials failure analysis research.",
+      "ids": [
+        "C086-CH4"
+      ]
+    },
+    "C087-CH1": {
+      "cls": "research",
+      "reason": "Modeling and mitigating pesticide drift in agricultural drones under varying wind conditions is control engineering and precision agriculture research.",
+      "ids": [
+        "C087-CH1"
+      ]
+    },
+    "C087-CH2": {
+      "cls": "research",
+      "reason": "Automating agronomic prescription map generation from multi-source spatial data layers is precision agriculture research.",
+      "ids": [
+        "C087-CH2"
+      ]
+    },
+    "C087-CH3": {
+      "cls": "not_research",
+      "reason": "Building three-year financial models and scenario analysis for investors is financial forecasting and accounting work.",
+      "ids": [
+        "C087-CH3"
+      ]
+    },
+    "C088-CH1": {
+      "cls": "research",
+      "reason": "Developing advanced water treatment processes to remove active pharmaceutical ingredients is environmental engineering research.",
+      "ids": [
+        "C088-CH1"
+      ]
+    },
+    "C088-CH2": {
+      "cls": "research",
+      "reason": "Investigating membrane fouling mechanisms and cleaning cycle optimization in dairy wastewater systems is chemical membrane engineering research.",
+      "ids": [
+        "C088-CH2"
+      ]
+    },
+    "C089-CH1": {
+      "cls": "research",
+      "reason": "Investigating the physicochemical conditions causing soda ash formation on cold-process soap surfaces is surface and colloid chemistry research.",
+      "ids": [
+        "C089-CH1"
+      ]
+    },
+    "C089-CH2": {
+      "cls": "research",
+      "reason": "Analyzing fatty-acid profiles of local Vojvodina plant oils as alternatives in cosmetics formulation is lipid chemistry research.",
+      "ids": [
+        "C089-CH2"
+      ]
+    },
+    "C089-CH3": {
+      "cls": "not_research",
+      "reason": "Analyzing webshop funnel drop-offs and abandoned-cart rates is e-commerce marketing work.",
+      "ids": [
+        "C089-CH3"
+      ]
+    },
+    "C090-CH1": {
+      "cls": "research",
+      "reason": "Improving automated species identification models for birds and insects from guest photographs is biodiversity and computer vision research.",
+      "ids": [
+        "C090-CH1"
+      ]
+    },
+    "C090-CH2": {
+      "cls": "research",
+      "reason": "Developing validated carbon-footprint calculation methodologies for tour packages at the per-guest level is environmental life-cycle accounting research.",
+      "ids": [
+        "C090-CH2"
+      ]
+    },
+    "C090-CH3": {
+      "cls": "not_research",
+      "reason": "Navigating administrative permit renewals with protected area inspectorates is administrative and legal work.",
+      "ids": [
+        "C090-CH3"
+      ]
+    },
+    "C090-CH4": {
+      "cls": "research",
+      "reason": "Analyzing spatial movement data, timestamps, and GPS logs from guided tours to optimize itineraries is spatial data analysis research.",
+      "ids": [
+        "C090-CH4"
+      ]
+    },
+    "C091-CH1": {
+      "cls": "research",
+      "reason": "Developing signal processing algorithms to eliminate motion artifacts in wearable ECG and heart rate monitors is biomedical signal processing research.",
+      "ids": [
+        "C091-CH1"
+      ]
+    },
+    "C091-CH2": {
+      "cls": "research",
+      "reason": "Designing and executing clinical validation studies required for medical device CE marking under MDR is clinical research.",
+      "ids": [
+        "C091-CH2"
+      ]
+    },
+    "C092-CH1": {
+      "cls": "research",
+      "reason": "Developing edge-compression and filtering algorithms for high-frequency vibration sensor streams is embedded systems and signal processing research.",
+      "ids": [
+        "C092-CH1"
+      ]
+    },
+    "C092-CH2": {
+      "cls": "research",
+      "reason": "Building multi-class fault classification models to distinguish worn differentials from failing wheel bearings is machine learning and diagnostics research.",
+      "ids": [
+        "C092-CH2"
+      ]
+    },
+    "C092-CH3": {
+      "cls": "not_research",
+      "reason": "Drafting data-processing agreements and navigating German Betriebsrat co-determination rules is legal compliance work.",
+      "ids": [
+        "C092-CH3"
+      ]
+    },
+    "C092-CH4": {
+      "cls": "research",
+      "reason": "Investigating corrosion and thermal potting seal failures on electronic PCBs in harsh environments is materials and reliability engineering research.",
+      "ids": [
+        "C092-CH4"
+      ]
+    },
+    "C093-CH1": {
+      "cls": "research",
+      "reason": "Developing non-destructive diagnostic methods to distinguish deeply discharged lithium-ion cells from degraded ones is electrical energy storage research.",
+      "ids": [
+        "C093-CH1"
+      ]
+    },
+    "C093-CH2": {
+      "cls": "research",
+      "reason": "Diagnosing network dropouts and communication failures in remote IoT sensor nodes is telecommunications and embedded systems research.",
+      "ids": [
+        "C093-CH2"
+      ]
+    },
+    "C093-CH3": {
+      "cls": "research",
+      "reason": "Redesigning e-waste disassembly station layouts and operations workflows to improve throughput is industrial and ergonomics engineering research.",
+      "ids": [
+        "C093-CH3"
+      ]
+    },
+    "C093-CH4": {
+      "cls": "not_research",
+      "reason": "Hiring electronics engineers and building an internal testing bench is a recruitment and equipment purchase task.",
+      "ids": [
+        "C093-CH4"
+      ]
+    },
+    "C094-CH1": {
+      "cls": "research",
+      "reason": "Developing fast state-of-health estimation methods for used battery modules without full charge-discharge cycles is power electronics and energy storage research.",
+      "ids": [
+        "C094-CH1"
+      ]
+    },
+    "C095-CH1": {
+      "cls": "research",
+      "reason": "Developing robust OCR and routing algorithms for crumpled or poorly printed multilingual parcel labels is document analysis research.",
+      "ids": [
+        "C095-CH1"
+      ]
+    },
+    "C095-CH2": {
+      "cls": "research",
+      "reason": "Implementing dynamic vehicle routing and real-time re-optimisation algorithms for delivery fleets is operational research.",
+      "ids": [
+        "C095-CH2"
+      ]
+    },
+    "C095-CH3": {
+      "cls": "not_research",
+      "reason": "Consulting on cross-border VAT and customs documentation under the EU OSS scheme is tax and trade advisory work.",
+      "ids": [
+        "C095-CH3"
+      ]
+    },
+    "C096-CH1": {
+      "cls": "research",
+      "reason": "Investigating surface-fatigue spalling on planetary gearbox gears under rapid direction reversals is mechanical condition monitoring research.",
+      "ids": [
+        "C096-CH1"
+      ]
+    },
+    "C096-CH2": {
+      "cls": "research",
+      "reason": "Analyzing machining process variability and tool wear impact on bore tolerances using statistical process control is manufacturing engineering research.",
+      "ids": [
+        "C096-CH2"
+      ]
+    },
+    "C096-CH3": {
+      "cls": "not_research",
+      "reason": "Preparing Production Part Approval Process (PPAP) documentation for automotive OEMs is quality management and administrative work.",
+      "ids": [
+        "C096-CH3"
+      ]
+    },
+    "C096-CH4": {
+      "cls": "research",
+      "reason": "Investigating thermal anomalies and base-oil lubricant reformulations in sealed gearboxes is tribochemistry and lubrication research.",
+      "ids": [
+        "C096-CH4"
+      ]
+    },
+    "C097-CH1": {
+      "cls": "research",
+      "reason": "Developing advanced signal-separation approaches to eliminate ambient factory noise in vibration-based anomaly detectors is signal processing research.",
+      "ids": [
+        "C097-CH1"
+      ]
+    },
+    "C097-CH2": {
+      "cls": "not_research",
+      "reason": "Conducting certified financial audits for grant applications is accounting and auditing work.",
+      "ids": [
+        "C097-CH2"
+      ]
+    },
+    "C097-CH3": {
+      "cls": "research",
+      "reason": "Automating camera intrinsic and extrinsic recalibration procedures for machine vision quality-control units is machine vision research.",
+      "ids": [
+        "C097-CH3"
+      ]
+    },
+    "C098-CH1": {
+      "cls": "research",
+      "reason": "Modeling and optimizing pre-cooling and setpoint management for refrigerated transport trailers to reduce diesel consumption is thermal engineering research.",
+      "ids": [
+        "C098-CH1"
+      ]
+    },
+    "C098-CH2": {
+      "cls": "not_research",
+      "reason": "Calculating driving-time compliance for tachographs under EU regulations is transport administration work.",
+      "ids": [
+        "C098-CH2"
+      ]
+    },
+    "C098-CH3": {
+      "cls": "research",
+      "reason": "Developing traceability models to pinpoint cold-chain temperature excursions across multi-node logistics chains is wireless sensor network research.",
+      "ids": [
+        "C098-CH3"
+      ]
+    },
+    "C098-CH4": {
+      "cls": "not_research",
+      "reason": "Preparing five-year cashflow projections for bank loan refinancing is financial accounting work.",
+      "ids": [
+        "C098-CH4"
+      ]
+    },
+    "C099-CH1": {
+      "cls": "research",
+      "reason": "Improving recall and predictive performance of customer churn models using advanced machine learning is data science research.",
+      "ids": [
+        "C099-CH1"
+      ]
+    },
+    "C099-CH2": {
+      "cls": "not_research",
+      "reason": "Implementing currency hedging strategies for multi-currency invoicing is corporate finance work.",
+      "ids": [
+        "C099-CH2"
+      ]
+    },
+    "C099-CH3": {
+      "cls": "not_research",
+      "reason": "Drafting GDPR-compliant data-processing agreements and transfer impact assessments is legal work.",
+      "ids": [
+        "C099-CH3"
+      ]
+    },
+    "C099-CH4": {
+      "cls": "research",
+      "reason": "Developing real-time multi-warehouse inventory allocation and planning engines for demand spikes is supply chain analytics research.",
+      "ids": [
+        "C099-CH4"
+      ]
+    },
+    "C100-CH1": {
+      "cls": "research",
+      "reason": "Improving OCR accuracy on low-contrast, curled thermal paper receipt photographs is graphic engineering and image processing research.",
+      "ids": [
+        "C100-CH1"
+      ]
+    },
+    "C100-CH2": {
+      "cls": "research",
+      "reason": "Automating the semantic classification of free-text merchant expense descriptions to standard accounting plan codes is machine learning and text processing research.",
+      "ids": [
+        "C100-CH2"
+      ]
+    },
+    "C100-CH3": {
+      "cls": "not_research",
+      "reason": "This is a marketing, go-to-market, and partnership strategy challenge with no open research question.",
+      "ids": [
+        "C100-CH3"
+      ]
+    },
+    "C101-CH1": {
+      "cls": "research",
+      "reason": "Developing noise mitigation algorithms for quantum circuit simulations involves open technical and scientific research.",
+      "ids": [
+        "C101-CH1"
+      ]
+    },
+    "C102-CH1": {
+      "cls": "research",
+      "reason": "Investigating polymer blade warping and flow calibration changes under humidity is a materials and mechanical engineering research question.",
+      "ids": [
+        "C102-CH1"
+      ]
+    },
+    "C102-CH2": {
+      "cls": "research",
+      "reason": "Automating spirometry trend analysis and reference norm comparison involves computational biostatistics and clinical data processing research.",
+      "ids": [
+        "C102-CH2"
+      ]
+    },
+    "C102-CH3": {
+      "cls": "research",
+      "reason": "Optimizing mixed-model assembly line scheduling to reduce inventory and prevent stockouts is an operations research problem.",
+      "ids": [
+        "C102-CH3"
+      ]
+    },
+    "C103-CH1": {
+      "cls": "research",
+      "reason": "Improving baseline energy models for seasonal production facilities requires advanced industrial energy and statistical modeling.",
+      "ids": [
+        "C103-CH1"
+      ]
+    },
+    "C103-CH2": {
+      "cls": "research",
+      "reason": "Extracting structured KPIs from unstructured PDF energy audits is a natural language processing and document analysis research problem.",
+      "ids": [
+        "C103-CH2"
+      ]
+    },
+    "C103-CH3": {
+      "cls": "research",
+      "reason": "Modelling the interaction between rooftop PV generation and industrial loads involves energy systems and electrical engineering simulation.",
+      "ids": [
+        "C103-CH3"
+      ]
+    },
+    "C104-CH1": {
+      "cls": "research",
+      "reason": "Analyzing and mitigating high packet loss in dense agricultural crop canopies is a wireless propagation and sensor network research task.",
+      "ids": [
+        "C104-CH1"
+      ]
+    },
+    "C104-CH2": {
+      "cls": "not_research",
+      "reason": "This is a packaging, labeling, and production scaling issue, not a research problem.",
+      "ids": [
+        "C104-CH2"
+      ]
+    },
+    "C104-CH3": {
+      "cls": "research",
+      "reason": "Mining historical agricultural sensor data to discover microclimate pest pressure patterns is a data mining and agricultural research task.",
+      "ids": [
+        "C104-CH3"
+      ]
+    },
+    "C105-CH1": {
+      "cls": "research",
+      "reason": "Investigating causes of allele dropout in pharmacogenetic assays involves molecular biology and diagnostics research.",
+      "ids": [
+        "C105-CH1"
+      ]
+    },
+    "C105-CH2": {
+      "cls": "research",
+      "reason": "Optimizing bioinformatics pipelines for high-throughput sequencing star-allele calling requires computational efficiency and algorithmic research.",
+      "ids": [
+        "C105-CH2"
+      ]
+    },
+    "C105-CH3": {
+      "cls": "research",
+      "reason": "Translating complex pharmacogenetic test results into plain-language patient insights involves health communication and clinical informatics research.",
+      "ids": [
+        "C105-CH3"
+      ]
+    },
+    "C106-CH1": {
+      "cls": "research",
+      "reason": "Developing advanced anomaly detection to reduce false positives in high-frequency sensor streams is a machine learning research problem.",
+      "ids": [
+        "C106-CH1"
+      ]
+    },
+    "C106-CH2": {
+      "cls": "not_research",
+      "reason": "This is a legal compliance, certification, and administrative task.",
+      "ids": [
+        "C106-CH2"
+      ]
+    },
+    "C106-CH3": {
+      "cls": "research",
+      "reason": "Automating data cleaning and schema reconciliation across heterogeneous spreadsheet formats is a data engineering and transformation research challenge.",
+      "ids": [
+        "C106-CH3"
+      ]
+    },
+    "C106-CH4": {
+      "cls": "research",
+      "reason": "Fine-tuning natural language interfaces and domain-specific embeddings for Serbian business vocabulary is a natural language processing research task.",
+      "ids": [
+        "C106-CH4"
+      ]
+    },
+    "C107-CH1": {
+      "cls": "research",
+      "reason": "Investigating subsurface porosity mechanisms in 316L additive manufacturing involves materials science and process optimization research.",
+      "ids": [
+        "C107-CH1"
+      ]
+    },
+    "C107-CH2": {
+      "cls": "research",
+      "reason": "Developing automated scheduling and routing for multi-machine additive manufacturing orders is an operational research and optimization problem.",
+      "ids": [
+        "C107-CH2"
+      ]
+    },
+    "C108-CH1": {
+      "cls": "research",
+      "reason": "Redesigning decortication mechanical systems to preserve long hemp fibres is a mechanical and biomaterials engineering research task.",
+      "ids": [
+        "C108-CH1"
+      ]
+    },
+    "C109-CH1": {
+      "cls": "research",
+      "reason": "Improving pose-estimation accuracy under adverse home lighting conditions is a computer vision research problem.",
+      "ids": [
+        "C109-CH1"
+      ]
+    },
+    "C109-CH2": {
+      "cls": "research",
+      "reason": "Training robust exercise-scoring models on very small annotated video datasets is a machine learning research challenge.",
+      "ids": [
+        "C109-CH2"
+      ]
+    },
+    "C109-CH3": {
+      "cls": "not_research",
+      "reason": "This is a legal, corporate restructuring, and grant application issue.",
+      "ids": [
+        "C109-CH3"
+      ]
+    },
+    "C110-CH1": {
+      "cls": "research",
+      "reason": "Developing explainable AI and auditable scoring mechanisms for regulated financial models is a machine learning research challenge.",
+      "ids": [
+        "C110-CH1"
+      ]
+    },
+    "C110-CH2": {
+      "cls": "research",
+      "reason": "Detecting nuanced clinical inconsistencies between diagnosis and procedure codes is a biomedical informatics research problem.",
+      "ids": [
+        "C110-CH2"
+      ]
+    },
+    "C110-CH3": {
+      "cls": "not_research",
+      "reason": "This is a talent acquisition and recruitment challenge.",
+      "ids": [
+        "C110-CH3"
+      ]
+    },
+    "C111-CH1": {
+      "cls": "research",
+      "reason": "Reverse-engineering and supporting diverse tractor CAN bus protocols involves embedded systems and firmware engineering research.",
+      "ids": [
+        "C111-CH1"
+      ]
+    },
+    "C111-CH2": {
+      "cls": "research",
+      "reason": "Integrating real-time plant sensing data into variable-rate fertilizer prescription models is precision agriculture research.",
+      "ids": [
+        "C111-CH2"
+      ]
+    },
+    "C111-CH3": {
+      "cls": "not_research",
+      "reason": "This is a regulatory compliance and legal gap analysis task.",
+      "ids": [
+        "C111-CH3"
+      ]
+    },
+    "C111-CH4": {
+      "cls": "research",
+      "reason": "Detecting abnormal agricultural controller behavior from operational telemetry logs is a data analytics and machine learning research problem.",
+      "ids": [
+        "C111-CH4"
+      ]
+    },
+    "C112-CH1": {
+      "cls": "research",
+      "reason": "Modelling complex shading and I-V curve dynamics on non-flat industrial roofs is a renewable energy and electrical engineering research task.",
+      "ids": [
+        "C112-CH1"
+      ]
+    },
+    "C112-CH2": {
+      "cls": "research",
+      "reason": "Developing predictive models for solar module degradation using time-series telemetry is a machine learning and condition monitoring research problem.",
+      "ids": [
+        "C112-CH2"
+      ]
+    },
+    "C112-CH3": {
+      "cls": "not_research",
+      "reason": "This is a cybersecurity compliance and legal consulting task.",
+      "ids": [
+        "C112-CH3"
+      ]
+    },
+    "C112-CH4": {
+      "cls": "research",
+      "reason": "Developing models to predict solar panel soiling losses based on environmental data is an applied environmental and data research challenge.",
+      "ids": [
+        "C112-CH4"
+      ]
+    },
+    "C113-CH1": {
+      "cls": "research",
+      "reason": "Building robust enterprise resource planning connectors resilient to upstream schema changes is a software architecture research challenge.",
+      "ids": [
+        "C113-CH1"
+      ]
+    },
+    "C113-CH2": {
+      "cls": "not_research",
+      "reason": "This is a legal drafting and data privacy compliance task.",
+      "ids": [
+        "C113-CH2"
+      ]
+    },
+    "C113-CH3": {
+      "cls": "research",
+      "reason": "Automating multi-format document layout adaptation for diverse brand guidelines is a document engineering research problem.",
+      "ids": [
+        "C113-CH3"
+      ]
+    },
+    "C114-CH1": {
+      "cls": "research",
+      "reason": "Automating security event clustering and alert ranking to reduce false positives is a machine learning and systems monitoring research task.",
+      "ids": [
+        "C114-CH1"
+      ]
+    },
+    "C114-CH2": {
+      "cls": "research",
+      "reason": "Extracting structured threat intelligence indicators from regional dark-web forums is a natural language processing and security research problem.",
+      "ids": [
+        "C114-CH2"
+      ]
+    },
+    "C114-CH3": {
+      "cls": "not_research",
+      "reason": "This is a legal compliance and regulatory gap assessment task.",
+      "ids": [
+        "C114-CH3"
+      ]
+    },
+    "C115-CH1": {
+      "cls": "research",
+      "reason": "Developing automated behavioral analysis models to scale video game anti-cheat detection is a machine learning research challenge.",
+      "ids": [
+        "C115-CH1"
+      ]
+    },
+    "C115-CH2": {
+      "cls": "research",
+      "reason": "Optimizing cloud resource allocation and matchmaking strategies for gaming servers is a distributed systems research problem.",
+      "ids": [
+        "C115-CH2"
+      ]
+    },
+    "C115-CH3": {
+      "cls": "research",
+      "reason": "Synthesizing dynamic and realistic crowd audio generation from limited sample libraries is a sound design and media technology research task.",
+      "ids": [
+        "C115-CH3"
+      ]
+    },
+    "C115-CH4": {
+      "cls": "not_research",
+      "reason": "This is a recruitment and hiring challenge.",
+      "ids": [
+        "C115-CH4"
+      ]
+    },
+    "C116-CH1": {
+      "cls": "research",
+      "reason": "Developing automated scoring algorithms for long argumentative student texts is a natural language processing research challenge.",
+      "ids": [
+        "C116-CH1"
+      ]
+    },
+    "C116-CH2": {
+      "cls": "research",
+      "reason": "Optimizing WebRTC media server architectures for large-scale virtual classrooms is a networking and multimedia systems research problem.",
+      "ids": [
+        "C116-CH2"
+      ]
+    },
+    "C116-CH3": {
+      "cls": "research",
+      "reason": "Building early-warning prediction models for student disengagement with high precision is an educational data mining research task.",
+      "ids": [
+        "C116-CH3"
+      ]
+    },
+    "C116-CH4": {
+      "cls": "not_research",
+      "reason": "This is a personnel retention, recruitment, and HR challenge.",
+      "ids": [
+        "C116-CH4"
+      ]
+    },
+    "C117-CH1": {
+      "cls": "research",
+      "reason": "Ranking static code analysis warnings for safety-critical software paths is a software engineering research problem.",
+      "ids": [
+        "C117-CH1"
+      ]
+    },
+    "C117-CH2": {
+      "cls": "not_research",
+      "reason": "This is a functional safety certification and consulting task.",
+      "ids": [
+        "C117-CH2"
+      ]
+    },
+    "C117-CH3": {
+      "cls": "not_research",
+      "reason": "This is a hardware acquisition and capital cost reduction problem.",
+      "ids": [
+        "C117-CH3"
+      ]
+    },
+    "C118-CH1": {
+      "cls": "research",
+      "reason": "Developing algorithms and sensor placement strategies to locate leaks in water distribution networks is a hydraulic engineering research task.",
+      "ids": [
+        "C118-CH1"
+      ]
+    },
+    "C118-CH2": {
+      "cls": "research",
+      "reason": "Optimizing municipal water pump scheduling and demand forecasting is a control engineering and systems research problem.",
+      "ids": [
+        "C118-CH2"
+      ]
+    },
+    "C119-CH1": {
+      "cls": "research",
+      "reason": "Automating artwork layout fitting into structural packaging dielines is a computational geometry and graphic engineering research task.",
+      "ids": [
+        "C119-CH1"
+      ]
+    },
+    "C119-CH2": {
+      "cls": "research",
+      "reason": "Developing systematic color measurement and profiling processes across heterogeneous print technologies is a color science research problem.",
+      "ids": [
+        "C119-CH2"
+      ]
+    },
+    "C119-CH3": {
+      "cls": "not_research",
+      "reason": "This is a talent hiring and labor market cost challenge.",
+      "ids": [
+        "C119-CH3"
+      ]
+    },
+    "C120-CH1": {
+      "cls": "research",
+      "reason": "Optimizing time-series database storage and query performance on constrained on-premise hardware is a data engineering research task.",
+      "ids": [
+        "C120-CH1"
+      ]
+    },
+    "C120-CH2": {
+      "cls": "research",
+      "reason": "Developing adaptive regression models for industrial fermentation processes with shifting parameters is a process control research problem.",
+      "ids": [
+        "C120-CH2"
+      ]
+    },
+    "C120-CH3": {
+      "cls": "not_research",
+      "reason": "This is a staff resource planning and personnel leave management issue.",
+      "ids": [
+        "C120-CH3"
+      ]
+    },
+    "C121-CH1": {
+      "cls": "research",
+      "reason": "Automating NMR and mass-spec data interpretation for reference standard compounds is a document analysis and chemoinformatics research task.",
+      "ids": [
+        "C121-CH1"
+      ]
+    },
+    "C121-CH2": {
+      "cls": "research",
+      "reason": "Redesigning chemical synthesis routes to incorporate green and sustainable solvents is a chemical process engineering research task.",
+      "ids": [
+        "C121-CH2"
+      ]
+    },
+    "C121-CH3": {
+      "cls": "not_research",
+      "reason": "This is a grant writing and budget preparation administrative task.",
+      "ids": [
+        "C121-CH3"
+      ]
+    },
+    "C122-CH1": {
+      "cls": "research",
+      "reason": "Developing automated remote diagnostic algorithms for solar inverter fault codes is an industrial control and machine learning research problem.",
+      "ids": [
+        "C122-CH1"
+      ]
+    },
+    "C122-CH2": {
+      "cls": "research",
+      "reason": "Refining rooftop irradiance and shading simulation models for photovoltaic planning is a renewable energy engineering research task.",
+      "ids": [
+        "C122-CH2"
+      ]
+    },
+    "C122-CH3": {
+      "cls": "research",
+      "reason": "Building flexible enterprise API integration architectures for energy monitoring platforms is a software engineering research task.",
+      "ids": [
+        "C122-CH3"
+      ]
+    },
+    "C123-CH1": {
+      "cls": "research",
+      "reason": "Investigating probiotic viability loss mechanisms in plant-based dairy analogues is a food science and biotechnology research problem.",
+      "ids": [
+        "C123-CH1"
+      ]
+    },
+    "C123-CH2": {
+      "cls": "research",
+      "reason": "Solving bioprocess scale-up challenges for fermentation pH and texture consistency is a biochemical engineering research task.",
+      "ids": [
+        "C123-CH2"
+      ]
+    },
+    "C123-CH3": {
+      "cls": "not_research",
+      "reason": "This is a financing, fundraising, and bank loan acquisition task.",
+      "ids": [
+        "C123-CH3"
+      ]
+    },
+    "C123-CH4": {
+      "cls": "not_research",
+      "reason": "This is a legal compliance and food labelling regulatory review task.",
+      "ids": [
+        "C123-CH4"
+      ]
+    },
+    "C124-CH1": {
+      "cls": "research",
+      "reason": "Developing cross-lingual document search and information retrieval models for mixed Slovenian-German corpora is a natural language processing research task.",
+      "ids": [
+        "C124-CH1"
+      ]
+    },
+    "C124-CH2": {
+      "cls": "research",
+      "reason": "Designing automated data migration pipelines for heterogeneous legacy software formats is a software engineering research task.",
+      "ids": [
+        "C124-CH2"
+      ]
+    },
+    "C125-CH1": {
+      "cls": "research",
+      "reason": "Optimizing water treatment filtration and aeration processes for heavy metal removal after rainfall events is an environmental engineering research problem.",
+      "ids": [
+        "C125-CH1"
+      ]
+    },
+    "C125-CH2": {
+      "cls": "not_research",
+      "reason": "This is an environmental impact assessment consultancy and grant compliance task.",
+      "ids": [
+        "C125-CH2"
+      ]
+    },
+    "C125-CH3": {
+      "cls": "research",
+      "reason": "Investigating pitting and crevice corrosion mechanisms on stainless-steel pipe welds is a materials science and electrochemistry research task.",
+      "ids": [
+        "C125-CH3"
+      ]
+    },
+    "C125-CH4": {
+      "cls": "research",
+      "reason": "Optimizing field service vehicle routing and scheduling is an operational research problem.",
+      "ids": [
+        "C125-CH4"
+      ]
+    },
+    "C126-CH1": {
+      "cls": "research",
+      "reason": "Developing high-performance point cloud classification and feature extraction pipelines is a computer vision and geoinformatics research task.",
+      "ids": [
+        "C126-CH1"
+      ]
+    },
+    "C126-CH2": {
+      "cls": "research",
+      "reason": "Developing spatial data infrastructure and schema harmonization algorithms for cadastral integration is a geoinformatics research problem.",
+      "ids": [
+        "C126-CH2"
+      ]
+    },
+    "C126-CH3": {
+      "cls": "not_research",
+      "reason": "This is a legal consortium agreement and bid preparation administrative task.",
+      "ids": [
+        "C126-CH3"
+      ]
+    },
+    "C127-CH1": {
+      "cls": "research",
+      "reason": "Validating cognitive learning outcomes and educational effectiveness of game mechanics is an educational psychology research task.",
+      "ids": [
+        "C127-CH1"
+      ]
+    },
+    "C127-CH2": {
+      "cls": "research",
+      "reason": "Investigating material stability and moisture-resistant packaging engineering for educational kits is a materials science research task.",
+      "ids": [
+        "C127-CH2"
+      ]
+    },
+    "C127-CH3": {
+      "cls": "research",
+      "reason": "Developing child-speech recognition and semantic understanding models for Serbian is a computational linguistics and speech technology research task.",
+      "ids": [
+        "C127-CH3"
+      ]
+    },
+    "C128-CH1": {
+      "cls": "research",
+      "reason": "Developing chemometric blending models to control flour falling number and gluten content is a food science and cereal chemistry research task.",
+      "ids": [
+        "C128-CH1"
+      ]
+    },
+    "C128-CH2": {
+      "cls": "research",
+      "reason": "Implementing predictive maintenance and condition monitoring systems for industrial roller mills is a mechanical engineering research task.",
+      "ids": [
+        "C128-CH2"
+      ]
+    },
+    "C128-CH3": {
+      "cls": "research",
+      "reason": "Designing industrial ventilation and dust extraction systems to meet occupational health exposure limits is an environmental engineering research problem.",
+      "ids": [
+        "C128-CH3"
+      ]
+    },
+    "C128-CH4": {
+      "cls": "not_research",
+      "reason": "This is a food law regulatory compliance and labelling assessment task.",
+      "ids": [
+        "C128-CH4"
+      ]
+    },
+    "C129-CH1": {
+      "cls": "research",
+      "reason": "Simulating polymer flow and cooling dynamics to eliminate sink marks in thick-walled injection moulding is a polymer processing research task.",
+      "ids": [
+        "C129-CH1"
+      ]
+    },
+    "C129-CH2": {
+      "cls": "not_research",
+      "reason": "This is a carbon accounting and supplier questionnaire compliance task.",
+      "ids": [
+        "C129-CH2"
+      ]
+    },
+    "C129-CH3": {
+      "cls": "research",
+      "reason": "Investigating mechanical property degradation in recycled polymer blends is a polymer science and materials characterisation research problem.",
+      "ids": [
+        "C129-CH3"
+      ]
+    },
+    "C129-CH4": {
+      "cls": "not_research",
+      "reason": "This is a hiring and workforce capacity challenge.",
+      "ids": [
+        "C129-CH4"
+      ]
+    },
+    "C130-CH1": {
+      "cls": "research",
+      "reason": "Developing low-traffic statistical testing methods for conversion rate optimization is a revenue management and statistical research task.",
+      "ids": [
+        "C130-CH1"
+      ]
+    },
+    "C130-CH2": {
+      "cls": "research",
+      "reason": "Automating pattern recognition and correlation analysis on web heatmap data is a data mining and human-computer interaction research problem.",
+      "ids": [
+        "C130-CH2"
+      ]
+    },
+    "C130-CH3": {
+      "cls": "not_research",
+      "reason": "This is a legal contract drafting and data privacy compliance task.",
+      "ids": [
+        "C130-CH3"
+      ]
+    },
+    "C131-CH1": {
+      "cls": "research",
+      "reason": "Refining physiological signal processing and fatigue-detection algorithms for wearable wellness data is a machine learning research problem.",
+      "ids": [
+        "C131-CH1"
+      ]
+    },
+    "C131-CH2": {
+      "cls": "research",
+      "reason": "Developing natural language generation models for personalized wellness coaching content is a computational linguistics research task.",
+      "ids": [
+        "C131-CH2"
+      ]
+    },
+    "C131-CH3": {
+      "cls": "not_research",
+      "reason": "This is a legal contract review and GDPR compliance task.",
+      "ids": [
+        "C131-CH3"
+      ]
+    },
+    "C132-CH1": {
+      "cls": "research",
+      "reason": "Improving clause-risk classification and legal text parsing models to reduce false positives is a natural language processing research task.",
+      "ids": [
+        "C132-CH1"
+      ]
+    },
+    "C132-CH2": {
+      "cls": "research",
+      "reason": "Expanding cross-lingual legal text processing pipelines to new languages using transfer learning is a natural language processing research task.",
+      "ids": [
+        "C132-CH2"
+      ]
+    },
+    "C132-CH3": {
+      "cls": "not_research",
+      "reason": "This is an IT security audit and compliance certification task.",
+      "ids": [
+        "C132-CH3"
+      ]
+    },
+    "C132-CH4": {
+      "cls": "research",
+      "reason": "Building script-agnostic search and normalization algorithms for mixed Cyrillic and Latin text is an information retrieval research problem.",
+      "ids": [
+        "C132-CH4"
+      ]
+    },
+    "C133-CH1": {
+      "cls": "research",
+      "reason": "Improving 3D point-cloud reconstruction and grasp planning for transparent and reflective objects is a robotics and computer vision research task.",
+      "ids": [
+        "C133-CH1"
+      ]
+    },
+    "C133-CH2": {
+      "cls": "not_research",
+      "reason": "This is a cybersecurity certification and compliance task.",
+      "ids": [
+        "C133-CH2"
+      ]
+    },
+    "C133-CH3": {
+      "cls": "research",
+      "reason": "Developing efficient task-planning and collision-avoidance algorithms for sparse bin-picking is a robotics research problem.",
+      "ids": [
+        "C133-CH3"
+      ]
+    },
+    "C134-CH1": {
+      "cls": "research",
+      "reason": "Developing multi-criteria optimization models for municipal building energy retrofits is an energy efficiency and decision science research task.",
+      "ids": [
+        "C134-CH1"
+      ]
+    },
+    "C135-CH1": {
+      "cls": "research",
+      "reason": "Scaling constraint-programming optimization algorithms for large workforce scheduling is an operations research problem.",
+      "ids": [
+        "C135-CH1"
+      ]
+    },
+    "C135-CH2": {
+      "cls": "research",
+      "reason": "Predicting staff absenteeism and shift coverage risks using machine learning on time-series data is an applied data science research task.",
+      "ids": [
+        "C135-CH2"
+      ]
+    },
+    "C135-CH3": {
+      "cls": "not_research",
+      "reason": "This is a startup fundraising and venture capital financing task.",
+      "ids": [
+        "C135-CH3"
+      ]
+    },
+    "C136-CH1": {
+      "cls": "research",
+      "reason": "Analyzing wireless signal propagation and attenuation in reinforced-concrete industrial buildings is a telecommunications research problem.",
+      "ids": [
+        "C136-CH1"
+      ]
+    },
+    "C136-CH2": {
+      "cls": "research",
+      "reason": "Porting real-time operating systems and firmware to novel microcontroller architectures is an embedded systems engineering research task.",
+      "ids": [
+        "C136-CH2"
+      ]
+    },
+    "C136-CH3": {
+      "cls": "not_research",
+      "reason": "This is a device-level security certification and administrative compliance task.",
+      "ids": [
+        "C136-CH3"
+      ]
+    },
+    "C137-CH1": {
+      "cls": "research",
+      "reason": "Developing middleware and protocol translation architectures for heterogeneous industrial automation networks is a systems software research task.",
+      "ids": [
+        "C137-CH1"
+      ]
+    },
+    "C137-CH2": {
+      "cls": "research",
+      "reason": "Modeling hazardous interactions in complex industrial pneumatic control loops is a process automation and safety engineering research task.",
+      "ids": [
+        "C137-CH2"
+      ]
+    },
+    "C137-CH3": {
+      "cls": "not_research",
+      "reason": "This is a talent recruitment and hiring challenge.",
+      "ids": [
+        "C137-CH3"
+      ]
+    },
+    "C138-CH1": {
+      "cls": "research",
+      "reason": "Investigating humidity effects on micro-corrugated board mechanical strength and die-cutting is a packaging engineering research task.",
+      "ids": [
+        "C138-CH1"
+      ]
+    },
+    "C138-CH2": {
+      "cls": "research",
+      "reason": "Analyzing surface energy and ink adhesion issues on recycled kraftliner for flexographic printing is a surface chemistry and graphic engineering research task.",
+      "ids": [
+        "C138-CH2"
+      ]
+    },
+    "C138-CH3": {
+      "cls": "research",
+      "reason": "Optimizing optical contrast and resolution parameters for flexo-printed QR codes under poor warehouse lighting is an optical metrology and machine vision research task.",
+      "ids": [
+        "C138-CH3"
+      ]
+    },
+    "C139-CH1": {
+      "cls": "research",
+      "reason": "Developing statistical process control and predictive models for pharmaceutical tablet film coating uniformity is a pharmaceutical engineering research task.",
+      "ids": [
+        "C139-CH1"
+      ]
+    },
+    "C139-CH2": {
+      "cls": "research",
+      "reason": "Formulating sustained-release drug matrices and in-vitro dissolution modeling is a pharmaceutical engineering research problem.",
+      "ids": [
+        "C139-CH2"
+      ]
+    },
+    "C139-CH3": {
+      "cls": "not_research",
+      "reason": "This is an enterprise software integration procurement and financial budgeting task.",
+      "ids": [
+        "C139-CH3"
+      ]
+    },
+    "C140-CH1": {
+      "cls": "research",
+      "reason": "Developing high-resolution spatial precipitation estimation models for parametric crop insurance is a hydrometeorology and remote sensing research task.",
+      "ids": [
+        "C140-CH1"
+      ]
+    },
+    "C140-CH2": {
+      "cls": "research",
+      "reason": "Developing computer vision models to detect distracted driving from telematics data is an intelligent transport systems research problem.",
+      "ids": [
+        "C140-CH2"
+      ]
+    },
+    "C140-CH3": {
+      "cls": "research",
+      "reason": "Adapting computer vision damage estimation models to diverse vehicle fleets using domain adaptation is a machine learning research task.",
+      "ids": [
+        "C140-CH3"
+      ]
+    },
+    "C140-CH4": {
+      "cls": "not_research",
+      "reason": "This is a corporate restructuring and venture capital fundraising task.",
+      "ids": [
+        "C140-CH4"
+      ]
+    },
+    "C141-CH1": {
+      "cls": "research",
+      "reason": "Investigating valorization pathways and secondary uses for aluminum-hydroxide industrial wastewater sludge is an industrial chemistry research task.",
+      "ids": [
+        "C141-CH1"
+      ]
+    },
+    "C141-CH2": {
+      "cls": "research",
+      "reason": "Analyzing metallurgical failure mechanisms and heat treatment for aluminum extrusion dies is a materials engineering research problem.",
+      "ids": [
+        "C141-CH2"
+      ]
+    },
+    "C141-CH3": {
+      "cls": "research",
+      "reason": "Developing energy disaggregation and load profiling models for heavy industrial manufacturing plants is an industrial engineering research task.",
+      "ids": [
+        "C141-CH3"
+      ]
+    },
+    "C141-CH4": {
+      "cls": "not_research",
+      "reason": "This is an international grant writing and proposal reframing consultancy task.",
+      "ids": [
+        "C141-CH4"
+      ]
+    },
+    "C142-CH1": {
+      "cls": "research",
+      "reason": "Developing advanced adaptive recommendation algorithms and personalized learning paths is an educational technology and machine learning research problem.",
+      "ids": [
+        "C142-CH1"
+      ]
+    },
+    "C142-CH2": {
+      "cls": "research",
+      "reason": "Mining learner clickstream data to evaluate module-level competency gains is an educational data mining research task.",
+      "ids": [
+        "C142-CH2"
+      ]
+    },
+    "C142-CH3": {
+      "cls": "not_research",
+      "reason": "This is a legal establishment, VAT registration, and corporate compliance task.",
+      "ids": [
+        "C142-CH3"
+      ]
+    },
+    "C143-CH1": {
+      "cls": "research",
+      "reason": "Optimizing fraud detection models to minimize false-positive rates in digital payments is a machine learning research challenge.",
+      "ids": [
+        "C143-CH1"
+      ]
+    },
+    "C143-CH2": {
+      "cls": "research",
+      "reason": "Rearchitecting database performance and query routing strategies for high-throughput transactional systems is a distributed database engineering research task.",
+      "ids": [
+        "C143-CH2"
+      ]
+    },
+    "C143-CH3": {
+      "cls": "not_research",
+      "reason": "This is a legal liability review and regulatory compliance opinion task.",
+      "ids": [
+        "C143-CH3"
+      ]
+    },
+    "C143-CH4": {
+      "cls": "research",
+      "reason": "Developing robust time-series forecasting models for irregular cash-flow prediction is a financial mathematics and statistics research task.",
+      "ids": [
+        "C143-CH4"
+      ]
+    },
+    "C144-CH1": {
+      "cls": "research",
+      "reason": "Investigating microbial strain drift and stability in long-term industrial fermentation banking is an industrial microbiology research problem.",
+      "ids": [
+        "C144-CH1"
+      ]
+    },
+    "C144-CH2": {
+      "cls": "research",
+      "reason": "Analyzing membrane fouling mechanisms and separation optimization in industrial ultrafiltration is a chemical engineering research task.",
+      "ids": [
+        "C144-CH2"
+      ]
+    },
+    "C144-CH3": {
+      "cls": "research",
+      "reason": "Conducting comprehensive life cycle assessment and carbon footprint modeling for bio-based enzyme products is an environmental engineering research task.",
+      "ids": [
+        "C144-CH3"
+      ]
+    },
+    "C144-CH4": {
+      "cls": "not_research",
+      "reason": "This is a capital investment financing and grant application task.",
+      "ids": [
+        "C144-CH4"
+      ]
+    },
+    "C145-CH1": {
+      "cls": "research",
+      "reason": "Developing advanced content-context matching and machine learning models for audio ad targeting is a media technology research problem.",
+      "ids": [
+        "C145-CH1"
+      ]
+    },
+    "C145-CH2": {
+      "cls": "research",
+      "reason": "Building predictive pricing models for advertising slots using historical panel and engagement data is a marketing science and media economics research task.",
+      "ids": [
+        "C145-CH2"
+      ]
+    },
+    "C145-CH3": {
+      "cls": "research",
+      "reason": "Developing automated audio signal processing and noise cancellation pipelines for field-recorded speech is an audio engineering research task.",
+      "ids": [
+        "C145-CH3"
+      ]
+    },
+    "C145-CH4": {
+      "cls": "not_research",
+      "reason": "This is an international taxation, transfer pricing, and accounting administrative task.",
+      "ids": [
+        "C145-CH4"
+      ]
+    },
+    "C146-CH1": {
+      "cls": "research",
+      "reason": "Investigating food matrix interference and assay optimization for pathogen detection in high-fat samples is an analytical biochemistry research task.",
+      "ids": [
+        "C146-CH1"
+      ]
+    },
+    "C146-CH2": {
+      "cls": "research",
+      "reason": "Optimizing slot-die coating processes and identifying defect drivers for nitrocellulose membrane manufacturing is a chemical engineering research problem.",
+      "ids": [
+        "C146-CH2"
+      ]
+    },
+    "C146-CH3": {
+      "cls": "not_research",
+      "reason": "This is a regulatory consulting and medical device registration task.",
+      "ids": [
+        "C146-CH3"
+      ]
+    },
+    "C147-CH1": {
+      "cls": "research",
+      "reason": "Developing predictive algorithms for early mastitis detection in precision livestock farming is an animal science research task.",
+      "ids": [
+        "C147-CH1"
+      ]
+    },
+    "C148-CH1": {
+      "cls": "research",
+      "reason": "Handling missing data imputation and ICD-10 code inconsistency for hospital readmission prediction is a biomedical informatics research task.",
+      "ids": [
+        "C148-CH1"
+      ]
+    },
+    "C148-CH2": {
+      "cls": "research",
+      "reason": "Optimizing video streaming and adaptive bitrate algorithms for low-bandwidth rural telehealth is a telecommunications research problem.",
+      "ids": [
+        "C148-CH2"
+      ]
+    },
+    "C148-CH3": {
+      "cls": "research",
+      "reason": "Designing automated database schema transformation and FHIR repository mapping for healthcare data is a health informatics research task.",
+      "ids": [
+        "C148-CH3"
+      ]
+    },
+    "C149-CH1": {
+      "cls": "research",
+      "reason": "Developing bioprocess engineering and valorization methods for wheat milling byproduct conversion is a food technology research task.",
+      "ids": [
+        "C149-CH1"
+      ]
+    },
+    "C149-CH2": {
+      "cls": "research",
+      "reason": "Designing industrial demand-side management and energy load-shifting strategies for milling plants is an electrical and energy systems research task.",
+      "ids": [
+        "C149-CH2"
+      ]
+    },
+    "C150-CH1": {
+      "cls": "research",
+      "reason": "Improving acoustic signal processing and sound event detection robustness in noisy home environments is a biomedical engineering research task.",
+      "ids": [
+        "C150-CH1"
+      ]
+    },
+    "C150-CH2": {
+      "cls": "research",
+      "reason": "Conducting UX research and interaction design studies tailored to elderly user cognitive and motor patterns is a human-computer interaction research task.",
+      "ids": [
+        "C150-CH2"
+      ]
+    },
+    "C150-CH3": {
+      "cls": "not_research",
+      "reason": "This is a cross-border commercial contract review and legal negotiation task.",
+      "ids": [
+        "C150-CH3"
+      ]
+    },
+    "C151-CH1": {
+      "cls": "research",
+      "reason": "Refining alternative lending fraud detection models to reduce false-positive rates is a machine learning research problem.",
+      "ids": [
+        "C151-CH1"
+      ]
+    },
+    "C151-CH2": {
+      "cls": "research",
+      "reason": "Analyzing open banking user behavior and improving consent flow conversion rates is a consumer psychology and financial technology research task.",
+      "ids": [
+        "C151-CH2"
+      ]
+    },
+    "C151-CH3": {
+      "cls": "research",
+      "reason": "Disentangling macroeconomic default risk from individual borrower behavior using financial econometrics is a financial research task.",
+      "ids": [
+        "C151-CH3"
+      ]
+    },
+    "C152-CH1": {
+      "cls": "research",
+      "reason": "Investigating moisture-induced caking and powder physics of hygroscopic protein blends is a food powder technology research problem.",
+      "ids": [
+        "C152-CH1"
+      ]
+    },
+    "C152-CH2": {
+      "cls": "not_research",
+      "reason": "This is a packaging material procurement and minimum order quantity commercial negotiation task.",
+      "ids": [
+        "C152-CH2"
+      ]
+    },
+    "C152-CH3": {
+      "cls": "research",
+      "reason": "Developing robust chemometric calibration models for inline NIR protein measurement in changing blends is an analytical chemistry research task.",
+      "ids": [
+        "C152-CH3"
+      ]
+    },
+    "C153-CH1": {
+      "cls": "research",
+      "reason": "Modeling thermal dynamics and computational fluid dynamics inside industrial meat drying chambers to optimize energy use is a thermal engineering research task.",
+      "ids": [
+        "C153-CH1"
+      ]
+    },
+    "C153-CH2": {
+      "cls": "research",
+      "reason": "Investigating persistent microbial harborage and molecular epidemiology of Listeria monocytogenes in food processing plants is a food microbiology research task.",
+      "ids": [
+        "C153-CH2"
+      ]
+    },
+    "C153-CH3": {
+      "cls": "research",
+      "reason": "Evaluating mechanical calibre tolerances and material properties of locally sourced natural casings is a food science research task.",
+      "ids": [
+        "C153-CH3"
+      ]
+    }
+  },
+  "verdicts": [
+    {
+      "reviewId": "rv_01",
+      "writerId": "W1",
+      "pairId": "pair-1",
+      "round": 1,
+      "pass": false,
+      "claims": [
+        {
+          "n": 5,
+          "check": "C5",
+          "pass": false,
+          "detail": "Quote the words in R0906's open_to or notes that support this role."
+        }
+      ],
+      "checks": [
+        {
+          "check": "C1",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": "proposal",
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C8",
+          "target": "proposal",
+          "pass": true,
+          "detail": "All six required sections are present."
+        },
+        {
+          "check": "C9",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 1,
+          "pass": true,
+          "detail": "Record C091 confirms CardioTrack d.o.o. has 12 employees and is located at NTP Novi Sad."
+        },
+        {
+          "check": "C1",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 2,
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 2,
+          "pass": true,
+          "detail": "Record C091-CH1 states roughly one in four AF alerts turns out to be a motion artifact."
+        },
+        {
+          "check": "C1",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 3,
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 3,
+          "pass": true,
+          "detail": "Record C091-CH1 confirms the dataset holds about 1,400 completed patient recordings."
+        },
+        {
+          "check": "C1",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 4,
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 4,
+          "pass": true,
+          "detail": "Record C091-CH1 confirms the aim of a false-positive rate below ten percent."
+        },
+        {
+          "check": "C1",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C5",
+          "target": 5,
+          "pass": false,
+          "detail": "Quote the words in R0906's open_to or notes that support this role.",
+          "record": "R0906"
+        },
+        {
+          "check": "C6",
+          "target": 5,
+          "pass": true,
+          "detail": "R0906's notes set no number of new commitments; 0 passed so far."
+        },
+        {
+          "check": "C9",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 6,
+          "pass": true,
+          "detail": "SYN-PUB-09638 credits R0906.",
+          "record": "SYN-PUB-09638",
+          "mark": "R0906"
+        },
+        {
+          "check": "C3",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 6,
+          "pass": true,
+          "detail": "Record SYN-PUB-09638 shows Maja Popović published work on cutting false AF alarms."
+        },
+        {
+          "check": "C1",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 7,
+          "pass": true,
+          "detail": "SYN-PRJ-0014 credits R0906.",
+          "record": "SYN-PRJ-0014",
+          "mark": "R0906"
+        },
+        {
+          "check": "C3",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 7,
+          "pass": true,
+          "detail": "Record SYN-PRJ-0014 confirms Maja Popović leads HEARTWATCH for remote cardiac monitoring."
+        },
+        {
+          "check": "C1",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 8,
+          "pass": true,
+          "detail": "SYN-PUB-09641 credits R0906.",
+          "record": "SYN-PUB-09641",
+          "mark": "R0906"
+        },
+        {
+          "check": "C3",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 8,
+          "pass": true,
+          "detail": "Record SYN-PUB-09641 shows Maja Popović authored research on benchmark datasets for patch ECG."
+        }
+      ]
+    },
+    {
+      "reviewId": "rv_03",
+      "writerId": "W2",
+      "pairId": "pair-2",
+      "round": 1,
+      "pass": false,
+      "claims": [
+        {
+          "n": "proposal",
+          "check": "C3",
+          "pass": false,
+          "detail": "researcherIds lists a second record: R0139 is a second record of R0539. List the canonical ID."
+        },
+        {
+          "n": 4,
+          "check": "C2",
+          "pass": false,
+          "detail": "SYN-PUB-01827's author entries carry R0539, not R0139."
+        },
+        {
+          "n": 4,
+          "check": "C3",
+          "pass": false,
+          "detail": "SYN-PUB-01827 is attributed to R0539. R0139 and R0539 look like one person (reversed name order, same faculty). Cite R0539 or state both IDs."
+        },
+        {
+          "n": 5,
+          "check": "C2",
+          "pass": false,
+          "detail": "SYN-PUB-01828's author entries carry R0539, not R0139."
+        },
+        {
+          "n": 5,
+          "check": "C3",
+          "pass": false,
+          "detail": "SYN-PUB-01828 is attributed to R0539. R0139 and R0539 look like one person (reversed name order, same faculty). Cite R0539 or state both IDs."
+        },
+        {
+          "n": 6,
+          "check": "C2",
+          "pass": false,
+          "detail": "SYN-PUB-01829's author entries carry R0539, not R0139."
+        },
+        {
+          "n": 6,
+          "check": "C3",
+          "pass": false,
+          "detail": "SYN-PUB-01829 is attributed to R0539. R0139 and R0539 look like one person (reversed name order, same faculty). Cite R0539 or state both IDs."
+        }
+      ],
+      "checks": [
+        {
+          "check": "C1",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": "proposal",
+          "pass": false,
+          "detail": "researcherIds lists a second record: R0139 is a second record of R0539. List the canonical ID.",
+          "record": "R0139",
+          "mark": "R0539"
+        },
+        {
+          "check": "C7",
+          "target": "proposal",
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C8",
+          "target": "proposal",
+          "pass": true,
+          "detail": "All six required sections are present."
+        },
+        {
+          "check": "C9",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 1,
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 1,
+          "pass": true,
+          "detail": "Record C062-CH1 states that surveys return B-scan images and about one in five utility pipes are missed due to operator disagreement."
+        },
+        {
+          "check": "C1",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 2,
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 2,
+          "pass": true,
+          "detail": "Record C062-CH1 confirms a missed gas pipe last year caused a major incident, shutting the site for nine days with a settlement."
+        },
+        {
+          "check": "C1",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 3,
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 3,
+          "pass": true,
+          "detail": "Record C062-CH1 states they have raw B-scan files going back to 2017, roughly 4 terabytes, with ground truth from excavation."
+        },
+        {
+          "check": "C1",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 4,
+          "pass": false,
+          "detail": "SYN-PUB-01827's author entries carry R0539, not R0139.",
+          "record": "SYN-PUB-01827",
+          "mark": "R0539"
+        },
+        {
+          "check": "C3",
+          "target": 4,
+          "pass": false,
+          "detail": "SYN-PUB-01827 is attributed to R0539. R0139 and R0539 look like one person (reversed name order, same faculty). Cite R0539 or state both IDs.",
+          "record": "SYN-PUB-01827",
+          "mark": "R0539"
+        },
+        {
+          "check": "C4",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 5,
+          "pass": false,
+          "detail": "SYN-PUB-01828's author entries carry R0539, not R0139.",
+          "record": "SYN-PUB-01828",
+          "mark": "R0539"
+        },
+        {
+          "check": "C3",
+          "target": 5,
+          "pass": false,
+          "detail": "SYN-PUB-01828 is attributed to R0539. R0139 and R0539 look like one person (reversed name order, same faculty). Cite R0539 or state both IDs.",
+          "record": "SYN-PUB-01828",
+          "mark": "R0539"
+        },
+        {
+          "check": "C4",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 6,
+          "pass": false,
+          "detail": "SYN-PUB-01829's author entries carry R0539, not R0139.",
+          "record": "SYN-PUB-01829",
+          "mark": "R0539"
+        },
+        {
+          "check": "C3",
+          "target": 6,
+          "pass": false,
+          "detail": "SYN-PUB-01829 is attributed to R0539. R0139 and R0539 look like one person (reversed name order, same faculty). Cite R0539 or state both IDs.",
+          "record": "SYN-PUB-01829",
+          "mark": "R0539"
+        },
+        {
+          "check": "C4",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 6,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "reviewId": "rv_05",
+      "writerId": "W1",
+      "pairId": "pair-1",
+      "round": 2,
+      "pass": true,
+      "claims": [],
+      "checks": [
+        {
+          "check": "C1",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": "proposal",
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C8",
+          "target": "proposal",
+          "pass": true,
+          "detail": "All six required sections are present."
+        },
+        {
+          "check": "C9",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 1,
+          "pass": true,
+          "detail": "Record C091 confirms company name, employee count, sector, and location."
+        },
+        {
+          "check": "C1",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 2,
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 2,
+          "pass": true,
+          "detail": "Record C091-CH1 states roughly one in four AF alerts is a motion artifact."
+        },
+        {
+          "check": "C1",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 3,
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 3,
+          "pass": true,
+          "detail": "Record C091-CH1 mentions about 1,400 patient recordings tagged by cardiologists."
+        },
+        {
+          "check": "C1",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 4,
+          "pass": true,
+          "detail": "The Analyst classified C091-CH1 as a research problem.",
+          "record": "C091-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 4,
+          "pass": true,
+          "detail": "Record C091-CH1 confirms the goal of a false-positive rate below ten percent."
+        },
+        {
+          "check": "C1",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C5",
+          "target": 5,
+          "pass": true,
+          "detail": "Supported by R0906's open_to: \"industrial PhD supervision\".",
+          "record": "R0906",
+          "mark": "industrial PhD supervision"
+        },
+        {
+          "check": "C6",
+          "target": 5,
+          "pass": true,
+          "detail": "R0906's notes set no number of new commitments; 0 passed so far."
+        },
+        {
+          "check": "C9",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 5,
+          "pass": true,
+          "detail": "Record R0906 explicitly lists 'industrial PhD supervision' and 'joint projects'."
+        },
+        {
+          "check": "C1",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 6,
+          "pass": true,
+          "detail": "SYN-PUB-09638 credits R0906.",
+          "record": "SYN-PUB-09638",
+          "mark": "R0906"
+        },
+        {
+          "check": "C3",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 6,
+          "pass": true,
+          "detail": "Record SYN-PUB-09638 authored by Maja Popović covers cutting false AF alarms."
+        },
+        {
+          "check": "C1",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 7,
+          "pass": true,
+          "detail": "SYN-PRJ-0014 credits R0906.",
+          "record": "SYN-PRJ-0014",
+          "mark": "R0906"
+        },
+        {
+          "check": "C3",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 7,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 7,
+          "pass": true,
+          "detail": "Record SYN-PRJ-0014 states Maja Popović leads the HEARTWATCH project."
+        },
+        {
+          "check": "C1",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 8,
+          "pass": true,
+          "detail": "SYN-PUB-09641 credits R0906.",
+          "record": "SYN-PUB-09641",
+          "mark": "R0906"
+        },
+        {
+          "check": "C3",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 8,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 8,
+          "pass": true,
+          "detail": "Record SYN-PUB-09641 authored by Maja Popović discusses benchmark datasets."
+        }
+      ]
+    },
+    {
+      "reviewId": "rv_07",
+      "writerId": "W2",
+      "pairId": "pair-2",
+      "round": 2,
+      "pass": true,
+      "claims": [],
+      "checks": [
+        {
+          "check": "C1",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": "proposal",
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C8",
+          "target": "proposal",
+          "pass": true,
+          "detail": "All six required sections are present."
+        },
+        {
+          "check": "C9",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 1,
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 1,
+          "pass": true,
+          "detail": "Record C062-CH1 states that surveys miss one in five pipes due to operator disagreement on B-scans."
+        },
+        {
+          "check": "C1",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 2,
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 2,
+          "pass": true,
+          "detail": "Record C062-CH1 confirms a missed gas pipe last year shut the site for nine days with a settlement."
+        },
+        {
+          "check": "C1",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 3,
+          "pass": true,
+          "detail": "The Analyst classified C062-CH1 as a research problem.",
+          "record": "C062-CH1"
+        },
+        {
+          "check": "C9",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 3,
+          "pass": true,
+          "detail": "Record C062-CH1 mentions roughly 4 terabytes of raw B-scan files going back to 2017 with excavation ground truth."
+        },
+        {
+          "check": "C1",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 4,
+          "pass": true,
+          "detail": "SYN-PUB-01827 credits R0539.",
+          "record": "SYN-PUB-01827",
+          "mark": "R0539"
+        },
+        {
+          "check": "C3",
+          "target": 4,
+          "pass": true,
+          "detail": "R0539 is the canonical record; R0139 is a second record of the same person."
+        },
+        {
+          "check": "C4",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 4,
+          "pass": true,
+          "detail": "Record SYN-PUB-01827 states Mirjana Jeremić trained and tested a CNN to detect hyperbolic reflections in GPR B-scans."
+        },
+        {
+          "check": "C1",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 5,
+          "pass": true,
+          "detail": "SYN-PUB-01828 credits R0539.",
+          "record": "SYN-PUB-01828",
+          "mark": "R0539"
+        },
+        {
+          "check": "C3",
+          "target": 5,
+          "pass": true,
+          "detail": "R0539 is the canonical record; R0139 is a second record of the same person."
+        },
+        {
+          "check": "C4",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 5,
+          "pass": true,
+          "detail": "Record SYN-PUB-01828 shows Mirjana Jeremić assessed discrepancies between GPR surveys and GIS records for cable routes."
+        },
+        {
+          "check": "C1",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 6,
+          "pass": true,
+          "detail": "SYN-PUB-01829 credits R0539.",
+          "record": "SYN-PUB-01829",
+          "mark": "R0539"
+        },
+        {
+          "check": "C3",
+          "target": 6,
+          "pass": true,
+          "detail": "R0539 is the canonical record; R0139 is a second record of the same person."
+        },
+        {
+          "check": "C4",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 6,
+          "pass": true,
+          "detail": "Record SYN-PUB-01829 states Mirjana Jeremić evaluated horizontal positioning accuracy of RTK-GNSS in Novi Sad street types."
+        }
+      ]
+    },
+    {
+      "reviewId": "rv_08",
+      "writerId": "W3",
+      "pairId": "pair-3",
+      "round": 1,
+      "pass": false,
+      "claims": [
+        {
+          "n": 3,
+          "check": "C5",
+          "pass": false,
+          "detail": "The claim names no researcher whose availability could be checked."
+        },
+        {
+          "n": 3,
+          "check": "C6",
+          "pass": false,
+          "detail": "The claim names no researcher whose capacity could be checked."
+        }
+      ],
+      "checks": [
+        {
+          "check": "C1",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": "proposal",
+          "pass": true,
+          "detail": "The Analyst classified C088-CH2 as a research problem.",
+          "record": "C088-CH2"
+        },
+        {
+          "check": "C8",
+          "target": "proposal",
+          "pass": true,
+          "detail": "All six required sections are present."
+        },
+        {
+          "check": "C9",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 1,
+          "pass": true,
+          "detail": "Record C088 states that ReVita Water designs, builds, and commissions compact wastewater treatment units for food processing and pharmaceutical manufacturing."
+        },
+        {
+          "check": "C1",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 2,
+          "pass": true,
+          "detail": "The Analyst classified C088-CH2 as a research problem.",
+          "record": "C088-CH2"
+        },
+        {
+          "check": "C9",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 2,
+          "pass": true,
+          "detail": "Record C088-CH2 confirms membranes in two dairy plants foul quickly and require cleaning every week."
+        },
+        {
+          "check": "C1",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C5",
+          "target": 3,
+          "pass": false,
+          "detail": "The claim names no researcher whose availability could be checked."
+        },
+        {
+          "check": "C6",
+          "target": 3,
+          "pass": false,
+          "detail": "The claim names no researcher whose capacity could be checked."
+        },
+        {
+          "check": "C9",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 4,
+          "pass": true,
+          "detail": "SYN-PUB-03378 credits R0269.",
+          "record": "SYN-PUB-03378",
+          "mark": "R0269"
+        },
+        {
+          "check": "C3",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 4,
+          "pass": true,
+          "detail": "Record SYN-PUB-03378 lists Ivona Bogdanović as an author investigating NaOH and alkaline hypochlorite cleaning protocols for dairy membranes."
+        },
+        {
+          "check": "C1",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 5,
+          "pass": true,
+          "detail": "SYN-PUB-03379 credits R0269.",
+          "record": "SYN-PUB-03379",
+          "mark": "R0269"
+        },
+        {
+          "check": "C3",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 5,
+          "pass": true,
+          "detail": "Record SYN-PUB-03379 lists Ivona Bogdanović as an author evaluating TMP control strategies during continuous whey protein ultrafiltration."
+        },
+        {
+          "check": "C1",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 6,
+          "pass": true,
+          "detail": "SYN-PRJ-0260 credits R0269.",
+          "record": "SYN-PRJ-0260",
+          "mark": "R0269"
+        },
+        {
+          "check": "C3",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 6,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 6,
+          "pass": true,
+          "detail": "Record SYN-PRJ-0260 shows Ivona Bogdanović participated as principal investigator in membrane-based clarification projects for regional producers."
+        }
+      ]
+    },
+    {
+      "reviewId": "rv_09",
+      "writerId": "W3",
+      "pairId": "pair-3",
+      "round": 2,
+      "pass": true,
+      "claims": [],
+      "checks": [
+        {
+          "check": "C1",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C3",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": "proposal",
+          "pass": true,
+          "detail": "The Analyst classified C088-CH2 as a research problem.",
+          "record": "C088-CH2"
+        },
+        {
+          "check": "C8",
+          "target": "proposal",
+          "pass": true,
+          "detail": "All six required sections are present."
+        },
+        {
+          "check": "C9",
+          "target": "proposal",
+          "pass": true
+        },
+        {
+          "check": "C1",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 1,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 1,
+          "pass": true,
+          "detail": "Record C088 states that ReVita Water designs, builds, and commissions compact wastewater treatment units for food processing and pharmaceutical manufacturing plants."
+        },
+        {
+          "check": "C1",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C7",
+          "target": 2,
+          "pass": true,
+          "detail": "The Analyst classified C088-CH2 as a research problem.",
+          "record": "C088-CH2"
+        },
+        {
+          "check": "C9",
+          "target": 2,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 2,
+          "pass": true,
+          "detail": "Record C088-CH2 states that at two dairy plants serviced by ReVita Water, MBR membranes foul quickly and require cleaning every week."
+        },
+        {
+          "check": "C1",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 3,
+          "pass": true,
+          "detail": "SYN-PUB-03378 credits R0269.",
+          "record": "SYN-PUB-03378",
+          "mark": "R0269"
+        },
+        {
+          "check": "C3",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 3,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 3,
+          "pass": true,
+          "detail": "Record SYN-PUB-03378 lists Ivona Bogdanović as an author on a paper investigating sodium hydroxide and alkaline hypochlorite cleaning protocols for dairy ultrafiltration membranes."
+        },
+        {
+          "check": "C1",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 4,
+          "pass": true,
+          "detail": "SYN-PUB-03379 credits R0269.",
+          "record": "SYN-PUB-03379",
+          "mark": "R0269"
+        },
+        {
+          "check": "C3",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 4,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 4,
+          "pass": true,
+          "detail": "Record SYN-PUB-03379 lists Ivona Bogdanović as an author on a study evaluating transmembrane pressure control strategies during continuous whey protein ultrafiltration."
+        },
+        {
+          "check": "C1",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C2",
+          "target": 5,
+          "pass": true,
+          "detail": "SYN-PRJ-0260 credits R0269.",
+          "record": "SYN-PRJ-0260",
+          "mark": "R0269"
+        },
+        {
+          "check": "C3",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C4",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C9",
+          "target": 5,
+          "pass": true
+        },
+        {
+          "check": "C10",
+          "target": 5,
+          "pass": true,
+          "detail": "Record SYN-PRJ-0260 shows Ivona Bogdanović participated as principal investigator in membrane-based clarification and concentration projects for regional food producers."
+        }
+      ]
+    }
+  ]
+}

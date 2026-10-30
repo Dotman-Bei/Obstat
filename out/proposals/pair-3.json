@@ -1,0 +1,253 @@
+{
+  "pairId": "pair-3",
+  "researcherIds": [
+    "R0269"
+  ],
+  "companyId": "C088",
+  "challengeId": "C088-CH2",
+  "format": "joint_project",
+  "sections": {
+    "title": "Mitigation of Rapid Membrane Fouling in Dairy Wastewater Treatment Systems",
+    "problem": "ReVita Water services two dairy plants near Temerin and Bečej where membrane bioreactor membranes foul faster than design assumptions, requiring full cleaning-in-place every 5 to 7 days instead of every 12 to 14 days {2}. Each full CIP consumes roughly 200 litres of citric acid and caustic solution and takes the system offline for 4 to 6 hours, resulting in significant chemical costs and lost treatment capacity over a year {2}. Seasonal patterns show fouling is worst in summer, while high fats, proteins, and sugars form a persistent gel layer {2}.",
+    "researchQuestions": [
+      "What are the precise chemical and structural compositions of the foulant deposit layers accumulating on membranes at the dairy sites during summer and winter operations?",
+      "How do temperature variations and dairy wastewater constituents influence gel layer formation and transmembrane pressure spikes in membrane bioreactor systems?",
+      "Which adjustments to pre-treatment, aeration strategies, or cleaning protocols can reliably extend membrane cleaning intervals to at least twelve days?"
+    ],
+    "plan": "Year 1 | Characterisation of membrane foulant samples from dairy sites and identification of gel layer composition | Foulant composition report\nYear 2 | Evaluation of modified pre-treatment, aeration, and cleaning-in-place protocols to extend operating intervals | Protocol optimisation report and pilot trial data",
+    "eachSideBrings": {
+      "company": "ReVita Water contributes historical service records, site access to the dairy plants near Temerin and Bečej, and process engineering support from its NTP Novi Sad headquarters.",
+      "faculty": "The Faculty of Technology contributes membrane fouling characterisation expertise, analytical instrumentation, and cleaning protocol optimisation experience {3}."
+    },
+    "whyThisPair": "ReVita Water needs specialised foulant characterisation and cleaning protocol expertise to address severe membrane fouling at regional dairy installations {2}. Ivona Bogdanović brings extensive experience in membrane fouling mechanisms, cleaning protocols, and dairy stream filtration {3}.",
+    "agreedUpFront": "Industrial data, service records, and foulant samples from the dairy sites will be shared under a mutual confidentiality agreement. Foreground intellectual property generated jointly will be shared, and results may be published with industry consent."
+  },
+  "claims": [
+    {
+      "n": 1,
+      "kind": "company_fact",
+      "text": "ReVita Water designs, builds, and commission compact wastewater treatment units for food processing and pharmaceutical manufacturing plants across the region.",
+      "researcherId": null,
+      "ids": [
+        "C088"
+      ]
+    },
+    {
+      "n": 2,
+      "kind": "challenge",
+      "text": "At two dairy plants serviced by ReVita Water, membrane bioreactor membranes foul quickly and require cleaning every week.",
+      "researcherId": null,
+      "ids": [
+        "C088-CH2"
+      ]
+    },
+    {
+      "n": 3,
+      "kind": "authored",
+      "text": "Ivona Bogdanović investigated sodium hydroxide and alkaline hypochlorite cleaning protocols for ultrafiltration membranes fouled with dairy process streams.",
+      "researcherId": "R0269",
+      "ids": [
+        "SYN-PUB-03378"
+      ]
+    },
+    {
+      "n": 4,
+      "kind": "authored",
+      "text": "Ivona Bogdanović evaluated transmembrane pressure control strategies during continuous whey protein ultrafiltration.",
+      "researcherId": "R0269",
+      "ids": [
+        "SYN-PUB-03379"
+      ]
+    },
+    {
+      "n": 5,
+      "kind": "project",
+      "text": "Ivona Bogdanović participated in membrane-based clarification and concentration projects for regional producers.",
+      "researcherId": "R0269",
+      "ids": [
+        "SYN-PRJ-0260"
+      ]
+    }
+  ],
+  "writerId": "W3",
+  "verdict": {
+    "reviewId": "rv_09",
+    "writerId": "W3",
+    "pairId": "pair-3",
+    "round": 2,
+    "pass": true,
+    "claims": [],
+    "checks": [
+      {
+        "check": "C1",
+        "target": "proposal",
+        "pass": true
+      },
+      {
+        "check": "C3",
+        "target": "proposal",
+        "pass": true
+      },
+      {
+        "check": "C7",
+        "target": "proposal",
+        "pass": true,
+        "detail": "The Analyst classified C088-CH2 as a research problem.",
+        "record": "C088-CH2"
+      },
+      {
+        "check": "C8",
+        "target": "proposal",
+        "pass": true,
+        "detail": "All six required sections are present."
+      },
+      {
+        "check": "C9",
+        "target": "proposal",
+        "pass": true
+      },
+      {
+        "check": "C1",
+        "target": 1,
+        "pass": true
+      },
+      {
+        "check": "C9",
+        "target": 1,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 1,
+        "pass": true,
+        "detail": "Record C088 states that ReVita Water designs, builds, and commissions compact wastewater treatment units for food processing and pharmaceutical manufacturing plants."
+      },
+      {
+        "check": "C1",
+        "target": 2,
+        "pass": true
+      },
+      {
+        "check": "C7",
+        "target": 2,
+        "pass": true,
+        "detail": "The Analyst classified C088-CH2 as a research problem.",
+        "record": "C088-CH2"
+      },
+      {
+        "check": "C9",
+        "target": 2,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 2,
+        "pass": true,
+        "detail": "Record C088-CH2 states that at two dairy plants serviced by ReVita Water, MBR membranes foul quickly and require cleaning every week."
+      },
+      {
+        "check": "C1",
+        "target": 3,
+        "pass": true
+      },
+      {
+        "check": "C2",
+        "target": 3,
+        "pass": true,
+        "detail": "SYN-PUB-03378 credits R0269.",
+        "record": "SYN-PUB-03378",
+        "mark": "R0269"
+      },
+      {
+        "check": "C3",
+        "target": 3,
+        "pass": true
+      },
+      {
+        "check": "C4",
+        "target": 3,
+        "pass": true
+      },
+      {
+        "check": "C9",
+        "target": 3,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 3,
+        "pass": true,
+        "detail": "Record SYN-PUB-03378 lists Ivona Bogdanović as an author on a paper investigating sodium hydroxide and alkaline hypochlorite cleaning protocols for dairy ultrafiltration membranes."
+      },
+      {
+        "check": "C1",
+        "target": 4,
+        "pass": true
+      },
+      {
+        "check": "C2",
+        "target": 4,
+        "pass": true,
+        "detail": "SYN-PUB-03379 credits R0269.",
+        "record": "SYN-PUB-03379",
+        "mark": "R0269"
+      },
+      {
+        "check": "C3",
+        "target": 4,
+        "pass": true
+      },
+      {
+        "check": "C4",
+        "target": 4,
+        "pass": true
+      },
+      {
+        "check": "C9",
+        "target": 4,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 4,
+        "pass": true,
+        "detail": "Record SYN-PUB-03379 lists Ivona Bogdanović as an author on a study evaluating transmembrane pressure control strategies during continuous whey protein ultrafiltration."
+      },
+      {
+        "check": "C1",
+        "target": 5,
+        "pass": true
+      },
+      {
+        "check": "C2",
+        "target": 5,
+        "pass": true,
+        "detail": "SYN-PRJ-0260 credits R0269.",
+        "record": "SYN-PRJ-0260",
+        "mark": "R0269"
+      },
+      {
+        "check": "C3",
+        "target": 5,
+        "pass": true
+      },
+      {
+        "check": "C4",
+        "target": 5,
+        "pass": true
+      },
+      {
+        "check": "C9",
+        "target": 5,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 5,
+        "pass": true,
+        "detail": "Record SYN-PRJ-0260 shows Ivona Bogdanović participated as principal investigator in membrane-based clarification and concentration projects for regional food producers."
+      }
+    ]
+  },
+  "writtenAt": "2026-10-30T18:28:15.723Z"
+}

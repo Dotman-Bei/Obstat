@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Obstat</title>
+    <meta name="description" content="Obstat writes research proposals for the EINSTEIN network and holds each one until a separate Critic has checked every claim against the person it names.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='7.5' fill='none' stroke='%231b6c80' stroke-width='2.25'/%3E%3Cpath d='M3.5 10h13' stroke='%231b6c80' stroke-width='2.75'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet"><!-- taste-skill-ignore: Plex Mono is used only for the real commands in code elements -->
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="/site/site.css">
+  </head>
+  <body>
+    <header class="nav">
+      <a class="wordmark" href="#top" aria-label="Obstat, back to the top">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="2.25"/><path d="M3.5 10h13" stroke="currentColor" stroke-width="2.75"/></svg>
+        <span>Obstat</span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="#how-it-works">How it works</a>
+        <a href="#checks">Checks</a>
+        <a href="#proposals">Proposals</a>
+      </nav>
+      <a class="button" href="console.html#/run">Open terminal</a>
+    </header>
+
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-h">
+        <h1 class="lines" id="hero-h">
+          <span class="line"><span data-line style="--i:0">No proposal</span></span>
+          <span class="line"><span data-line style="--i:1">leaves unchecked</span></span>
+        </h1>
+        <p class="hero-lede">Obstat writes research proposals and holds each one until a separate Critic has checked every claim against the person it names.</p>
+
+        <figure class="hero-shot" data-ui aria-label="The terminal's hold screen for review rv_03: Writer 2 credited R0139 with SYN-PUB-01827 and the Critic failed the claim">
+          <div class="ui-sheet">
+            <p class="ui-crumbs">Holds <span aria-hidden="true">/</span> <span class="ui-id">rv_03</span></p>
+            <p class="ui-title">Writer 2 held, round 1</p>
+            <p class="ui-sub">Failed on the proposal and claims 4, 5 and 6 (C3, duplicate profile).</p>
+            <div class="ui-claim">
+              <span class="ui-n">4</span>
+              <div>
+                <p>Mirjana Jeremić trained and tested a convolutional neural network to detect hyperbolic reflections indicative of buried point and linear targets in GPR B-scans.</p>
+                <p class="ui-meta">Authored · names <span class="ui-id">R0139</span> · cites <span class="ui-id">SYN-PUB-01827</span></p>
+                <p class="ui-why"><b>C2 Attribution.</b> <span class="ui-id">SYN-PUB-01827</span>’s author entries carry <span class="ui-id">R0539</span>, not <span class="ui-id">R0139</span>.</p>
+                <p class="ui-why"><b>C3 Duplicate profile.</b> <span class="ui-id">SYN-PUB-01827</span> is attributed to <span class="ui-id">R0539</span>. <span class="ui-id">R0139</span> and <span class="ui-id">R0539</span> look like one person (reversed name order, same faculty). Cite <span class="ui-id">R0539</span> or state both IDs.</p>
+              </div>
+              <span class="ui-pill">Failed C2, C3</span>
+            </div>
+            <div class="ui-claim">
+              <span class="ui-n">5</span>
+              <div>
+                <p>Mirjana Jeremić assessed positional discrepancies between independent GPR-based cadastre surveys and operator GIS records.</p>
+                <p class="ui-meta">Authored · names <span class="ui-id">R0139</span> · cites <span class="ui-id">SYN-PUB-01828</span></p>
+              </div>
+              <span class="ui-pill">Failed C2, C3</span>
+            </div>
+          </div>
+        </figure>
+
+        <p class="hero-fact">The committed run wrote 3 proposals and turned 135 challenges away, in 23 model calls.</p>
+      </section>
+
+      <section class="censor" id="nihil-obstat" aria-label="What the name means" data-reveal>
+        <p class="statement" style="--i:0">Nihil obstat: the censor’s line that let a book go to press. Obstat prints it only after every claim checks out.</p>
+        <div class="records-block" style="--i:2">
+          <p class="records-note">One person, stored twice in the dataset.</p>
+          <div class="records" data-ui>
+            <div class="rec">
+              <p class="rec-id">R0139</p>
+              <p class="rec-name">Jeremić Mirjana</p>
+              <p class="rec-meta">vanredni profesor, Fakultet tehničkih nauka</p>
+              <p class="rec-works">Profile lists SYN-PUB-01827, 01828 and 01829</p>
+            </div>
+            <div class="rec">
+              <p class="rec-id">R0539</p>
+              <p class="rec-name">Mirjana Jeremić</p>
+              <p class="rec-meta">Associate Professor, Faculty of Technical Sciences</p>
+              <p class="rec-works">The author entry on SYN-PUB-01827 carries R0539</p>
+            </div>
+          </div>
+        </div>
+        <figure class="censor-page" style="--i:1">
+          <img src="/landing/himmelsbrot-imprimatur-1897.jpg" width="1819" height="3024" loading="lazy" decoding="async"
+               alt="A printed page headed Imprimatur, with a round episcopal seal and the date 4 Juni 1897, inside a red ruled border">
+        </figure>
+      </section>
+
+      <section class="steps" id="how-it-works" aria-labelledby="step-1" data-reveal>
+        <div class="step" style="--i:0">
+          <h2 id="step-1">First, a writer writes.</h2>
+          <p>From the researcher’s profile, as the profile states it. Writer 2 worked from R0139, whose profile lists SYN-PUB-01827.</p>
+        </div>
+        <div class="step" style="--i:1">
+          <h3>Then the gate holds it.</h3>
+          <p>Only that writer’s loop waits. Writers 1 and 3 kept working through the hold.</p>
+        </div>
+        <div class="step" style="--i:2">
+          <h3>Next, the Critic checks.</h3>
+          <p>Ten checks, run against the records themselves. The paper’s author entry carries R0539, not R0139.</p>
+        </div>
+        <div class="step" style="--i:3">
+          <h3>Last, it passes or returns.</h3>
+          <p>A failure goes back with its reasons. In round 2 Writer 2 cited R0539, and pair-2 was written.</p>
+        </div>
+        <figure class="press" style="--i:4">
+          <video autoplay muted loop playsinline preload="metadata" poster="/landing/printing-in-a-letterpress-poster.jpg" width="854" height="480" aria-hidden="true" data-loop><source src="/landing/printing-in-a-letterpress.webm" type="video/webm"></video>
+        </figure>
+      </section>
+
+      <section class="checks" id="checks" aria-labelledby="checks-h" data-reveal>
+        <h2 id="checks-h" style="--i:0">Ten checks on every claim</h2>
+        <div class="command" data-ui data-command style="--i:1">
+          <label class="ui-visually-hidden" for="check-search">Find a check</label>
+          <input id="check-search" type="search" placeholder="Find a check" autocomplete="off" spellcheck="false" aria-controls="check-list">
+          <ul id="check-list" class="command-list">
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">ID exists</span><span class="keys"><kbd>C</kbd><kbd>1</kbd></span></button>
+              <p>Fails when a cited ID is not in the dataset, or when the challenge belongs to another company.</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">Attribution</span><span class="keys"><kbd>C</kbd><kbd>2</kbd></span></button>
+              <p>Fails when the record’s author, inventor or participant entries do not carry the named researcher. In the run: SYN-PUB-01827’s author entries carry R0539, not R0139.</p></li>
+            <li class="selected"><button type="button" aria-expanded="true"><span class="cmd-name">Duplicate profile</span><span class="keys"><kbd>C</kbd><kbd>3</kbd></span></button>
+              <p>Fails when a claim names a second record of one person. In the run: SYN-PUB-01827 is attributed to R0539. R0139 and R0539 look like one person (reversed name order, same faculty). Cite R0539 or state both IDs.</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">Namesake</span><span class="keys"><kbd>C</kbd><kbd>4</kbd></span></button>
+              <p>Fails when the evidence belongs to a different person with the same name. In the dataset: SYN-PUB-09418 belongs to R0881 Nina Mamužić (Faculty of Agriculture), not R0128 (Faculty of Technology).</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">Availability</span><span class="keys"><kbd>C</kbd><kbd>5</kbd></span></button>
+              <p>Fails without a quote from the researcher’s own open_to or notes, or when they left, or are emeritus and the role is not consulting. In the run: Quote the words in R0906’s open_to or notes that support this role.</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">Capacity</span><span class="keys"><kbd>C</kbd><kbd>6</kbd></span></button>
+              <p>Fails when commitments the gate has already passed exceed what the researcher’s note allows.</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">Research problem</span><span class="keys"><kbd>C</kbd><kbd>7</kbd></span></button>
+              <p>Fails when the Industry Analyst turned the challenge away as not research, or as having no fitting researcher.</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">Sections complete</span><span class="keys"><kbd>C</kbd><kbd>8</kbd></span></button>
+              <p>Fails when a required section is missing, a marker points at no claim, or a claim is a pasted paragraph.</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">No ranking of people</span><span class="keys"><kbd>C</kbd><kbd>9</kbd></span></button>
+              <p>Fails on worth language about people: best researcher, top-ranked, scores next to names.</p></li>
+            <li><button type="button" aria-expanded="false"><span class="cmd-name">Support</span><span class="keys"><kbd>C</kbd><kbd>1</kbd><kbd>0</kbd></span></button>
+              <p>Fails when a small model, given only the cited records, finds they do not support the sentence.</p></li>
+          </ul>
+          <p class="command-empty" hidden>No check matches that.</p>
+        </div>
+      </section>
+
+      <section class="contents" id="proposals" aria-labelledby="proposals-h" data-reveal>
+        <h2 id="proposals-h" style="--i:0">The proposals</h2>
+        <ul class="index" data-index style="--i:1">
+          <li class="active">
+            <img class="phone-pic" src="/landing/using-ground-penetrating-radar-flickr-the-official.jpg" width="1920" height="1280" loading="lazy" decoding="async" alt="A surveyor in a yellow protective suit pushes a ground-penetrating radar cart across open grassland">
+            <a href="console.html#/proposals/pair-2" data-pick="pair-2"><span class="name">Terramap Subotica</span><span class="meta">Operators miss about one in five buried pipes in their radar scans. An industrial PhD with Mirjana Jeremić (R0539), passed in round 2 after the R0139 hold.</span></a>
+          </li>
+          <li>
+            <img class="phone-pic" src="/landing/ekg-normal-bionerd.jpg" width="1200" height="873" loading="lazy" decoding="async" alt="A printed twelve-lead electrocardiogram on a grid, with heart rate and intervals listed at the top">
+            <a href="console.html#/proposals/pair-1" data-pick="pair-1"><span class="name">CardioTrack</span><span class="meta">About one in four atrial fibrillation alarms from its ECG patch is a motion artefact. An industrial PhD with Maja Popović (R0906), passed in round 2.</span></a>
+          </li>
+          <li>
+            <img class="phone-pic" src="/landing/membrane-bioreactor-mbr-5729650689.jpg" width="1920" height="1440" loading="lazy" decoding="async" alt="A steel membrane filtration module hanging in a dark tank, fed by hoses and held by a chain">
+            <a href="console.html#/proposals/pair-3" data-pick="pair-3"><span class="name">ReVita Water</span><span class="meta">Membranes treating dairy wastewater foul too fast. A joint project with Ivona Bogdanović (R0269), passed in round 2.</span></a>
+          </li>
+        </ul>
+        <div class="frame" aria-hidden="true">
+          <img class="on" data-for="pair-2" src="/landing/using-ground-penetrating-radar-flickr-the-official.jpg" width="1920" height="1280" loading="lazy" decoding="async" alt="">
+          <img data-for="pair-1" src="/landing/ekg-normal-bionerd.jpg" width="1200" height="873" loading="lazy" decoding="async" alt="">
+          <img data-for="pair-3" src="/landing/membrane-bioreactor-mbr-5729650689.jpg" width="1920" height="1440" loading="lazy" decoding="async" alt="">
+        </div>
+      </section>
+
+      <section class="errata" id="turned-away" aria-labelledby="errata-h">
+        <img class="errata-ground" src="/landing/trg-slobode-7-in-novi-sad-2.jpg" width="1920" height="2040" loading="lazy" decoding="async"
+             alt="A pale pink Secession building with an ornate gable on Novi Sad’s main square, Trg slobode, with trees and people in front">
+        <article class="sheet" data-reveal>
+          <h2 id="errata-h" style="--i:0">Turned away</h2>
+          <p class="sheet-note" style="--i:1">135 of 489 challenges, before any matching. The Analyst’s reasons, as it gave them.</p>
+          <div class="group" style="--i:2">
+            <h3>Funding and grants</h3>
+            <dl>
+              <div><dt>Zrenjanin Game Works</dt><dd class="id">C002-CH3</dd><dd class="why">Grant application paperwork and administrative corrections are standard administrative tasks.</dd></div>
+              <div><dt>AutomVoj</dt><dd class="id">C003-CH3</dd><dd class="why">Preparing a bankable cash-flow model and sensitivity analysis for loan application is financial consulting, not research.</dd></div>
+              <div><dt>PravniPilot</dt><dd class="id">C006-CH2</dd><dd class="why">Cap table restructuring and handling convertible note terms are legal and corporate finance tasks.</dd></div>
+            </dl>
+          </div>
+          <div class="group" style="--i:3">
+            <h3>Legal and compliance</h3>
+            <dl>
+              <div><dt>Velago Software</dt><dd class="id">C011-CH2</dd><dd class="why">Reviewing and negotiating client data processing agreements under GDPR is legal work.</dd></div>
+              <div><dt>Sentinel Byte</dt><dd class="id">C012-CH3</dd><dd class="why">Filing paperwork for statutory auditor registration with government ministries is administrative and legal work.</dd></div>
+              <div><dt>OsiguroMi</dt><dd class="id">C004-CH4</dd><dd class="why">Appointing a licensed intermediary and handling regulatory licensing processes are legal and administrative work.</dd></div>
+              <div><dt>Suncokret Eko</dt><dd class="id">C007-CH2</dd><dd class="why">Preparing certification paperwork and navigating scheme documentation are administrative tasks.</dd></div>
+            </dl>
+          </div>
+          <div class="group" style="--i:4">
+            <h3>Hiring and training</h3>
+            <dl>
+              <div><dt>Kvantor Inženjering</dt><dd class="id">C014-CH3</dd><dd class="why">Onboarding and training junior staff members is human resources and management work.</dd></div>
+              <div><dt>DriveLogic Vojvodina</dt><dd class="id">C018-CH3</dd><dd class="why">Training engineers on protocol internals and handling staff turnover are internal HR and training activities.</dd></div>
+              <div><dt>Sentinel Byte</dt><dd class="id">C012-CH2</dd><dd class="why">Designing customer training curricula and educational materials is training development work.</dd></div>
+            </dl>
+          </div>
+          <div class="group" style="--i:5">
+            <h3>Sales and market entry</h3>
+            <dl>
+              <div><dt>Elekron Sistemi</dt><dd class="id">C008-CH3</dd><dd class="why">Navigating foreign public procurement tenders and e-procurement portals is sales and administrative work.</dd></div>
+              <div><dt>Krenuti Digital</dt><dd class="id">C064-CH3</dd><dd class="why">Sales training and presentation coaching for founders is professional development services.</dd></div>
+              <div><dt>Bela Ruža Kozmetika</dt><dd class="id">C089-CH3</dd><dd class="why">Analyzing webshop funnel drop-offs and abandoned-cart rates is e-commerce marketing work.</dd></div>
+            </dl>
+          </div>
+          <div class="group" style="--i:6">
+            <h3>No researcher in the field</h3>
+            <dl>
+              <div><dt>Orbita Inženjering</dt><dd class="id">C063-CH2</dd><dd class="why">Structural dynamics and vibration fatigue analysis is a real engineering question, but the closest university groups lack matching expertise.</dd></div>
+            </dl>
+          </div>
+          <p class="sheet-close" style="--i:7">The Industry Analyst read all 489 challenges.<br>Every one turned away is in out/no-match.md.</p>
+        </article>
+      </section>
+
+      <section class="imprimatur" aria-labelledby="open-h">
+        <a href="console.html#/run" class="imprimatur-link">
+          <h2 id="open-h">The terminal replays the committed run.</h2>
+          <svg class="arrow" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 36 36 12M16 12h20v20" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square"/></svg>
+          <svg class="word" data-fit viewBox="0 0 200 56" aria-label="Open terminal" role="img"><text x="0" y="50">OPEN</text></svg>
+        </a>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <div class="colophon-cols">
+        <div>
+          <p class="col-head">Obstat</p>
+          <p>Built for the EINSTEIN track of the NTP Novi Sad hackathon, 30–31 October 2026.</p>
+        </div>
+        <div>
+          <p class="col-head">Read</p>
+          <ul><li><a href="#how-it-works">How it works</a></li><li><a href="#checks">Checks</a></li><li><a href="#proposals">Proposals</a></li><li><a href="#turned-away">Turned away</a></li></ul>
+        </div>
+        <div>
+          <p class="col-head">In the repository</p>
+          <ul><li>README.md</li><li>out/trace.jsonl</li><li>out/summary.md</li><li>out/no-match.md</li></ul>
+        </div>
+        <div>
+          <p class="col-head">Run it</p>
+          <ul><li><code>npm start -- --demo</code></li><li><code>npm run proof</code></li><li><code>npm run ui</code></li></ul>
+        </div>
+      </div>
+      <div class="colophon-foot">
+        <svg class="colophon-word" data-fit viewBox="0 0 270 56" aria-label="Obstat" role="img"><text x="0" y="50">OBSTAT</text></svg>
+        <p class="legal">The EINSTEIN dataset is synthetic: every person, company and publication in it is invented.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/site/site.ts"></script>
+  </body>
+</html>

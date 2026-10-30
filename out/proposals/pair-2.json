@@ -1,0 +1,295 @@
+{
+  "pairId": "pair-2",
+  "researcherIds": [
+    "R0539"
+  ],
+  "companyId": "C062",
+  "challengeId": "C062-CH1",
+  "format": "industrial_phd",
+  "sections": {
+    "title": "Machine-Learning-Assisted Automated GPR Hyperbola Detection for Underground Utility Mapping",
+    "problem": "Terramap Subotica d.o.o. states that their ground-penetrating radar surveys miss about one in five utility pipes because operators disagree on what they see in raw B-scan images {1}. A missed gas pipe on a construction site last year caused a major incident that shut the site for nine days and cost a combined settlement {2}. Terramap holds roughly four terabytes of raw GPR B-scan files going back to 2017 with excavation ground truth from completed projects {3}.",
+    "researchQuestions": [
+      "How can convolutional neural networks be effectively adapted to process Terramap's historical GPR B-scan archives and automatically identify hyperbolic reflections from buried utility pipes?",
+      "What calibration methods and confidence scoring mechanisms can minimize operator disagreement and reduce the incidence of missed pipes during routine surveys?",
+      "How can automated detection layers be integrated into Terramap's daily operational workflow without disrupting survey processing timelines?"
+    ],
+    "plan": "Year 1 | Audit and curate Terramap's four terabytes of historical GPR B-scan files {3}, establish ground-truth labels from excavation records, and adapt existing convolutional neural network architectures for automated hyperbola detection {4}. | Curated training dataset and baseline automated hyperbola detection model.\nYear 2 | Train, validate, and test machine learning models on urban GPR B-scans, integrate confidence scoring for probable pipe locations, and perform field-testing on active Terramap survey projects. | Validated detection layer with confidence scoring and field-test evaluation report.\nYear 3 | Refine user interface integration for Terramap operators, establish escalation workflows for disputed scans, finalize the industrial PhD dissertation, and prepare joint publications. | Deployed detection workflow, completed doctoral dissertation, and submitted manuscripts.",
+    "eachSideBrings": {
+      "company": "Terramap Subotica d.o.o. contributes four terabytes of historical Gpr b-scan files with known excavation ground truth {3}, two senior surveyors with postgraduate geodesy backgrounds dedicating ten to fifteen hours per week, and industrial domain expertise in underground infrastructure mapping {C062}.",
+      "faculty": "Mirjana Jeremić {R0539} brings academic expertise in ground-penetrating radar, machine-learning-assisted hyperbola detection in B-scans {4}, subsurface utility engineering, and positional accuracy assessment of utility surveys {5, 6}."
+    },
+    "whyThisPair": "This collaboration pairs Terramap Subotica d.o.o., a commercial underground infrastructure mapping company facing operational challenges with missed utility pipes {1, C062}, with Mirjana Jeremić {R0539}, an expert in machine-learning-assisted hyperbola detection in B-scans {4} from the Faculty of Technical Sciences at the University of Novi Sad. By combining Terramap's four terabytes of historical survey data {3} with academic research in automated interpretation {4}, the partnership directly addresses the critical need to reduce operator dependency and prevent costly utility strikes {1, 2}.",
+    "agreedUpFront": "Data access will utilize Terramap's internal server containing four terabytes of historical GPR B-scan files with excavation ground truth. Intellectual property resulting from the industrial PhD will be shared between Terramap Subotica d.o.o. and the University of Novi Sad under an agreed commercialization and confidentiality framework. Joint publications in peer-reviewed journals will be pursued based on the findings of the automated detection models."
+  },
+  "claims": [
+    {
+      "n": 1,
+      "kind": "challenge",
+      "text": "Terramap Subotica d.o.o. states that their ground-penetrating radar surveys miss about one in five utility pipes because operators disagree on what they see in raw B-scan images.",
+      "researcherId": null,
+      "ids": [
+        "C062-CH1"
+      ]
+    },
+    {
+      "n": 2,
+      "kind": "challenge",
+      "text": "A missed gas pipe on a construction site last year caused a major incident that shut the site for nine days and cost a combined settlement.",
+      "researcherId": null,
+      "ids": [
+        "C062-CH1"
+      ]
+    },
+    {
+      "n": 3,
+      "kind": "challenge",
+      "text": "Terramap Subotica d.o.o. holds roughly four terabytes of raw GPR B-scan files going back to 2017 with excavation ground truth from completed projects.",
+      "researcherId": null,
+      "ids": [
+        "C062-CH1"
+      ]
+    },
+    {
+      "n": 4,
+      "kind": "authored",
+      "text": "Mirjana Jeremić trained and tested a convolutional neural network to detect hyperbolic reflections indicative of buried point and linear targets in GPR B-scans.",
+      "researcherId": "R0539",
+      "ids": [
+        "SYN-PUB-01827"
+      ]
+    },
+    {
+      "n": 5,
+      "kind": "authored",
+      "text": "Mirjana Jeremić assessed positional discrepancies between independent GPR-based cadastre surveys and operator GIS records for low-voltage cable routes in Vojvodina.",
+      "researcherId": "R0539",
+      "ids": [
+        "SYN-PUB-01828"
+      ]
+    },
+    {
+      "n": 6,
+      "kind": "authored",
+      "text": "Mirjana Jeremić evaluated horizontal positioning accuracy of RTK-GNSS for utility location work across different street types in Novi Sad.",
+      "researcherId": "R0539",
+      "ids": [
+        "SYN-PUB-01829"
+      ]
+    }
+  ],
+  "writerId": "W2",
+  "verdict": {
+    "reviewId": "rv_07",
+    "writerId": "W2",
+    "pairId": "pair-2",
+    "round": 2,
+    "pass": true,
+    "claims": [],
+    "checks": [
+      {
+        "check": "C1",
+        "target": "proposal",
+        "pass": true
+      },
+      {
+        "check": "C3",
+        "target": "proposal",
+        "pass": true
+      },
+      {
+        "check": "C7",
+        "target": "proposal",
+        "pass": true,
+        "detail": "The Analyst classified C062-CH1 as a research problem.",
+        "record": "C062-CH1"
+      },
+      {
+        "check": "C8",
+        "target": "proposal",
+        "pass": true,
+        "detail": "All six required sections are present."
+      },
+      {
+        "check": "C9",
+        "target": "proposal",
+        "pass": true
+      },
+      {
+        "check": "C1",
+        "target": 1,
+        "pass": true
+      },
+      {
+        "check": "C7",
+        "target": 1,
+        "pass": true,
+        "detail": "The Analyst classified C062-CH1 as a research problem.",
+        "record": "C062-CH1"
+      },
+      {
+        "check": "C9",
+        "target": 1,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 1,
+        "pass": true,
+        "detail": "Record C062-CH1 states that surveys miss one in five pipes due to operator disagreement on B-scans."
+      },
+      {
+        "check": "C1",
+        "target": 2,
+        "pass": true
+      },
+      {
+        "check": "C7",
+        "target": 2,
+        "pass": true,
+        "detail": "The Analyst classified C062-CH1 as a research problem.",
+        "record": "C062-CH1"
+      },
+      {
+        "check": "C9",
+        "target": 2,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 2,
+        "pass": true,
+        "detail": "Record C062-CH1 confirms a missed gas pipe last year shut the site for nine days with a settlement."
+      },
+      {
+        "check": "C1",
+        "target": 3,
+        "pass": true
+      },
+      {
+        "check": "C7",
+        "target": 3,
+        "pass": true,
+        "detail": "The Analyst classified C062-CH1 as a research problem.",
+        "record": "C062-CH1"
+      },
+      {
+        "check": "C9",
+        "target": 3,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 3,
+        "pass": true,
+        "detail": "Record C062-CH1 mentions roughly 4 terabytes of raw B-scan files going back to 2017 with excavation ground truth."
+      },
+      {
+        "check": "C1",
+        "target": 4,
+        "pass": true
+      },
+      {
+        "check": "C2",
+        "target": 4,
+        "pass": true,
+        "detail": "SYN-PUB-01827 credits R0539.",
+        "record": "SYN-PUB-01827",
+        "mark": "R0539"
+      },
+      {
+        "check": "C3",
+        "target": 4,
+        "pass": true,
+        "detail": "R0539 is the canonical record; R0139 is a second record of the same person."
+      },
+      {
+        "check": "C4",
+        "target": 4,
+        "pass": true
+      },
+      {
+        "check": "C9",
+        "target": 4,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 4,
+        "pass": true,
+        "detail": "Record SYN-PUB-01827 states Mirjana Jeremić trained and tested a CNN to detect hyperbolic reflections in GPR B-scans."
+      },
+      {
+        "check": "C1",
+        "target": 5,
+        "pass": true
+      },
+      {
+        "check": "C2",
+        "target": 5,
+        "pass": true,
+        "detail": "SYN-PUB-01828 credits R0539.",
+        "record": "SYN-PUB-01828",
+        "mark": "R0539"
+      },
+      {
+        "check": "C3",
+        "target": 5,
+        "pass": true,
+        "detail": "R0539 is the canonical record; R0139 is a second record of the same person."
+      },
+      {
+        "check": "C4",
+        "target": 5,
+        "pass": true
+      },
+      {
+        "check": "C9",
+        "target": 5,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 5,
+        "pass": true,
+        "detail": "Record SYN-PUB-01828 shows Mirjana Jeremić assessed discrepancies between GPR surveys and GIS records for cable routes."
+      },
+      {
+        "check": "C1",
+        "target": 6,
+        "pass": true
+      },
+      {
+        "check": "C2",
+        "target": 6,
+        "pass": true,
+        "detail": "SYN-PUB-01829 credits R0539.",
+        "record": "SYN-PUB-01829",
+        "mark": "R0539"
+      },
+      {
+        "check": "C3",
+        "target": 6,
+        "pass": true,
+        "detail": "R0539 is the canonical record; R0139 is a second record of the same person."
+      },
+      {
+        "check": "C4",
+        "target": 6,
+        "pass": true
+      },
+      {
+        "check": "C9",
+        "target": 6,
+        "pass": true
+      },
+      {
+        "check": "C10",
+        "target": 6,
+        "pass": true,
+        "detail": "Record SYN-PUB-01829 states Mirjana Jeremić evaluated horizontal positioning accuracy of RTK-GNSS in Novi Sad street types."
+      }
+    ]
+  },
+  "writtenAt": "2026-10-30T18:26:59.473Z"
+}
