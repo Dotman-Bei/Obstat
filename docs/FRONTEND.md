@@ -1,10 +1,11 @@
-# Obstat console: frontend spec
+# Obstat frontend: the terminal and the landing page
 
-Owner of look and stack for the web console (PRD §11, T12). The PRD owns data and behaviour; this file owns
-everything a viewer sees. Written 2026-10-30 from PRD v1, following the `design-taste-frontend` skill
-(app-screen run, `references/app-screens.md`).
+Owner of look and stack for the web frontend (PRD §11, T12): the terminal, the read-only console onto a run, and
+the landing page in front of it (§9). The PRD owns data and behaviour; this file owns everything a viewer sees.
+Written 2026-10-30 from PRD v1, following the `design-taste-frontend` skill (the app-screen run for the terminal,
+the page run for the landing page).
 
-Style dealt: **Framed sheet** (light), seed `315125889`, kind `devtools`. No redraws.
+Terminal style dealt: **Framed sheet** (light), seed `315125889`, kind `devtools`. No redraws. Landing page: §9.
 
 ---
 
@@ -98,103 +99,117 @@ App screens do not perform. Motion is feedback only.
 
 ## 3. Stack and structure
 
-- **Vite + TypeScript, no framework.** Hash routes (`#/run`, `#/holds/rv_17`, `#/proposals/pair-2`,
-  `?record=R0539` on any route opens the drawer). The console lives in `ui/` with its own `package.json`,
-  so a UI build failure cannot break `npm start` (T12).
+- **Vite + TypeScript, no framework.** Two pages in `ui/`: the landing page at `/` (`ui/index.html`, §9) and the
+  terminal, the read-only console, at `/console.html`. The terminal uses hash routes (`#/run`, `#/holds/rv_03`,
+  `#/proposals/pair-2`; `?record=R0539` on any route opens the drawer). `ui/` has its own `package.json`, so a UI
+  build failure cannot break `npm start` (T12).
 - **One data client** (`ui/src/data/`) reads exactly the PRD endpoints: `GET /events` (SSE, one trace line per
   event), `GET /api/summary`, `GET /api/proposals`, `GET /api/proposals/:pairId`, `GET /api/records/:id`.
-- **Replay without keys:** in development and preview, a Vite middleware serves those endpoints from a sample run
-  (`ui/fixtures/`). The real UI Bridge serves the same routes on `127.0.0.1` and replaces it with no UI change.
+- **One server-side answer to those endpoints:** `src/ui-bridge/api.ts` reads a finished run (`out/trace.jsonl`,
+  `out/run.json`, `out/proposals/*.json`) and serves records from the dataset index. `npm run ui`, the Vite dev
+  server and the Vite preview all use it, so every screen is built and checked against the committed run and the
+  real dataset. There is no sample data.
 - **Replay speed** (1×, 4×, Instant) is playback of the trace in the browser only. It does not touch the run.
   Lists, counters and the hold screens follow the playhead; the Summary shows the final figures.
 
 ### Running it
 
 ```bash
-cd ui
-npm install
-npm run dev        # http://127.0.0.1:4310, replay of the sample run
-npm run build      # type-check, then build to ui/dist
-npm run preview    # http://127.0.0.1:4311, the production build with the same replay endpoints
+npm run ui:build           # from the project root, once: installs and builds ui/
+npm run ui                 # http://127.0.0.1:4320: the landing page; the terminal is at /console.html
+cd ui && npm run dev       # http://127.0.0.1:4310, for design work, same data
+cd ui && npm run preview   # http://127.0.0.1:4311, the production build, same data
 ```
 
-The PRD's root-level `npm run ui` should call `npm --prefix ui run preview` once the agent runtime's
-`package.json` exists.
+All of them need the committed run in `out/` and the dataset in `data/data` (see the README).
 
-### Trace line the console expects
+### Trace line the terminal expects
 
 The PRD's line plus an optional `data` object on the events the screens need:
 
 ```json
-{"t":"2026-10-31T09:12:36.214Z","type":"interception.started","producer":"W2","loopId":"lp_w2_01",
- "summary":"write_proposal held (6 claims)","data":{"reviewId":"rv_04","pairId":"pair-2","round":1}}
+{"t":"2026-10-30T18:25:57.229Z","type":"interception.started","producer":"W2","loopId":"<Mozaik loop UUID>",
+ "summary":"write_proposal held (6 claims)","data":{"reviewId":"rv_03","pairId":"pair-2","round":1}}
 ```
 
-`claim.review.requested.data` carries `{ reviewId, writerId, pairId, round, claims[] }`;
-`claim.review.completed.data` carries the verdict shape of PRD §9 plus `checks[]` (every check run, pass or fail).
+- `claim.review.requested.data` carries `{ reviewId, writerId, pairId, round, claims[], proposal }`;
+  `claim.review.completed.data` carries the verdict shape of PRD §9 plus `checks[]` (every check run, pass or fail).
+- Loop IDs are Mozaik's UUIDs. The screens never show them: a loop is named by what it was for ("writing pair-1"),
+  from its `loop.started` line.
+- A call the gate rejected as malformed is marked `"malformed": true` on its `interception.started` line. It never
+  reached the Critic, so the terminal shows it in the trace feed and does not count it as a hold.
+- `loop.closing` and `loop.closed` mark a writer's loop ending after its file was written. They are not holds.
 
 ## 4. Screens, in build order
 
-Copy below is the copy that ships. Figures in brackets are computed from the trace, never typed.
+Copy below is the copy that ships. Figures in brackets are computed from the trace, never typed; the examples are
+the committed run's own figures (times in Belgrade time).
 
 ### 4.0 The shell (built first, with every screen)
 
-- **Sidebar** on the stone frame: the mark and "Obstat"; under it the scope, "Run of 31 Oct 2026, 09:11 CET".
-  Nav: **Run**, **Holds**, **Proposals**, **Summary**. No counts: nothing here is a queue to act on.
-  Foot: "Read-only. Replaying out/trace.jsonl" (or "Live from 127.0.0.1:4310" in live mode).
+- **Sidebar** on the stone frame: the mark and "Obstat", which leads back to the landing page; under it the scope,
+  "Run of 30 Oct 2026, 19:23 CET". Nav: **Run**, **Holds**, **Proposals**, **Summary**. No counts: nothing here
+  is a queue to act on. Foot: "Read-only. Replaying out/trace.jsonl".
 - **Top bar** (48px, frame tint, no rule): a centred lookup field, label "Look up a record",
   placeholder "Look up R0539, SYN-PUB-01827, C017-CH1", shortcut `/`, Esc clears it. A wrong format gets one line:
   "Type a dataset ID: a researcher (R0539), a record (SYN-PUB-01827), a company (C017) or a challenge (C017-CH1)."
-  Right end: the replay clock "[09:14:34] of [09:14:34]", a segmented control **1× · 4× · Instant**, and
+  Right end: the replay clock "[19:28:16] of [19:28:16]", a segmented control **1× · 4× · Instant**, and
   **Replay** (the one primary). The lookup centres in whatever room the replay controls leave.
 - **The sheet**: white, inset 8px right and bottom, radius 16, 1px edge, no shadow. Content padding 24.
 
 ### 4.1 S1 Run
 
-- **h1** "Run". **Subline (the finding, computed from the longest failed hold):** "The Critic held Writer 2 for
-  [8.1 s] and failed claim 3 on C3, duplicate profile. Writers 1 and 3 kept working the whole time."
+- **h1** "Run". **Subline (the finding):** computed from the hold that caught a wrong person (C2, C3 or C4) if
+  there is one, else the longest failed hold, and led by the claim's own explanation: "The Critic held Writer 2 for
+  [1.1 s] and failed claim 4 on C3, duplicate profile. Writers 1 and 3 kept working the whole time."
 - **Counters**, one strip split by 1px dividers, each with a grey note: **Loops running** [0] ("Most at once: [5],
-  at [09:11:02]") · **Holds** [9] ("On [5] pairs") · **Passed** [4] ("Released to write_proposal") · **Failed** [5]
-  ("Sent back to the writer") · **Proposals written** [4] ("[1] pair abandoned").
+  at [19:23:22]") · **Holds** [6] ("On [3] pairs") · **Passed** [3] ("Released to write_proposal") · **Failed** [3]
+  ("Sent back to the writer") · **Proposals written** [3] ("None abandoned").
 - **Timeline** panel, title "Loops by participant", the legend in its header (the marks themselves): Running ·
   Held by the gate · Critic reviewing · Proposal written · Pair abandoned.
   Under the header, the **readout**, above the chart so it shares the first screen with the held bar at 1280×720.
-  It is pinned to the longest failed hold until the cursor moves: "[09:12:36] Writer 2 held (rv_01, pair-2 round 1).
-  Running at this moment: Writer 1 (tool call, lookup_company), Writer 3 (model turn), Critic (checking rv_01)."
+  It is pinned to the finding's hold until the cursor moves: "[19:25:57] Writer 2 held (rv_03, pair-2 round 1).
+  Running at this moment: Writer 1 (model turn), Writer 3 (model turn), Critic (checking rv_03)."
   Lanes grouped by *Reading* (Coordinator, Profiler 1–4, Industry Analyst), *Matching* (Matchmaker),
-  *Writing* (Writer 1–3), *Checking* (Critic, with a second row when two reviews overlap).
+  *Writing* (Writer 1–3), *Checking* (Critic, with a second row when two reviews overlap). A hold the Critic
+  settled in a second is still drawn at least 7px wide, so it can be seen and pointed at.
   Each hold is a link: click, or focus and Enter, opens S2.
   Footnote: "Trace Observer and UI Bridge record every event. They run no loops, so they have no lane."
 - **Latest holds** panel (left half): the five latest, columns Hold · Writer · Pair · Round · Held for · Result.
-  "View all [9]".
+  "View all [6]".
 - **Trace** panel (right half): the last nine trace lines in mono, newest first, "Newest first, as in out/trace.jsonl".
 
 ### 4.2 S2 Hold
 
-- **Breadcrumb** Holds / rv_01. **h1** "Writer 2 held, round 1". Right: "Proposal pair-2".
-- **Subline (finding, computed):** "Failed on claim 3 (C3, duplicate profile): SYN-PUB-01827 is attributed to
-  R0539. Round 2 passed [29.3 s] later." On the last round of an abandoned pair: "Round cap reached: pair-4 was
-  abandoned."
+- **Breadcrumb** Holds / rv_03. **h1** "Writer 2 held, round 1". Right: "Proposal pair-2".
+- **Subline (finding, computed):** "Failed on the proposal and claims 4, 5 and 6 (C3, duplicate profile):
+  SYN-PUB-01827 is attributed to R0539. Round 2 passed [61.1 s] later." Claims are listed the way a person would
+  ("claims 4, 5 and 6"), and a claim's own C3 or C4 reason leads over C2's bare mismatch. On the last round of an
+  abandoned pair: "Round cap reached: pair-N was abandoned."
 - **Round tabs:** "Round 1 · failed" · "Round 2 · passed", one per review of the pair.
 - **Claims** panel: one row per claim: n · claim text · kind · "names R0139 · cites SYN-PUB-01827" (each ID
   opens S4 with the deciding value marked) · result pill. A failed claim shows each failing check's detail.
-- **Checks** panel (384px rail): C1–C10 down, claims across, plus "All" for the whole-proposal checks (C8, C9).
-  A cell is passed (ink dot), failed (red cross) or not run on that claim (grey dash); the detail is in its tooltip.
-- **While it waited** panel: "Held from [09:12:36.2] to [09:12:44.3]. Running meanwhile:" then each loop with its
-  ID and what it did ("1 tool call, 1 model turn", "held from 09:12:48", "reviewing rv_01").
-- **What changed** panel: the claims that differ between this round and the next (or the previous), round by
-  round side by side, removed words struck in muted ink, added words on the accent tint.
+- **Checks** panel (384px rail): C1–C10 down, claims across, plus "All" for the whole-proposal checks (C1, C3, C7,
+  C8, C9). A cell is passed (ink dot), failed (red cross) or not run on that claim (grey dash); the detail is in
+  its tooltip.
+- **While it waited** panel: "Held from [19:25:57.2] to [19:25:58.3]. Running meanwhile:" then each loop by what it
+  was for and what it did ("writing pair-1 · running", "writing pair-3 · 1 model turn, held from 19:25:57",
+  "reviewing rv_03").
+- **What the writer changed** panel: the claims that differ between this round and the next (or the previous).
+  When the sentence is unchanged it is shown once, with only the ID change marked ("Names ~~R0139~~ R0539"); when
+  the words changed, the two rounds sit side by side, removed words struck in muted ink, added words on the
+  accent tint.
 - The panels are placed so the two columns end level: the waiting panel and the diff each go to the shorter
   column, and the diff runs full width when neither column has room.
 - Not found: "There is no hold rv_99 in this run." Not reached yet in a replay: "rv_05 has not happened yet at
-  [09:11:40] in this replay."
+  [19:24:10] in this replay."
 
 ### 4.3 S4 Record drawer
 
 - A native `<dialog>` over any screen, 480px on desktop, full screen on a phone. The 20% backdrop separates it;
   its own shadow stays soft.
 - **Title:** the record's name or title. **Line above it:** type and ID ("Publication · SYN-PUB-01827").
-- **Why it is open**, when opened from a claim: "Claim 3 in rv_01 credits R0139 with this record." then each
+- **Why it is open**, when opened from a claim: "Claim 4 in rv_03 credits R0139 with this record." then each
   failing check's detail (or the deciding passing check). For a researcher's own record: "Claim 3 in rv_08 is about
   this researcher."
 - **Fields** as a key-value well, the deciding value on the accent tint (an author entry, a note).
@@ -205,37 +220,41 @@ Copy below is the copy that ships. Figures in brackets are computed from the tra
 
 ### 4.4 S3 Proposals
 
-- **List:** h1 "Proposals". Subline "[4] written, [1] abandoned after the round cap." Tabs All [5] · Written [4] ·
-  Abandoned [1]. Columns: Proposal (title, with "pair-2 · Industrial PhD · Writer 2" under it) · Researcher ·
-  Company and challenge · Rounds · Result · Time. Sorted by the time each was written or abandoned.
+- **List:** h1 "Proposals". Subline "[3] written." Tabs All [3] · Written [3] · Abandoned [0]. Columns: Proposal
+  (title, with "pair-2 · Industrial PhD · Writer 2" under it) · Researcher · Company and challenge · Rounds ·
+  Result · Time. Sorted by the time each was written or abandoned.
 - **Proposal view:** breadcrumb Proposals / pair-2. h1 is the proposal's title; the status pill on the right.
-  Under it: "Industrial PhD · Mirjana Jeremić (R0539) with Panonija Mlin a.d. on C017-CH1."
+  Under it: "Industrial PhD · Mirjana Jeremić (R0539) with Terramap Subotica d.o.o. on C062-CH1."
   Left: the document, in the PRD's order: The problem · Research questions · Plan · What each side brings ·
-  Why this pair · Agreed up front · Claims and their records. Each claim marker in the text jumps to its row.
-  The table gives each claim its records and the Critic's final verdict ("Passed 5": five checks ran, all passed).
-  Right rail, sticky beside the text: **Verdict** ("Passed by the Critic in round 2." / "rv_05 · 09:13:13 ·
-  written 09:13:14"), **Parties**, **Rounds**. On a phone the rail follows the document.
-- **Abandoned pair:** the last submitted draft under a notice: "Abandoned after 3 rounds. C5 failed in all 3
-  rounds: R0068 left the faculty in March 2026. … This is the last draft the writer submitted; it was never
-  written to out/proposals/."
+  Why this pair · Agreed up front · Claims and their records. Each claim marker in the text, the plan table
+  included, jumps to its row; a marker list such as `{1, 2}` becomes one button per claim.
+  The table gives each claim its records and the Critic's final verdict ("Passed 6": six checks ran, all passed).
+  Right rail, sticky beside the text: **Verdict** ("Passed by the Critic in round 2." / "rv_07 · 19:26:59 ·
+  written 19:26:59"), **Parties**, **Rounds**. On a phone the rail follows the document.
+- **Abandoned pair:** the last submitted draft under a notice: "Abandoned after [n] rounds. [reason] This is the
+  last draft the writer submitted; it was never written to out/proposals/."
 
 ### 4.5 Holds list
 
-- h1 "Holds". Subline "[9] writes held, [5] failed and were sent back to the writer. The longest hold lasted [8.1 s]."
-- Tabs All [9] · Failed [5] · Passed [4]. Columns: Hold · Writer · Pair · Round · Claims · Failed checks
-  ("claim 3: C2, C3") · Held at · Held for · Result. Rows open S2.
+- h1 "Holds". Subline "[6] writes held, [3] failed and were sent back to the writer. The longest hold lasted
+  [40.2 s]."
+- Tabs All [6] · Failed [3] · Passed [3]. Columns: Hold · Writer · Pair · Round · Claims · Failed checks
+  ("claim 4: C2, C3") · Held at · Held for · Result. Rows open S2.
 
 ### 4.6 S5 Summary
 
-- h1 "Summary". Subline "[4] proposals for [4] different researchers and [4] different challenges. [118]
+- h1 "Summary". Subline "[3] proposals for [3] different researchers and [3] different challenges. [135]
   challenges of [489] turned away before matching."
-- **Pairs proposed** [4]: pair, researcher, company and challenge, format.
-- **Abandoned** [1]: the pair, its reason, its three rounds, and "The Matchmaker replaced it with pair-5."
-- **Failed checks by type** [7]: bars in the gate's teal: C5 Availability [3], C2 Attribution [2], C3 Duplicate
-  profile [1], C4 Namesake [1]. Note: attribution (C2) fails alongside the duplicate or namesake check that explains it.
-- **Holds per writer** [9]: Writer 1 [5 / 3 failed], Writer 2 [2 / 1], Writer 3 [2 / 1], with a split bar.
-- **Turned away before matching** [118]: counts by reason (grey bars) beside a sample of challenges with their
-  one-line reasons. "[8] of [118] shown. Every one, with its reason, is in out/no-match.md."
+- **Pairs proposed** [3]: pair, researcher, company and challenge, format.
+- **Abandoned** [0]: "No pair was abandoned." When there is one: the pair, its reason, its rounds, and its
+  replacement.
+- **Failed checks by type** [10]: bars in the gate's teal: C3 Duplicate profile [4], C2 Attribution [3],
+  C5 Availability [2], C6 Capacity [1]. Note: attribution (C2) fails alongside the duplicate or namesake check that
+  explains it.
+- **Holds per writer** [6]: Writer 1, 2 and 3 [2 / 1 failed] each, with a split bar.
+- **Turned away before matching** [135] ("134 not_research · 1 no_uns_fit"): counts by the kind of work (grey
+  bars: legal, tax or compliance [43], funding [38], hiring [36], and the rest) beside twelve of them with the
+  Analyst's own reasons. "[12] of [135] shown. Every one, with its reason, is in out/no-match.md."
 
 ## 5. Components
 
@@ -267,30 +286,27 @@ Copy below is the copy that ships. Figures in brackets are computed from the tra
 - Placeholder names, invented totals, counts typed in instead of computed from the trace.
 - A greeting, a hero banner, a welcome illustration, or an empty-state picture.
 
-## 7. Sample data to replace
+## 7. Data
 
-The console ships with a sample run in `ui/fixtures/` so it works with no backend and no key. Its researchers,
-companies, papers and proposals are invented in the dataset's shape. The PRD's trap IDs (R0139/R0539,
-SYN-PUB-01827, R0128/R0881, R0068, C004-CH4, C021-CH3) are used as the PRD describes them. Replace the
-fixture with a committed `out/trace.jsonl` and the UI Bridge's endpoints before submission.
+There is no sample data. The terminal and the landing page both show the committed run:
 
-What is invented and where:
+- `out/trace.jsonl`, `out/run.json` and `out/proposals/*.json` from the last `npm start -- --demo`;
+- dataset records from `data/data`, read into the same in-memory index the runtime uses.
 
-- `ui/fixtures/records.ts`: every researcher, publication, project, patent, company and challenge record,
-  including names, faculties, notes and company figures (31,400 motors, 420 t a day, 140 ha, 2,300 ha).
-- `ui/fixtures/proposals.ts`: the five proposals (titles, problems, plans, terms) and their claims per round;
-  the turned-away sample and its counts by reason (118 of 489).
-- `ui/fixtures/run.ts`: the schedule (times, shards, batch counts, token counts). Its verdicts are not typed in:
-  a small Critic runs C1–C10 against the records, and assertions fail the build if a total disagrees.
+`src/ui-bridge/api.ts` turns those into the five endpoints for `npm run ui`, the dev server and the preview alike.
+The landing page's figures, IDs, quotes and reasons are copied from the same run and dataset; if the committed run
+changes, its copy must be checked against the new `out/`.
 
-## 8. Review log (2026-10-30)
+## 8. Review log
+
+### 2026-10-30: the terminal on a sample run
 
 Checked with the skill's `lint.mjs --app` and `inspect.mjs --app` at 1440, 768 and 390 on the production build,
 and with a 21-step input script (hover, keyboard focus, 4× replay, lookup, drawer Back and Esc, round tabs, claim
 markers, unknown IDs, the phone menu) at 1280×720. Result: 0 FAIL on every screen, 21 of 21 steps pass, no console
 errors. Warnings left, each defended:
 
-- `hero-void` on Proposals: a five-row list shrinks to its rows; nothing pads it.
+- `hero-void` on Proposals: a short list shrinks to its rows; nothing pads it.
 - `numeric-align` at 390 on Holds: below 640px the table becomes two-line rows, where figures sit in the second line.
 - `radius-mix` with the drawer open: the fourth "radius" is the claim rows' top rules (0), not a panel.
 - Lint `em-dash`: the grey dash in empty cells (§11 of the skill), not prose. Lint `mono`: the spec's second face.
@@ -300,8 +316,57 @@ a jumbled word diff and uneven columns on Hold; the drawer opening before the tr
 "2,021" and double-spaced raw JSON; numberless research questions and a rail leaving the right side empty on the
 proposal; the replay controls sliding under the search at 1280px; the readout below the fold at 1280×720.
 
-Against the app-screen critique: each screen's question is answered by its biggest block (the timeline, the
-claims, the document); colour sits only on the gate's data (holds, failed checks) and status; every count is
-computed from the trace and the totals agree across screens (9 holds = 4 passed + 5 failed; 7 failed checks).
-Still short: the Run screen's counters are the largest figures, though the finding is a duration (8.1 s) set in
-the subline; and the Summary's "Turned away" shows a sample, not the full list, until a real `no-match.md` exists.
+### 2026-10-30: the terminal on the committed run
+
+Connected to the real trace through `src/ui-bridge/`. Fixed from the screenshots of real data:
+
+- The Run finding picked the longest failed hold (a missing quote) instead of the R0139 trap; it now prefers a hold
+  that caught a wrong person.
+- "While it waited" showed Mozaik's loop UUIDs; it now names each loop by its task.
+- A 1.1 s hold was a sliver on the timeline; held bars now have a minimum width.
+- The round diff repeated unchanged sentences in two narrow columns; an unchanged sentence now shows once, with the
+  ID change marked.
+- `{n}` markers were raw text in the plan table, and `{1, 2}` lists were not parsed.
+- Malformed calls the gate rejected were counted as holds.
+- The turned-away table printed full challenge texts.
+
+Re-inspected: 0 FAIL on Run, the hold, the holds list, proposals, a proposal and the summary at all three widths.
+
+## 9. The landing page
+
+Built with the skill's page run (not the app-screen run), at `ui/index.html` with `ui/site/site.css` and
+`ui/site/site.ts`. It keeps the terminal's palette and type (`--keep palette,type`).
+
+- **Direction dealt:** "Dressed as something else" (borrowed category), seed `925220181`, no redraws.
+- **Idea:** *nihil obstat* is the line a censor printed in a book before it could go to press, so the page is
+  dressed as a book's front matter with the Critic as its censor: title page (hero), the censor's statement,
+  how it was examined, the index of checks, contents (the proposals), the errata sheet (what was turned away),
+  the imprimatur (the OPEN band) and the colophon (footer).
+- **One action:** **Open terminal**, in the navigation and as the OPEN band, to `console.html#/run`.
+- **Sections, in order:**
+  - the hero, "NO PROPOSAL / LEAVES UNCHECKED", with the plain sentence under it and the real hold screen for
+    rv_03 rising beneath;
+  - the censor's statement on an ink field, with the two records of one person (R0139 and R0539) and an 1897
+    imprimatur page;
+  - four steps as a staircase, closed by a film of a platen press;
+  - the ten checks as the product's command menu;
+  - the three proposals as big names beside a picture of each one's world;
+  - the turned-away challenges on a printed sheet over Novi Sad's main square;
+  - the OPEN band;
+  - the colophon, with the name at full width.
+- **Live thing:** the check menu. Type "c3", "c4" or "namesake", move with the arrow keys or tap a row, and read
+  what each check fails on, with the committed run's real failure where there was one. Without script it is a
+  plain list with every sentence shown.
+- **Type:** IBM Plex Sans only (Plex Mono only for the commands in the colophon), five sizes: 14, 18, 32, 66
+  and the headline, which is sized from the measured width of "LEAVES UNCHECKED" to about two thirds of the page
+  (the full width on a phone).
+- **Pictures:** six real pictures and one film from Wikimedia Commons, stored in `ui/public/landing/`. The page
+  carries no captions and no credit line; the credits the licences require are in `docs/CREDITS.md`.
+- **Motion:** the headline's lines rise from behind their baseline on load; each section's parts rise in once as
+  it enters; the press film loops muted, and the Novi Sad photograph drifts with the scroll. Under
+  `prefers-reduced-motion` nothing travels and the film stays on its poster frame.
+- **Checked:** `inspect.mjs` 0 FAIL, 0 WARN at 1440, 768 and 390 on the production build; `lint.mjs` 0 FAIL;
+  an input script (filtering, arrow keys, hover on the proposals, Open terminal reaching the terminal, the
+  terminal's mark leading back) passes with no console errors. Last critique: 7.9 overall (design 7.5, usability
+  8, creativity 8, content 8.5). Still short: a stretch of ink between the statement and the records on desktop;
+  the book is carried by structure and real artefacts, not by type, because the brand fixes the type.

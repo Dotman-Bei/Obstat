@@ -2,17 +2,10 @@
 // (PRD §10), and a readable line for the terminal (PRD §16). Mozaik has no loop start or finish events, so a
 // loop.started line is added at a loop's first event and loop.finished at its answer.
 import type { SemanticEvent } from '@mozaik-ai/core';
-import type { ReviewRequest, Verdict } from './contract.ts';
+import type { ReviewRequest, TraceLine, Verdict } from './contract.ts';
 import type { ObstatState } from './state.ts';
 
-export interface TraceLine {
-  t: string;
-  type: string;
-  producer: string;
-  loopId?: string;
-  summary: string;
-  data?: Record<string, unknown>;
-}
+export type { TraceLine } from './contract.ts';
 
 const clip = (s: string, n: number) => (s.length > n ? `${s.slice(0, n - 1)}…` : s);
 const oneLine = (s: string) => s.replace(/\s+/g, ' ').trim();

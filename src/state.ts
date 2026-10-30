@@ -1,27 +1,11 @@
 // Shared state (PRD §10). Participants read and write it; none of them calls another.
 import { RuntimeState } from '@mozaik-ai/core';
-import type { ProposalFormat } from './contract.ts';
+import type { ChallengeClass, Pair } from './contract.ts';
 import type { IdentityHint } from './data/identities.ts';
 import type { DataIndex } from './data/index.ts';
 import { Reviews } from './gate/wait-for-verdict.ts';
 
-export type ChallengeClassName = 'research' | 'not_research' | 'no_uns_fit';
-
-export interface ChallengeClass { cls: ChallengeClassName; reason: string; ids: string[] }
-
-export interface Pair {
-  pairId: string;
-  researcherIds: string[];
-  companyId: string;
-  challengeId: string;
-  format: ProposalFormat;
-  why: string;
-  evidence: string[];
-  status: 'shortlisted' | 'writing' | 'written' | 'abandoned';
-  writerId?: string;
-  reason?: string;
-  replacedBy?: string;
-}
+export type { ChallengeClass, ChallengeClassName, Pair } from './contract.ts';
 
 export interface LoopStatus { participant: string; loopId: string; lastEventAt: number; state: 'running' | 'stalled' | 'done' }
 

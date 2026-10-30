@@ -14,5 +14,5 @@
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  "include": ["src", "fixtures", "vite.config.ts", "site"]
+  "include": ["src", "vite.config.ts", "site"]
 }

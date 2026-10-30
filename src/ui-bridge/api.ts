@@ -2,10 +2,8 @@
 // out/proposals/*.json, plus records from the in-memory index. Nothing is re-run and nothing is invented.
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { CheckId, Claim, ProposalFormat, ProposalSections, Verdict, WriteProposalInput } from '../contract.ts';
+import type { ChallengeClass, CheckId, Claim, Pair, ProposalFormat, ProposalSections, TraceLine, Verdict, WriteProposalInput } from '../contract.ts';
 import { getRecord, titleOf, type DataIndex } from '../data/index.ts';
-import type { ChallengeClass, Pair } from '../state.ts';
-import type { TraceLine } from '../trace.ts';
 
 interface RunFile { pairs: Pair[]; classes: Record<string, ChallengeClass>; verdicts: Verdict[] }
 interface Written extends WriteProposalInput { writerId: string; verdict: Verdict; writtenAt: string }

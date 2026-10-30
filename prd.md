@@ -136,7 +136,7 @@ All created with `createAgent` / `createHuman`, joined with `join`, reacting thr
 | **Trace Observer** | observer (handlers only) | every event | Appends one JSON line per event to `out/trace.jsonl`; prints a readable line to the terminal | none |
 | **UI Bridge** | observer (handlers only) | every event | Pushes each event to connected browsers over Server-Sent Events (§11). Never sends messages or events, never starts loops, never writes state | none |
 
-Default models are config values (`gpt-5.5`, `gpt-5.4-mini`), both listed in v4.1.0 `supportedModels`.
+Default models are config values in `src/config.ts`, overridable in `obstat.config.json`. The committed run uses `gemini-3.5-flash-lite` for every role, read from `GEMINI_API_KEY`, because it fits Gemini's free tier (a small daily request cap per model, about 5 requests a minute). Any model in v4.1.0 `supportedModels` works; the provider follows the model name. Gemini needs one fix, in `src/providers.ts`: Mozaik 4.1.0 drops Gemini's thought signatures, which Gemini 3 requires back on the next turn of a tool call.
 
 ---
 

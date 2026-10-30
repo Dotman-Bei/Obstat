@@ -175,3 +175,32 @@ export function parseWriteProposal(args: string): Parsed {
   }
   return problems.length ? { ok: false, error: problems.join('; ') } : { ok: true, value: v as WriteProposalInput };
 }
+
+/** One line of out/trace.jsonl, and one message on the console's /events stream. */
+export interface TraceLine {
+  t: string;
+  type: string;
+  producer: string;
+  loopId?: string;
+  summary: string;
+  data?: Record<string, unknown>;
+}
+
+export type ChallengeClassName = 'research' | 'not_research' | 'no_uns_fit';
+
+export interface ChallengeClass { cls: ChallengeClassName; reason: string; ids: string[] }
+
+/** A researcher and a challenge the Matchmaker shortlisted, and how far its proposal got. */
+export interface Pair {
+  pairId: string;
+  researcherIds: string[];
+  companyId: string;
+  challengeId: string;
+  format: ProposalFormat;
+  why: string;
+  evidence: string[];
+  status: 'shortlisted' | 'writing' | 'written' | 'abandoned';
+  writerId?: string;
+  reason?: string;
+  replacedBy?: string;
+}
