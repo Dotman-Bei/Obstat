@@ -4,7 +4,7 @@
 
   **The Gated Multi-Agent Matchmaker**
 
-[![Powered by Mozaik](https://img.shields.io/badge/Powered%20by-Mozaik%204.1.0-blue?style=flat-square)](https://www.npmjs.com/package/@mozaik-ai/core) [![EINSTEIN track](https://img.shields.io/badge/NTP%20Novi%20Sad%20Hackathon-EINSTEIN%20track-1b6c80?style=flat-square)](https://build.jigjoy.ai/tracks/einstein) [![No API key](https://img.shields.io/badge/no%20API%20key-npm%20run%20replay-1b6c80?style=flat-square)](#test-it-out) [![Tests](https://img.shields.io/badge/tests-42%20passing-brightgreen?style=flat-square)](./test) [![Dataset](https://img.shields.io/badge/dataset-EINSTEIN%20Matchmaker-lightgrey?style=flat-square)](https://github.com/jigjoy-ai/einstein-matchmaker-data)
+[![Live demo](https://img.shields.io/badge/live%20demo-obstat.vercel.app-131416?style=flat-square&logo=vercel&logoColor=white)](https://obstat.vercel.app/) [![Powered by Mozaik](https://img.shields.io/badge/Powered%20by-Mozaik%204.1.0-blue?style=flat-square)](https://www.npmjs.com/package/@mozaik-ai/core) [![EINSTEIN track](https://img.shields.io/badge/NTP%20Novi%20Sad%20Hackathon-EINSTEIN%20track-1b6c80?style=flat-square)](https://build.jigjoy.ai/tracks/einstein) [![No API key](https://img.shields.io/badge/no%20API%20key-npm%20run%20replay-1b6c80?style=flat-square)](#test-it-out) [![Tests](https://img.shields.io/badge/tests-42%20passing-brightgreen?style=flat-square)](./test) [![Dataset](https://img.shields.io/badge/dataset-EINSTEIN%20Matchmaker-lightgrey?style=flat-square)](https://github.com/jigjoy-ai/einstein-matchmaker-data)
 
 <p align="center">
   No proposal leaves a writer until a separate Critic has checked every claim against the person it names.<br/>
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <b><a href="#test-it-out">Test It Out</a></b> | <b><a href="#system-architecture">System Architecture</a></b> | <b><a href="./out/proposals/pair-2.md">Read a Proposal</a></b> | <b><a href="./out/trace.jsonl">Full Trace</a></b>
+  <b><a href="https://obstat.vercel.app/">Live Demo</a></b> | <b><a href="#test-it-out">Test It Out</a></b> | <b><a href="#system-architecture">System Architecture</a></b> | <b><a href="./out/proposals/pair-2.md">Read a Proposal</a></b> | <b><a href="./out/trace.jsonl">Full Trace</a></b>
 </p>
 
 <p align="center">
@@ -60,7 +60,13 @@
 
 ## Test It Out
 
-Everything below runs on your own computer, in a terminal, with **no API key**. It takes about 5 minutes.
+### In Your Browser (no install)
+
+Open **[obstat.vercel.app](https://obstat.vercel.app/)**, click **Open terminal**, and follow the clicks in step 5 below. It is the committed run, replayed: the timeline of holds, every verdict, the proposals and the records they cite.
+
+### On Your Computer
+
+Everything below runs on your own computer, in a terminal, with **no API key**. It takes about 5 minutes, and it runs the agents themselves, not only the replayed view.
 
 **You need:** [Node.js](https://nodejs.org/) 22.6 or newer, and [Git](https://git-scm.com/).
 
