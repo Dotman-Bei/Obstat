@@ -4,7 +4,7 @@
 
   **The Gated Multi-Agent Matchmaker**
 
-[![Powered by Mozaik](https://img.shields.io/badge/Powered%20by-Mozaik%204.1.0-blue?style=flat-square)](https://www.npmjs.com/package/@mozaik-ai/core) [![EINSTEIN track](https://img.shields.io/badge/NTP%20Novi%20Sad%20Hackathon-EINSTEIN%20track-1b6c80?style=flat-square)](https://build.jigjoy.ai/tracks/einstein) [![No API key](https://img.shields.io/badge/no%20API%20key-npm%20run%20replay-1b6c80?style=flat-square)](#usage) [![Tests](https://img.shields.io/badge/tests-42%20passing-brightgreen?style=flat-square)](./test) [![Dataset](https://img.shields.io/badge/dataset-EINSTEIN%20Matchmaker-lightgrey?style=flat-square)](https://github.com/jigjoy-ai/einstein-matchmaker-data)
+[![Powered by Mozaik](https://img.shields.io/badge/Powered%20by-Mozaik%204.1.0-blue?style=flat-square)](https://www.npmjs.com/package/@mozaik-ai/core) [![EINSTEIN track](https://img.shields.io/badge/NTP%20Novi%20Sad%20Hackathon-EINSTEIN%20track-1b6c80?style=flat-square)](https://build.jigjoy.ai/tracks/einstein) [![No API key](https://img.shields.io/badge/no%20API%20key-npm%20run%20replay-1b6c80?style=flat-square)](#test-it-out) [![Tests](https://img.shields.io/badge/tests-42%20passing-brightgreen?style=flat-square)](./test) [![Dataset](https://img.shields.io/badge/dataset-EINSTEIN%20Matchmaker-lightgrey?style=flat-square)](https://github.com/jigjoy-ai/einstein-matchmaker-data)
 
 <p align="center">
   No proposal leaves a writer until a separate Critic has checked every claim against the person it names.<br/>
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <b><a href="#usage">Run It</a></b> | <b><a href="#system-architecture">System Architecture</a></b> | <b><a href="./out/proposals/pair-2.md">Read a Proposal</a></b> | <b><a href="./out/trace.jsonl">Full Trace</a></b>
+  <b><a href="#test-it-out">Test It Out</a></b> | <b><a href="#system-architecture">System Architecture</a></b> | <b><a href="./out/proposals/pair-2.md">Read a Proposal</a></b> | <b><a href="./out/trace.jsonl">Full Trace</a></b>
 </p>
 
 <p align="center">
@@ -26,6 +26,46 @@
 </div>
 
 ---
+
+## Test It Out
+
+Everything below runs on your own computer, in a terminal, with **no API key**. It takes about 5 minutes.
+
+**You need:** [Node.js](https://nodejs.org/) 22.6 or newer, and [Git](https://git-scm.com/).
+
+**Where to run it:** open a terminal (PowerShell or Command Prompt on Windows, Terminal on macOS or Linux). Every command after step 1 is typed **inside the `Obstat` folder**, the one that holds `package.json`.
+
+1. **Download Obstat and go into its folder:**
+   ```bash
+   git clone https://github.com/Dotman-Bei/Obstat.git
+   cd Obstat
+   ```
+2. **Install it and download the EINSTEIN dataset** into a folder named `data` inside `Obstat`:
+   ```bash
+   npm install
+   git clone https://github.com/jigjoy-ai/einstein-matchmaker-data data
+   ```
+3. **Run it.** This runs the whole agent swarm again, with every model call answered from the committed run's recording:
+   ```bash
+   npm run replay
+   ```
+   You will see the agents work in parallel, the gate hold Writer 2 (`HELD write_proposal`), the Critic fail its claim on `R0139`, the revision pass, and three proposals written. It ends with **"The replay reproduces the committed run."**
+4. **Open the web terminal.** Build it once, then start it:
+   ```bash
+   npm run ui:build
+   npm run ui
+   ```
+   Leave that terminal open and go to **http://127.0.0.1:4320** in your browser.
+5. **Click through the main feature:**
+   1. **Open terminal** (top right of the landing page).
+   2. In **Latest holds**, click **`rv_03`**: Writer 2 credited `R0139` with paper `SYN-PUB-01827`, and the Critic's red boxes say why that is wrong.
+   3. Click the **Round 2 · passed** tab: the writer's fix, `R0139` replaced by `R0539`.
+   4. Click **`SYN-PUB-01827`**: the paper's real record opens, with the author entry `R0539` highlighted.
+   5. Click **Proposal pair-2** (top right): the finished proposal, every claim with its dataset IDs and the Critic's verdict.
+
+   To watch the run happen instead, click **Replay** at the top with **1×** selected.
+
+**To run it live** with your own model calls, put a Gemini key in a file named `.env` (copy `.env.example`) and run `npm start -- --demo` in the same folder. See [Local Development](#local-development).
 
 ## Overview
 
@@ -130,24 +170,6 @@ Two packages: the runtime at the root, and the frontend in `ui/` with its own `p
 | `src/ui-bridge`, `src/replay`, `src/proof` | Tools | The terminal's read endpoints, replay from the recording, the concurrency proof |
 | `ui` | Frontend | The landing page and the read-only terminal |
 
-### Concurrency Proof
-
-`npm run proof` on the committed trace:
-
-```text
-Most writer loops at once: 3. Most profiler loops at once: 4.
-
-rv_01  W1 held 25.9 s (18:24:58.9–18:25:24.8), pair-1 round 1: fail: claim 5 C5
-  active meanwhile: AN classifying batch 3 of 3; W2 writing pair-2; W3 writing pair-3
-rv_03  W2 held 1.1 s (18:25:57.2–18:25:58.3), pair-2 round 1: fail: proposal C3, claim 4 C2, claim 4 C3, …
-  active meanwhile: W1 writing pair-1; W3 writing pair-3
-  work done meanwhile: W3 held, W3 model turn
-
-PASS  at least 3 writer loops ran at once (T7)
-PASS  at least 2 profiler loops ran at once (T7)
-PASS  at least 2 other writer loops were active during one hold (PRD §17)
-```
-
 ## Usage
 
 Obstat runs from the project folder with npm. No API key is needed to see it work:
@@ -201,20 +223,11 @@ Open http://127.0.0.1:4320, click **Open terminal**, then the hold `rv_03`:
 
 ## Committed Run
 
-The run in `out/` wrote three proposals for three different pairs and turned 135 of 489 challenges away, in 23 model calls on `gemini-3.5-flash-lite`.
+The run in `out/` wrote three proposals for three different pairs and turned 135 of 489 challenges away, in 23 model calls on `gemini-3.5-flash-lite`. The demo pair (`R0139` with `C062-CH1`) was seeded with `--demo`, as PRD F5 allows, because the Matchmaker merges second records and would not pick `R0139` itself; the hold that follows is real.
 
 **[Industrial PhD: Mirjana Jeremić (R0539) with Terramap Subotica](./out/proposals/pair-2.md)** | **[Industrial PhD: Maja Popović (R0906) with CardioTrack](./out/proposals/pair-1.md)** | **[Joint project: Ivona Bogdanović (R0269) with ReVita Water](./out/proposals/pair-3.md)**
 
 **[Run Summary](./out/summary.md)** | **[Challenges Turned Away](./out/no-match.md)** | **[Full Trace](./out/trace.jsonl)**
-
-### Known Limits
-
-- **The Demo Pair Is Seeded**: the Matchmaker merges second records into their canonical person, so on its own it would pair `R0539`, not `R0139`. `--demo` seeds `R0139` with `C062-CH1`, as PRD F5 allows; the hold that follows is real.
-- **Writers Work From a Dossier**: the profile as the profile states it, not the author entries. Checking attribution is the Critic's job; that is the point of the gate.
-- **Small Models**: the committed run used Gemini's free tier. Writers sometimes leave out required fields; the gate rejects those calls before review without using up a round.
-- **Identity Hints Need Evidence**: two records with one name and one faculty but no shared works stay two people. A missed merge is the safe failure, because C2 still checks the exact ID on every record.
-- **Replay Is Exact or It Misses**: answers are keyed by a hash of the whole request, so any change to a prompt, gate message or dossier breaks the replay of this run, and `npm run replay` reports the misses rather than inventing answers.
-- **Gemini Needs a Patch**: Mozaik 4.1.0 drops Gemini's thought signatures, which Gemini 3 requires on the next turn of a tool call; [`src/providers.ts`](./src/providers.ts) keeps them.
 
 ## Local Development
 
