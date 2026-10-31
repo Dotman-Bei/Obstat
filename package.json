@@ -12,6 +12,7 @@
     "replay": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/replay/replay.ts",
     "ui": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/ui-bridge/server.ts",
     "ui:build": "npm --prefix ui install && npm --prefix ui run build",
+    "ui:export": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/ui-bridge/export-static.ts",
     "proof": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/proof/concurrency-proof.ts",
     "doctor": "node --env-file-if-exists=.env --experimental-strip-types --disable-warning=ExperimentalWarning src/doctor.ts",
     "identities": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/data/report.ts",

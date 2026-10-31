@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/events", "destination": "/api/events.txt" },
+    { "source": "/api/summary", "destination": "/api/summary.json" },
+    { "source": "/api/proposals", "destination": "/api/proposals.json" },
+    { "source": "/api/proposals/:id", "destination": "/api/proposals/:id.json" },
+    { "source": "/api/records/:id", "destination": "/api/records/:id.json" }
+  ],
+  "headers": [
+    {
+      "source": "/events",
+      "headers": [
+        { "key": "Content-Type", "value": "text/event-stream; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    },
+    {
+      "source": "/api/events.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/event-stream; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    }
+  ]
+}

@@ -218,6 +218,7 @@ Open http://127.0.0.1:4320, click **Open terminal**, then the hold `rv_03`:
 - `npm run identities`: prints the duplicate profiles, namesakes and stale profiles found in the dataset.
 - `npm run ui:build`: installs and builds the frontend in `ui/` (once, before `npm run ui`).
 - `npm run ui -- --port <n>`: serves the frontend on another port.
+- `npm run ui:export`: writes the committed run as static files in `ui/public/api/`, so `ui/` can be hosted with no server (see `ui/vercel.json`). Run it again after a new run.
 - `npm test`: runs 42 tests with no key, including a whole offline run and the replay of the committed run.
 - `npm run check`: type-checks the runtime.
 
