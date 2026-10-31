@@ -1,11 +1,11 @@
 import { raw } from './html.ts';
 
-// One outline set at 1.5px, drawn for this console. The mark is a ring with a bar across it: something in the way.
+// One outline set at 1.5px, drawn for this console. The mark (brand/mark-colour.svg) is the O held by a block on its line: obstat, it stands in the way.
 const icon = (body: string, vb = 16) =>
   raw(`<svg viewBox="0 0 ${vb} ${vb}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`);
 
 export const icons = {
-  mark: raw('<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5" fill="none" stroke="var(--accent)" stroke-width="2.25"/><path d="M3.5 10h13" stroke="var(--accent)" stroke-width="2.75" stroke-linecap="square"/></svg>'),
+  mark: raw('<svg viewBox="0 0 64 64" aria-hidden="true"><path fill-rule="evenodd" fill="var(--accent)" d="M4 30a22 22 0 1 0 44 0a22 22 0 1 0 -44 0ZM15 30a11 11 0 1 1 22 0a11 11 0 1 1 -22 0ZM4 55h56v7h-56Z"/><path fill="var(--text)" d="M50 30h10v25h-10Z"/></svg>'),
   run: icon('<path d="M2 4h7M2 8h11M5 12h7"/>'),
   holds: icon('<circle cx="8" cy="8" r="5.75"/><path d="M4 8h8"/>'),
   proposals: icon('<path d="M4 1.75h5.5L12.25 4.5v9.75H4z"/><path d="M6.5 7.5h3.5M6.5 10.5h3.5"/>'),

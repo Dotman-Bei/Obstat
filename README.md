@@ -1,6 +1,9 @@
 <div align="center">
 
-  # 📜 Obstat
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./brand/lockup-colour-reverse.svg">
+    <img src="./brand/lockup-colour.svg" alt="Obstat" height="88">
+  </picture>
 
   **The Gated Multi-Agent Matchmaker**
 
@@ -175,6 +178,19 @@ Two packages: the runtime at the root, and the frontend in `ui/` with its own `p
 | `src/participants` | Agents | Coordinator, Profilers, Analyst, Matchmaker, Writers, Trace Observer |
 | `src/ui-bridge`, `src/replay`, `src/proof` | Tools | The terminal's read endpoints, replay from the recording, the concurrency proof |
 | `ui` | Frontend | The landing page and the read-only terminal |
+| `brand` | Brand | The logo as SVG: mark, wordmark and lockup, in colour and monochrome |
+
+### Brand
+
+The mark is the O of Obstat stopped by a block on its line: *obstat*, it stands in the way, the way the Critic stands between a writer and a sent proposal. It is flat vector on a 64-unit grid, made to read at 16px, and the wordmark is IBM Plex Sans Bold converted to outlines, so no font is needed.
+
+| File | Use |
+|---|---|
+| [`lockup-colour.svg`](./brand/lockup-colour.svg) | Mark and wordmark on light grounds (teal `#1b6c80`, ink `#131416`) |
+| [`lockup-colour-reverse.svg`](./brand/lockup-colour-reverse.svg) | The same on dark grounds |
+| [`lockup-ink.svg`](./brand/lockup-ink.svg), [`lockup-paper.svg`](./brand/lockup-paper.svg) | One colour: black, or white on dark |
+| `mark-*.svg`, `wordmark-*.svg` | The mark or the word alone, in the same four versions |
+| [`favicon.svg`](./brand/favicon.svg) | The browser tab icon |
 
 ## Usage
 
