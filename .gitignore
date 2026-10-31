@@ -9,3 +9,6 @@ ui/dist/
 .claude/
 # npm run replay writes here; the committed run stays in out/
 out-replay/
+
+# The demo reference footage and renders stay local
+/ByIOOQ7k-flOaG-g.mp4

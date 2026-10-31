@@ -15,7 +15,12 @@
 </p>
 
 <p align="center">
-  <b><a href="https://obstat.vercel.app/">Live Demo</a></b> | <b><a href="#test-it-out">Test It Out</a></b> | <b><a href="#system-architecture">System Architecture</a></b> | <b><a href="./out/proposals/pair-2.md">Read a Proposal</a></b> | <b><a href="./out/trace.jsonl">Full Trace</a></b>
+  <b><a href="https://obstat.vercel.app/">Live Demo</a></b> | <b><a href="./demo/obstat-demo.mp4">Watch the Demo</a></b> | <b><a href="#test-it-out">Test It Out</a></b> | <b><a href="#system-architecture">System Architecture</a></b> | <b><a href="./out/proposals/pair-2.md">Read a Proposal</a></b> | <b><a href="./out/trace.jsonl">Full Trace</a></b>
+</p>
+
+<p align="center">
+  <a href="./demo/obstat-demo.mp4"><img src="./demo/poster.jpg" alt="Watch the Obstat demo (2:09): a real run replayed, Writer 2 held by the Critic, the duplicate-profile failure, round 2 passing" width="760" /></a>
+  <br/><sub>2:09, sound on. A real run replayed in the terminal. <a href="./demo/STORYBOARD.md">Storyboard</a></sub>
 </p>
 
 <p align="center">
@@ -179,6 +184,7 @@ Two packages: the runtime at the root, and the frontend in `ui/` with its own `p
 | `src/ui-bridge`, `src/replay`, `src/proof` | Tools | The terminal's read endpoints, replay from the recording, the concurrency proof |
 | `ui` | Frontend | The landing page and the read-only terminal |
 | `brand` | Brand | The logo as SVG: mark, wordmark and lockup, in colour and monochrome |
+| `demo` | Film | The demo video, its poster and its shot-by-shot storyboard |
 
 ### Brand
 
