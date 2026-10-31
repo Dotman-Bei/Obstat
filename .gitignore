@@ -3,7 +3,7 @@ ui/node_modules/
 ui/dist/
 .env
 # The dataset is cloned from https://github.com/jigjoy-ai/einstein-matchmaker-data, not committed
-data/
+/data/
 .taste-skill/
 # The design skill used to build the frontend, a tool rather than part of Obstat
 .claude/
