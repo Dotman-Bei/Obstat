@@ -27,6 +27,37 @@
 
 ---
 
+## Overview
+
+**Obstat reads the EINSTEIN dataset and writes collaboration proposals between University of Novi Sad researchers and companies around NTP Novi Sad.** The dataset is messy on purpose: one person is stored twice under different spellings, two people share a name, profiles go stale, and some notes describe someone else. When the work is split across agents, the writer holding a profile loses the context needed to tell people apart. So Obstat does not trust its writers: every `write_proposal` call is intercepted and held until a separate Critic has checked each claim against the records themselves.
+
+- **The Gate**: `ObstatGate`, a Mozaik `InterceptionHandler`, holds only the writer whose `write_proposal` it caught, while every other loop keeps running.
+- **The Critic**: ten checks (C1–C10) on every claim: the ID exists, the record really credits the named researcher, duplicate profiles, namesakes, availability, capacity, research fit, complete sections, no ranking of people, and support.
+- **Identity Hints**: names normalized across Serbian Cyrillic and Latin, diacritics and reversed order, so `R0139` "Jeremić Mirjana" and `R0539` "Mirjana Jeremić" are found to be one person.
+- **Agent Swarm**: a Coordinator, four Research Profilers, an Industry Analyst, a Matchmaker, three Proposal Writers, the Critic and a Trace Observer. No agent calls another; every hand-off is an event.
+- **Code-First Retrieval**: candidates for each challenge come from TF-IDF over researchers' own works, so models judge a shortlist instead of reading 7 million tokens.
+- **Fails Closed**: a Critic that does not answer within 90 s returns the writer to `inference` with nothing written. The gate never returns `idle`.
+- **Round Cap and Replacement**: after three failed rounds the writer drops the failing claims; if a final round fails, the pair is abandoned and the Matchmaker finds a replacement.
+- **Replay Without a Key**: `npm run replay` runs the same runtime with every model call answered from the committed run's recording, and proves it reproduces the run word for word.
+- **Concurrency Proof**: `npm run proof` computes, from the trace alone, how many loops ran at once and what the other writers did during each hold.
+- **Read-Only Terminal**: a web console and landing page that replay the run: the timeline of holds, every verdict, and every record a claim cites.
+
+### Plugging Into EINSTEIN
+
+[EINSTEIN](https://cordis.europa.eu/project/id/101136377) is a Horizon Europe project (2024–2028) coordinated by the University of Novi Sad, with a consortium of nine institutions in Serbia, Austria, the Netherlands and Denmark. Its stated mission includes knowledge management and technology transfer. Obstat is a technology-transfer tool for that university and the companies around NTP Novi Sad.
+
+- **Where It Sits**: between the university's researchers and the park's companies. It reads both sides, turns away challenges that are not research, and hands EINSTEIN staff proposals they can check line by line, instead of a list of names.
+- **What It Reads**: any source of researcher profiles with IDs for publications, projects and patents. EINSTEIN's own [EINSTEIN Score](https://einsteineuproject.com/platforms/einstein-score/) keeps exactly such profiles. Obstat would read the profiles and deliberately ignore the scores: it proposes collaborations and never ranks people.
+- **What It Hands Over**: each proposal as Markdown for a person and JSON for a system, every claim mapped to the dataset IDs it rests on, with the Critic's verdict and a trace of who checked what, and when.
+- **What It Guards**: the identity problems a network of many institutions creates: one person under two spellings or scripts, two people with one name, profiles that went stale.
+- **EINSTEIN Stars**: not defined in the track brief, the dataset or the project's public site, so this README does not guess at it. If it names a set of researchers EINSTEIN features, Obstat takes it as one more source of profiles, checked like any other, and never uses it to rank anyone.
+
+### Responsible Data
+
+- **No Ranking of People**: Obstat proposes collaborations; C9 fails ranking language in every claim and section, and lists sort by ID or time.
+- **Every Claim Cited**: each claim carries dataset IDs, and the Critic checks each one against the record before anything is written.
+- **Dataset Only**: no outside data. The EINSTEIN dataset is synthetic; its people, companies and publications are invented.
+
 ## Test It Out
 
 Everything below runs on your own computer, in a terminal, with **no API key**. It takes about 5 minutes.
@@ -66,37 +97,6 @@ Everything below runs on your own computer, in a terminal, with **no API key**. 
    To watch the run happen instead, click **Replay** at the top with **1×** selected.
 
 **To run it live** with your own model calls, put a Gemini key in a file named `.env` (copy `.env.example`) and run `npm start -- --demo` in the same folder. See [Local Development](#local-development).
-
-## Overview
-
-**Obstat reads the EINSTEIN dataset and writes collaboration proposals between University of Novi Sad researchers and companies around NTP Novi Sad.** The dataset is messy on purpose: one person is stored twice under different spellings, two people share a name, profiles go stale, and some notes describe someone else. When the work is split across agents, the writer holding a profile loses the context needed to tell people apart. So Obstat does not trust its writers: every `write_proposal` call is intercepted and held until a separate Critic has checked each claim against the records themselves.
-
-- **The Gate**: `ObstatGate`, a Mozaik `InterceptionHandler`, holds only the writer whose `write_proposal` it caught, while every other loop keeps running.
-- **The Critic**: ten checks (C1–C10) on every claim: the ID exists, the record really credits the named researcher, duplicate profiles, namesakes, availability, capacity, research fit, complete sections, no ranking of people, and support.
-- **Identity Hints**: names normalized across Serbian Cyrillic and Latin, diacritics and reversed order, so `R0139` "Jeremić Mirjana" and `R0539` "Mirjana Jeremić" are found to be one person.
-- **Agent Swarm**: a Coordinator, four Research Profilers, an Industry Analyst, a Matchmaker, three Proposal Writers, the Critic and a Trace Observer. No agent calls another; every hand-off is an event.
-- **Code-First Retrieval**: candidates for each challenge come from TF-IDF over researchers' own works, so models judge a shortlist instead of reading 7 million tokens.
-- **Fails Closed**: a Critic that does not answer within 90 s returns the writer to `inference` with nothing written. The gate never returns `idle`.
-- **Round Cap and Replacement**: after three failed rounds the writer drops the failing claims; if a final round fails, the pair is abandoned and the Matchmaker finds a replacement.
-- **Replay Without a Key**: `npm run replay` runs the same runtime with every model call answered from the committed run's recording, and proves it reproduces the run word for word.
-- **Concurrency Proof**: `npm run proof` computes, from the trace alone, how many loops ran at once and what the other writers did during each hold.
-- **Read-Only Terminal**: a web console and landing page that replay the run: the timeline of holds, every verdict, and every record a claim cites.
-
-### Plugging Into EINSTEIN
-
-[EINSTEIN](https://cordis.europa.eu/project/id/101136377) is a Horizon Europe project (2024–2028) coordinated by the University of Novi Sad, with a consortium of nine institutions in Serbia, Austria, the Netherlands and Denmark. Its stated mission includes knowledge management and technology transfer. Obstat is a technology-transfer tool for that university and the companies around NTP Novi Sad.
-
-- **Where It Sits**: between the university's researchers and the park's companies. It reads both sides, turns away challenges that are not research, and hands EINSTEIN staff proposals they can check line by line, instead of a list of names.
-- **What It Reads**: any source of researcher profiles with IDs for publications, projects and patents. EINSTEIN's own [EINSTEIN Score](https://einsteineuproject.com/platforms/einstein-score/) keeps exactly such profiles. Obstat would read the profiles and deliberately ignore the scores: it proposes collaborations and never ranks people.
-- **What It Hands Over**: each proposal as Markdown for a person and JSON for a system, every claim mapped to the dataset IDs it rests on, with the Critic's verdict and a trace of who checked what, and when.
-- **What It Guards**: the identity problems a network of many institutions creates: one person under two spellings or scripts, two people with one name, profiles that went stale.
-- **EINSTEIN Stars**: not defined in the track brief, the dataset or the project's public site, so this README does not guess at it. If it names a set of researchers EINSTEIN features, Obstat takes it as one more source of profiles, checked like any other, and never uses it to rank anyone.
-
-### Responsible Data
-
-- **No Ranking of People**: Obstat proposes collaborations; C9 fails ranking language in every claim and section, and lists sort by ID or time.
-- **Every Claim Cited**: each claim carries dataset IDs, and the Critic checks each one against the record before anything is written.
-- **Dataset Only**: no outside data. The EINSTEIN dataset is synthetic; its people, companies and publications are invented.
 
 ## System Architecture
 
