@@ -66,6 +66,13 @@ const server = createServer((req, res) => {
   return file(res, join(dist, 'index.html'));
 });
 
+server.on('error', (e: NodeJS.ErrnoException) => {
+  if (e.code !== 'EADDRINUSE') throw e;
+  console.error(`Port ${port} is already in use, most likely by Obstat itself: open http://127.0.0.1:${port}.`);
+  console.error(`To start a second copy, pick another port: npm run ui -- --port ${port + 1}`);
+  process.exit(1);
+});
+
 server.listen(port, '127.0.0.1', () => {
   console.log(`Obstat console: http://127.0.0.1:${port}  (replaying ${api.lines.length} trace lines from ${outDir})`);
 });
